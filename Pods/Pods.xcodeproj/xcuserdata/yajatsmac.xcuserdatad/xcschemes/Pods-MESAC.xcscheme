@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5E5443B32372C81B6BF1931C'
+               BlueprintIdentifier = '59C5125C8EEE5A1EE777B255'
                BlueprintName = 'Pods-MESAC'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_MESAC.framework'>

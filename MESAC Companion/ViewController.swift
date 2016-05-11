@@ -13,7 +13,7 @@ import Firebase
 class ViewController: UIViewController {
     
     
-    let ref = Firebase(url: "https://mesac-companion.firebase.io.com") 
+    let ref = Firebase(url: "https://mesac-companion.firebaseio.com")
 
     override func viewDidLoad() {
         super.viewDidLoad()
