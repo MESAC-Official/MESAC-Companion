@@ -8,25 +8,21 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>MaterialControls-MaterialControls.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>MaterialControls.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-MESAC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -37,11 +33,6 @@
 			<true/>
 		</dict>
 		<key>720EA7C4B6AC4D960C9A08E2261B6B22</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>87E8A34A7BE7A618424BB7D1119DC4DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
