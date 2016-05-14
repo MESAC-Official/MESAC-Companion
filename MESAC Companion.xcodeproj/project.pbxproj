@@ -481,7 +481,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "MESAC Companion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< .merge_file_nn2i7X
 				PRODUCT_BUNDLE_IDENTIFIER = com.philipposslicher.mesactest2;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = "com.philipposslicher.MESAC-Companion";
+>>>>>>> .merge_file_GTVGhS
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -496,7 +500,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "MESAC Companion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+<<<<<<< .merge_file_nn2i7X
 				PRODUCT_BUNDLE_IDENTIFIER = com.philipposslicher.mesactest2;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = "com.philipposslicher.MESAC-Companion";
+>>>>>>> .merge_file_GTVGhS
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
