@@ -7,10 +7,17 @@
 	<key>classes</key>
 	<dict/>
 	<key>objectVersion</key>
-	<string>46</string>
+	<string>47</string>
 	<key>objects</key>
 	<dict>
-		<key>08EB10140BA7027F9126F4BD</key>
+		<key>08A0335E6DC0640EC559DB27</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C39CB6886B5EB7B08E7C18D6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>191B7509972EAF624E409F7F</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
@@ -21,7 +28,7 @@
 			<key>isa</key>
 			<string>PBXShellScriptBuildPhase</string>
 			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
+			<string>&#128230; Embed Pods Frameworks</string>
 			<key>outputPaths</key>
 			<array/>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -29,18 +36,19 @@
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion-frameworks.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
 		</dict>
-		<key>513B9A1686DAF45202CA46F4</key>
+		<key>2B12B0670449F1F2CC7E7826</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C4806F5975B630F8F972EC2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>306DC66FD715F1E71AEDDF92</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
@@ -51,7 +59,7 @@ fi
 			<key>isa</key>
 			<string>PBXShellScriptBuildPhase</string>
 			<key>name</key>
-			<string>Copy Pods Resources</string>
+			<string>&#128230; Embed Pods Frameworks</string>
 			<key>outputPaths</key>
 			<array/>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -59,27 +67,12 @@ fi
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion-resources.sh"
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests-frameworks.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
 		</dict>
-		<key>60366FD330B61EE7F6F80992</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-MESAC-Companion.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>64A174DCCB749FDC0EACA9CE</key>
+		<key>38204906C46E0B2B252F7BB6</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -94,7 +87,68 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7344A773E79B5AEC3EE8C359</key>
+		<key>502DDA0DDF845AEFA8E656CA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-MESAC-Companion.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5D97A20E679F74F7DA3BF7A0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-MESAC-CompanionUITests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6977C9B9922904BD8B1B1E28</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>38204906C46E0B2B252F7BB6</string>
+				<string>502DDA0DDF845AEFA8E656CA</string>
+				<string>FD59BCDBD95293DEE3D4C100</string>
+				<string>FC8AF74C665B1921E26C9230</string>
+				<string>A74C35ADC3C1B1FC3D68B0C2</string>
+				<string>5D97A20E679F74F7DA3BF7A0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C4806F5975B630F8F972EC2</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_MESAC_CompanionUITests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>89D97F4C05764AEE72536FBA</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>wrapper.framework</string>
@@ -107,11 +161,35 @@ fi
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>78A063E45B7DFA27A65FD333</key>
+		<key>9A19C89693FD374A5094650C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>89D97F4C05764AEE72536FBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A74C35ADC3C1B1FC3D68B0C2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-MESAC-CompanionUITests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AB32CF117C174B9F739B0140</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>7344A773E79B5AEC3EE8C359</string>
+				<string>89D97F4C05764AEE72536FBA</string>
+				<string>C39CB6886B5EB7B08E7C18D6</string>
+				<string>7C4806F5975B630F8F972EC2</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -120,7 +198,7 @@ fi
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8CCA2AD88BE72EB92ABCA410</key>
+		<key>B0FF24F0A638D577E90244D8</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
@@ -131,7 +209,7 @@ fi
 			<key>isa</key>
 			<string>PBXShellScriptBuildPhase</string>
 			<key>name</key>
-			<string>Embed Pods Frameworks</string>
+			<string>&#128230; Copy Pods Resources</string>
 			<key>outputPaths</key>
 			<array/>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -139,10 +217,45 @@ fi
 			<key>shellPath</key>
 			<string>/bin/sh</string>
 			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion-frameworks.sh"
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests-resources.sh"
 </string>
 			<key>showEnvVarsInLog</key>
 			<string>0</string>
+		</dict>
+		<key>B5CABE8FEC6945AE34F63456</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B86DDCF11CFAF844009B7081</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xml</string>
+			<key>path</key>
+			<string>MESAC-Companion.entitlements</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B8A18F7C1CFAADF90044AA7C</key>
 		<dict>
@@ -152,8 +265,8 @@ fi
 				<string>B8A18F9F1CFAADF90044AA7C</string>
 				<string>B8A18FAA1CFAADF90044AA7C</string>
 				<string>B8A18F861CFAADF90044AA7C</string>
-				<string>F837D235C8AC60857AB7965C</string>
-				<string>78A063E45B7DFA27A65FD333</string>
+				<string>6977C9B9922904BD8B1B1E28</string>
+				<string>AB32CF117C174B9F739B0140</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -178,6 +291,14 @@ fi
 						<string>7.3</string>
 						<key>DevelopmentTeam</key>
 						<string>4EM2VYKJG8</string>
+						<key>SystemCapabilities</key>
+						<dict>
+							<key>com.apple.iCloud</key>
+							<dict>
+								<key>enabled</key>
+								<string>1</string>
+							</dict>
+						</dict>
 					</dict>
 					<key>B8A18F9B1CFAADF90044AA7C</key>
 					<dict>
@@ -202,7 +323,7 @@ fi
 			<key>buildConfigurationList</key>
 			<string>B8A18F801CFAADF90044AA7C</string>
 			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
+			<string>Xcode 6.3</string>
 			<key>developmentRegion</key>
 			<string>English</string>
 			<key>hasScannedForEncodings</key>
@@ -266,7 +387,7 @@ fi
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>E4B3C466C76EA3194D47DA51</string>
+				<string>9A19C89693FD374A5094650C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -294,12 +415,12 @@ fi
 			<string>B8A18FB01CFAADF90044AA7C</string>
 			<key>buildPhases</key>
 			<array>
-				<string>08EB10140BA7027F9126F4BD</string>
+				<string>BE7F48890CA433C28DD6A82F</string>
 				<string>B8A18F811CFAADF90044AA7C</string>
 				<string>B8A18F821CFAADF90044AA7C</string>
 				<string>B8A18F831CFAADF90044AA7C</string>
-				<string>8CCA2AD88BE72EB92ABCA410</string>
-				<string>513B9A1686DAF45202CA46F4</string>
+				<string>191B7509972EAF624E409F7F</string>
+				<string>B5CABE8FEC6945AE34F63456</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -348,6 +469,7 @@ fi
 		<dict>
 			<key>children</key>
 			<array>
+				<string>B86DDCF11CFAF844009B7081</string>
 				<string>B8A18F881CFAADF90044AA7C</string>
 				<string>B8A18F8A1CFAADF90044AA7C</string>
 				<string>B8A18F8C1CFAADF90044AA7C</string>
@@ -547,7 +669,9 @@ fi
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array/>
+			<array>
+				<string>08A0335E6DC0640EC559DB27</string>
+			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -570,9 +694,12 @@ fi
 			<string>B8A18FB31CFAADF90044AA7C</string>
 			<key>buildPhases</key>
 			<array>
+				<string>C39118CD28BFC4D7384C70AD</string>
 				<string>B8A18F981CFAADF90044AA7C</string>
 				<string>B8A18F991CFAADF90044AA7C</string>
 				<string>B8A18F9A1CFAADF90044AA7C</string>
+				<string>306DC66FD715F1E71AEDDF92</string>
+				<string>EA4BD1934AC39A6FEC119767</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -687,7 +814,9 @@ fi
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array/>
+			<array>
+				<string>2B12B0670449F1F2CC7E7826</string>
+			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -710,9 +839,11 @@ fi
 			<string>B8A18FB61CFAADF90044AA7C</string>
 			<key>buildPhases</key>
 			<array>
+				<string>CEAEFA84E0AA5CBC422E9ADE</string>
 				<string>B8A18FA31CFAADF90044AA7C</string>
 				<string>B8A18FA41CFAADF90044AA7C</string>
 				<string>B8A18FA51CFAADF90044AA7C</string>
+				<string>B0FF24F0A638D577E90244D8</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -977,17 +1108,21 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
 		<key>B8A18FB11CFAADF90044AA7C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>64A174DCCB749FDC0EACA9CE</string>
+			<string>38204906C46E0B2B252F7BB6</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
 				<string>AppIcon</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string>MESAC-Companion/MESAC-Companion.entitlements</string>
 				<key>CODE_SIGN_IDENTITY</key>
 				<string>iPhone Developer</string>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -997,7 +1132,7 @@ fi
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks</string>
 				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.philipposslicher.MESAC-Companion</string>
+				<string>com.philipposslicher.MESAC-Test</string>
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
 				<key>PROVISIONING_PROFILE</key>
@@ -1011,11 +1146,13 @@ fi
 		<key>B8A18FB21CFAADF90044AA7C</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>60366FD330B61EE7F6F80992</string>
+			<string>502DDA0DDF845AEFA8E656CA</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
 				<string>AppIcon</string>
+				<key>CODE_SIGN_ENTITLEMENTS</key>
+				<string>MESAC-Companion/MESAC-Companion.entitlements</string>
 				<key>CODE_SIGN_IDENTITY</key>
 				<string>iPhone Developer</string>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1025,7 +1162,7 @@ fi
 				<key>LD_RUNPATH_SEARCH_PATHS</key>
 				<string>$(inherited) @executable_path/Frameworks</string>
 				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>com.philipposslicher.MESAC-Companion</string>
+				<string>com.philipposslicher.MESAC-Test</string>
 				<key>PRODUCT_NAME</key>
 				<string>$(TARGET_NAME)</string>
 				<key>PROVISIONING_PROFILE</key>
@@ -1045,11 +1182,15 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
 		<key>B8A18FB41CFAADF90044AA7C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>FD59BCDBD95293DEE3D4C100</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -1072,6 +1213,8 @@ fi
 		</dict>
 		<key>B8A18FB51CFAADF90044AA7C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>FC8AF74C665B1921E26C9230</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>BUNDLE_LOADER</key>
@@ -1101,11 +1244,15 @@ fi
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
 		<key>B8A18FB71CFAADF90044AA7C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A74C35ADC3C1B1FC3D68B0C2</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>INFOPLIST_FILE</key>
@@ -1126,6 +1273,8 @@ fi
 		</dict>
 		<key>B8A18FB81CFAADF90044AA7C</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>5D97A20E679F74F7DA3BF7A0</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>INFOPLIST_FILE</key>
@@ -1144,24 +1293,160 @@ fi
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>E4B3C466C76EA3194D47DA51</key>
+		<key>BE7F48890CA433C28DD6A82F</key>
 		<dict>
-			<key>fileRef</key>
-			<string>7344A773E79B5AEC3EE8C359</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F837D235C8AC60857AB7965C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>64A174DCCB749FDC0EACA9CE</string>
-				<string>60366FD330B61EE7F6F80992</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXShellScriptBuildPhase</string>
 			<key>name</key>
-			<string>Pods</string>
+			<string>&#128230; Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>C39118CD28BFC4D7384C70AD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>C39CB6886B5EB7B08E7C18D6</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_MESAC_CompanionTests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>CEAEFA84E0AA5CBC422E9ADE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>EA4BD1934AC39A6FEC119767</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>FC8AF74C665B1921E26C9230</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-MESAC-CompanionTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FD59BCDBD95293DEE3D4C100</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-MESAC-CompanionTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

@@ -1,0 +1,6 @@
+framework module Pods_MESAC_CompanionUITests {
+  umbrella header "Pods-MESAC-CompanionUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
