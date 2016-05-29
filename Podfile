@@ -3,7 +3,7 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'MESAC' do
+target 'MESAC-Companion’ do
 
 pod 'Firebase', '>= 2.5.1'
 pod 'MaterialControls', '~> 1.0.2'
@@ -11,11 +11,11 @@ pod 'MaterialControls', '~> 1.0.2'
 
 end
 
-target 'MESAC CompanionTests' do
+target 'MESAC-CompanionTests' do
 
 end
 
-target 'MESAC CompanionUITests' do
+target 'MESAC-CompanionUITests' do
 
 end
 
