@@ -1,15 +1,18 @@
 PODS:
   - Firebase (2.5.1)
   - MaterialControls (1.0.2)
+  - SwiftPaginator (1.0.0)
 
 DEPENDENCIES:
   - Firebase (>= 2.5.1)
   - MaterialControls (~> 1.0.2)
+  - SwiftPaginator
 
 SPEC CHECKSUMS:
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
   MaterialControls: bdeeb94aa049b73f70739a5514be137d2d45c08a
+  SwiftPaginator: aafe9d5b053be5d847ecf86cbcdb774c736e1a82
 
-PODFILE CHECKSUM: d5e5ac93ecda057e5980505a54449ef7626cb1e7
+PODFILE CHECKSUM: 7490ba630a32ca62c86db8906c6d5f99c7dc93e8
 
 COCOAPODS: 1.0.0

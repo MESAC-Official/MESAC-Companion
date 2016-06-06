@@ -7,6 +7,7 @@ target 'MESAC-Companion’ do
 
 pod 'Firebase', '>= 2.5.1'
 pod 'MaterialControls', '~> 1.0.2'
+pod 'SwiftPaginator'
 
 
 end

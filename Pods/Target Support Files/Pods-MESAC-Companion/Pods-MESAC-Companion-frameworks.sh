@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Firebase/Firebase.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MaterialControls/MaterialControls.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftPaginator/SwiftPaginator.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Firebase/Firebase.framework"
   install_framework "$BUILT_PRODUCTS_DIR/MaterialControls/MaterialControls.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftPaginator/SwiftPaginator.framework"
 fi

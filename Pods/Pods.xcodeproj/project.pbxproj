@@ -23,10 +23,25 @@
 			<key>remoteInfo</key>
 			<string>MaterialControls-MaterialControls</string>
 		</dict>
+		<key>007CA07B32B61455BB11C5E11E8F8722</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDSliderTickMarksView.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Slider/MDSliderTickMarksView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>012A7E018F3D34F159894EBD7EACACF9</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B0FEF7C65C53747B09379956AE4F0D9C</string>
+			<string>4FB0DE262014FE2F58C7AFB7F4CEAA55</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -43,7 +58,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>02D14B5BFA0489617C64D19C00B55A06</key>
+		<key>01FD7E2E5CAACD656F783432645CDFBD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDSliderThumbView.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Slider/MDSliderThumbView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>032E67AC50060A20E945B1491207FB05</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -52,7 +82,7 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>MaterialControls-umbrella.h</string>
+			<string>FDataSnapshot.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -69,10 +99,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>03D77CBDCE9AA212DED9870DDE595895</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>AutoResizeTextView.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/AutoResizeTextView.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>040C70A955B919B72F35738FEBEE8118</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3A9C2183E3364FB2FF67F436BACFDFAE</string>
+			<string>05C18BB117BB72FECB2AE8DCEF65B1B6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -96,6 +141,51 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
+		</dict>
+		<key>05C18BB117BB72FECB2AE8DCEF65B1B6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDProgressLayer.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Progress/MDProgressLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>062319CD0E3C1D3BE4C85DBCA73E4D7F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIColorHelper.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Helpers/UIColorHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>07F103152E7DCBBCD43B8065AA2B0D2A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDTextField.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDTextField.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>07F7FA5B759632B21DE4AB1BD19DD27D</key>
 		<dict>
@@ -168,14 +258,14 @@
 		<key>080C78DA7FB39DE86914079A441B998B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9F7A7E66ED6DA264153E4D9C4BFF2095</string>
+			<string>08666614B63A0AD890B48B071514CD19</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>083C4DA679B5F61C7BB51247B0C04AE4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>83C20CD180C28FC2438D82E244419031</string>
+			<string>5CDAA823DDBD1E218EB497A0F8E4FF8A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -186,47 +276,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>08F5351C28394EB99FAC14EF6B9D1BA7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FQuery.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0A30CA25B5968421391C60C34A4C5D2A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FEventType.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0A40F691F07DB8B41EC59FE345E95EBE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>ECDC9E5B32E3D3E1ADD7926D826982B2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>0B59D91B280A6BA74F68AEDB9E4F3755</key>
+		<key>08666614B63A0AD890B48B071514CD19</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -235,9 +285,38 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDTabBarViewController.m</string>
+			<string>MDDeviceHelper.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTabBarViewController.m</string>
+			<string>iOSUILib/iOSUILib/Helpers/MDDeviceHelper.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0A40F691F07DB8B41EC59FE345E95EBE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>829DA5FF5710879E082F79817CDAE48D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>0AEB11CCEE0F9FA09654858E09CDE13B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDConstants.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDConstants.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -254,31 +333,46 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0D8CB62F4D82576D3E358CEC529A5969</key>
+		<key>0C617DB4C86A26BDEEC58D44569CD8F0</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>B0FEF7C65C53747B09379956AE4F0D9C</string>
-				<string>A5BE94DE8365F053D10C40C5B96F485D</string>
-				<string>E9BDD848924AF22F3823F327A22D4672</string>
-				<string>A0AE43800A693C755B3FBB6C38103BA0</string>
-				<string>F5F2D94E3D9384B190A068EAC273B065</string>
-				<string>0A30CA25B5968421391C60C34A4C5D2A</string>
-				<string>ADEB2E8623D73299FBD777082E93D6E2</string>
-				<string>E987D9F3F79C416C3840BF757E5767CD</string>
-				<string>1B9040E646A34B3064ED6560030AE397</string>
-				<string>4FB793B7B6925A31419B01070F5EE8CF</string>
-				<string>08F5351C28394EB99FAC14EF6B9D1BA7</string>
-				<string>4C6417B4B9E4EFA13D9C31081836A224</string>
-				<string>7DFCF56EF717AB18B38113EA5565B84A</string>
-				<string>BC1F802588B48A9E24D2D39E4F82C273</string>
-			</array>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>Firebase</string>
+			<string>MaterialControls.bundle</string>
 			<key>path</key>
-			<string>Firebase</string>
+			<string>MaterialControls.bundle</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>0CC5FEE9E3480ED955989263FC79CBBA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Firebase-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0DDBE076E7010B2B2A9318F8105C78B7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDSlider.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDSlider.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -295,38 +389,36 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>0E059CDC0E9441224CC1AE61F8FF4EFA</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>720EA7C4B6AC4D960C9A08E2261B6B22</string>
-			<key>remoteInfo</key>
-			<string>MaterialControls</string>
-		</dict>
-		<key>0E24088C6DFE38D7FF6EBA9D683D3D1D</key>
+		<key>0FBA4075AA799DBD718830AF960B1C64</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDCircularProgressLayer.m</string>
+			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Progress/MDCircularProgressLayer.m</string>
+			<string>FTransactionResult.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FDB91EBDBAFC5919E3E716DAAB459FA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SwiftPaginator-prefix.pch</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>100F27B16B3A9FF2276476D0345FEA40</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E9202E1CD2429F3371931E19BB96A967</string>
+			<string>476CD223707F073FF91F593ECF1EDF9C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -374,6 +466,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>120BECBFE893FB1D4A258802ED9580D0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Firebase-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>122435C725C9425DD6003A6A4BD33E11</key>
 		<dict>
 			<key>fileRef</key>
@@ -384,11 +489,11 @@
 		<key>12650E64E608E11AAC187B32DA50DE42</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B2532CD650D4E6C4B3CA80AC584FAB97</string>
+			<string>8EB58A88C21348AEACCDA96D921DDFF7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>144B778EE2D5D881812F501238AD5EE6</key>
+		<key>144DE354FF67E26D291889245C038E7D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -397,9 +502,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDDeviceHelper.h</string>
+			<string>NSDate+MDExtension.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/MDDeviceHelper.h</string>
+			<string>iOSUILib/iOSUILib/Calendar/NSDate+MDExtension.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -442,32 +547,35 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>17CFA65B7D5D81B023CB1E5B74360B3F</key>
+		<key>1761B15F98C24D2116DB856FFF66E019</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildConfigurationList</key>
+			<string>84788DA12C665058939E9B39D4F19A47</string>
+			<key>buildPhases</key>
+			<array>
+				<string>190099A928FCF817C2AB452118070945</string>
+				<string>88F9BC116A2DCF7D23AA1E99523AB08E</string>
+				<string>AF772ED21BA2B5A611B1B3C2A398A8BE</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>MDCalendarCell.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>18E0BCAE891E1264B607F5CA39BCE021</key>
-		<dict>
-			<key>fileRef</key>
-			<string>34BBFDFB5F7F76C67192149151D2B67A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>SwiftPaginator</string>
+			<key>productName</key>
+			<string>SwiftPaginator</string>
+			<key>productReference</key>
+			<string>F7ECB2F43BB6E9D29C1B7317B50453BD</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>18FA51BB574F54167A706FA2AA6EB96B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DBC2E81652D16BCEA033070103FF2CEB</string>
+			<string>8A0BCC0A3D06F205DF06C845ACC0C6DD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -477,11 +585,25 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>190099A928FCF817C2AB452118070945</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7262F04732C4E0079B2F1D72FF82B1D2</string>
+				<string>EA2A6F7C21C43864FB97A14DCD7562C5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>191DE2EB9A35585AE0A88BA9F833A1F4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4C6417B4B9E4EFA13D9C31081836A224</string>
+			<string>0FBA4075AA799DBD718830AF960B1C64</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -492,25 +614,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>198268BD7D25D2B8BE16698D86D6024F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDCalendarYearSelectorViewCell.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarYearSelectorViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>1992AA908872A52426C5A0A9AF5F90EC</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>86DC529517FF0053157F40099AC40FD1</string>
+			<string>F10C0B9EA89453C8D29C77F2EF725A9B</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -567,25 +674,25 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>19DB7465035C92062A8930BC3E18DA4D</key>
+		<key>1AD4A49234278CC7A1228A4FE96DE8C2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIColorHelper.h</string>
+			<string>MDTableViewCell.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/UIColorHelper.h</string>
+			<string>iOSUILib/iOSUILib/MDTableViewCell.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1B77427B3CA109B5FE8A06F503B4AF30</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F0D033A80B6E1C210D0A6CA1C3B06C6B</string>
+			<string>6DA1596820E0DD9137272979D99B4163</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -595,19 +702,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>1B9040E646A34B3064ED6560030AE397</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>FirebaseServerValue.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>1C052A86E0844D87B5339F7B74C3B5A4</key>
 		<dict>
@@ -625,7 +719,7 @@
 		<key>1C3EF85CD30E6FF2E51471BD5B3CEB29</key>
 		<dict>
 			<key>fileRef</key>
-			<string>ADEB2E8623D73299FBD777082E93D6E2</string>
+			<string>47B3108C10F2DFA5AA1D928618794E44</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -636,18 +730,18 @@
 				</array>
 			</dict>
 		</dict>
-		<key>1C6267F8A8172B94E90F1F49BFE461B3</key>
+		<key>1CBBCE1DEC4DF790B8E402B6BDB3E40C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDSliderTickMarksView.h</string>
+			<string>MDSnackbar.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Slider/MDSliderTickMarksView.h</string>
+			<string>iOSUILib/iOSUILib/MDSnackbar.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -667,7 +761,7 @@
 		<key>1D925BB011B04DDED982C7946571A67A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E9BDD848924AF22F3823F327A22D4672</string>
+			<string>585CF22D3AF6AA7014084222108C4BFC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -681,7 +775,7 @@
 		<key>1D9D7FF5237C8CC91EF58DC45AC274FB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>45E7A406C9D043D28CD100906BA1AAE0</string>
+			<string>3967026620842085FC4F86062F1638EF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -767,32 +861,17 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>1EEE8AB4BEDC07BFD743BA89E5CE0258</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDConstants.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>1F8B8B894DBC9ECC3EC5E9A84A89B3EE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A0BBAC48DC080E4CEB60F5F1B86F274D</string>
+			<string>6870BF2951C180B3E0066E6CE84426EC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>20B40B3C80E73EA1D12256F4F611727D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B39DDA153FCFEBA16C1F9575CCBF150F</string>
+			<string>53E6F2208FD6EC7423E1D4423BA8A358</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -806,7 +885,7 @@
 		<key>21C1537E6F239B3BD47B8125525E2B00</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1C6267F8A8172B94E90F1F49BFE461B3</string>
+			<string>007CA07B32B61455BB11C5E11E8F8722</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -833,25 +912,29 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2276DACC5B693583829962F6B62C8172</key>
+		<key>22577BBB4071FFF0ADECF1ABADAABE61</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>8DED1E494868FC30B6CF015D05BE7026</string>
+				<string>0C617DB4C86A26BDEEC58D44569CD8F0</string>
+				<string>C5DE4ED6FF08F382BEEC317C98CE3B80</string>
+				<string>F9EA3B08360A8E3261CC89C10F76DC50</string>
+				<string>2F8141B323AA0D3EEF27014FDA6F6B67</string>
+				<string>50CAFC00395FCD64169E6AC31B42FB4C</string>
+				<string>F7ECB2F43BB6E9D29C1B7317B50453BD</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>MDSwitch.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDSwitch.h</string>
+			<string>Products</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>231957ABB4DAFBE0E5C4A1AC1394905F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>699123654A139D014C308CC0287A7D5E</string>
+			<string>B1B8EA3886C242E1F2C7980106A88A77</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -861,21 +944,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>232AF95336FF6A6CB5E274B631F30E00</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDProgressLayer.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Progress/MDProgressLayer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>232B58D9D0E3E3B6FA3AFC4097BCC3DD</key>
 		<dict>
@@ -888,10 +956,108 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>234281ABE60ABA4F7AF010E7D4634BA3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>03D77CBDCE9AA212DED9870DDE595895</string>
+				<string>D0F14EAEFCC220DED3CE699C0349F472</string>
+				<string>476CD223707F073FF91F593ECF1EDF9C</string>
+				<string>CBA521CC063A9F9ACD60E00095385BA7</string>
+				<string>829DA5FF5710879E082F79817CDAE48D</string>
+				<string>47E922B7D8713BA26A461FF33440F253</string>
+				<string>FE89E43986417E1936AC031E987A32FB</string>
+				<string>6870BF2951C180B3E0066E6CE84426EC</string>
+				<string>7E9730B83A4AB9B97F3F5DAB67F13967</string>
+				<string>8EB58A88C21348AEACCDA96D921DDFF7</string>
+				<string>44157920A2918ADD936F1CEB7EBF3F9E</string>
+				<string>5965CF9B74638D56C490FD97061B4C82</string>
+				<string>EB80614C74310582CC563EC26330CBFD</string>
+				<string>55CEE783635CB1B31E70A8133E5E07E4</string>
+				<string>5DB9400DBB5BB17D0376966FFB8FE79F</string>
+				<string>4F668078A66E09648E5553A006290FCC</string>
+				<string>53B3A67BB22A6386EEE254355A7FCF02</string>
+				<string>A4E6D3A0C229D9CFDBF16ACEA7464F33</string>
+				<string>71C28309AD3585DF705E667F9166CCB8</string>
+				<string>EB2C61CD47DB1277DB6EC75E3441979F</string>
+				<string>D3894106D9BC71CF57378027929B2548</string>
+				<string>63CCE99D789AE58EC5185950E58174B7</string>
+				<string>0AEB11CCEE0F9FA09654858E09CDE13B</string>
+				<string>E08A9FAFB6873DC0CAD4C42AA1FCEED4</string>
+				<string>C5538188947DC643C456F4B28BFF6C2D</string>
+				<string>D51FABE9E85BE48057CA29FA0C456F44</string>
+				<string>49D395062BDDDEA9A5E620D7FC4AA3EA</string>
+				<string>6EC442C6265128933D40F2EC03D8090A</string>
+				<string>08666614B63A0AD890B48B071514CD19</string>
+				<string>8275CE4449E85C4BA9FAB9977F74BE9A</string>
+				<string>3E1E8DA977FF91519C355B8EB5131E5C</string>
+				<string>B739DE29BEFA6BD7BDD58566D7FBC353</string>
+				<string>DA18F39C48F647B9B332DBD079DAED19</string>
+				<string>B1B8EA3886C242E1F2C7980106A88A77</string>
+				<string>7F1FB9A41880DFD7EC5F46B6954BDAD3</string>
+				<string>05C18BB117BB72FECB2AE8DCEF65B1B6</string>
+				<string>627C9426F9AC19C4B9720C741C5F295F</string>
+				<string>5D72ACBE8196C4B544B77BA81BB7C3BD</string>
+				<string>5D04C74411C621389DAE89545F17CD0C</string>
+				<string>575AB519E39507B6ED92FC9F9688CE1F</string>
+				<string>0DDBE076E7010B2B2A9318F8105C78B7</string>
+				<string>FE3ACF49110E4C4B2757D00D2CB562F8</string>
+				<string>7C8B4BDB6497913480160738ACD6A1CA</string>
+				<string>F39CEF5C7460739930F7E1BC78722A57</string>
+				<string>01FD7E2E5CAACD656F783432645CDFBD</string>
+				<string>007CA07B32B61455BB11C5E11E8F8722</string>
+				<string>9CAB925F39F9E685F7F5F45BCF33F891</string>
+				<string>53E6F2208FD6EC7423E1D4423BA8A358</string>
+				<string>1CBBCE1DEC4DF790B8E402B6BDB3E40C</string>
+				<string>A0AFF86DEE9817065CB9641DB0F24A27</string>
+				<string>E0C0501E3DE56B8C0B3656A3FEEABD28</string>
+				<string>3EEBEC4F02BADB6FDE46B045F815CFA1</string>
+				<string>658D88418269381EA6F4EF4D012A57ED</string>
+				<string>C40CB24F6D207C4D6C4C7F7023C9568C</string>
+				<string>BFD3B7B440CC77E15278E49B3ADAC06A</string>
+				<string>8A0BCC0A3D06F205DF06C845ACC0C6DD</string>
+				<string>D98BADFB8814411211D370339E503B83</string>
+				<string>C2B641DCA7F078AB08F807ABC4E2C1B8</string>
+				<string>40D77DA0F6F183742F83A248970CD530</string>
+				<string>40BC8DC26BE0BBD485E1900D18EE1EAD</string>
+				<string>1AD4A49234278CC7A1228A4FE96DE8C2</string>
+				<string>07F103152E7DCBBCD43B8065AA2B0D2A</string>
+				<string>A30C9AA5A53190BF3C656225C63A9AE9</string>
+				<string>924897AA52DE6A6B54A483F0ADD0DB7F</string>
+				<string>56D4085B9BB57F08CC2F509164E02F64</string>
+				<string>98C4858093155B939C8DBEC3B028E207</string>
+				<string>A1CDD71186F77A71E39259FB20816BFA</string>
+				<string>89DBFB5C16927F385722F858D3C0ED38</string>
+				<string>846A73C9B7509DE3675C39A7316D7FEB</string>
+				<string>6DA1596820E0DD9137272979D99B4163</string>
+				<string>4E47FC574E4910C404F7542509D9B0AB</string>
+				<string>144DE354FF67E26D291889245C038E7D</string>
+				<string>A001618E8EB56D730124C3100FC99FB2</string>
+				<string>CF86A64C3E59B149EB067F08D943EE18</string>
+				<string>8F8AA400406AB68DA416F4F238D71A2D</string>
+				<string>062319CD0E3C1D3BE4C85DBCA73E4D7F</string>
+				<string>9761B5F61BE5673C26981FA60A66D16A</string>
+				<string>5CDAA823DDBD1E218EB497A0F8E4FF8A</string>
+				<string>45484E10CE9A8922A45D09290F9D44EB</string>
+				<string>903A926D7F9050FD761092A60C969023</string>
+				<string>25037792450127253532E3DBC0DC33C0</string>
+				<string>8A53EFF5D9EFA14ED6250A901E363FED</string>
+				<string>FBF98F82E7059784D1D990F8794DA970</string>
+				<string>A052B81C9E80832BC203C8436AAE0A3B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MaterialControls</string>
+			<key>path</key>
+			<string>MaterialControls</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>235985C80CABAE4CFBE97BA0F52C026B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C4B948A3396C3631FBDB5B2ED7F966AF</string>
+			<string>40BC8DC26BE0BBD485E1900D18EE1EAD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -905,7 +1071,7 @@
 		<key>239B10F388840841389B7F09648735B1</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0A30CA25B5968421391C60C34A4C5D2A</string>
+			<string>F6432FC3EFD8F14022C627DC66EFCF5E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -916,6 +1082,17 @@
 				</array>
 			</dict>
 		</dict>
+		<key>23C0BFBB0818E53A43C33F9262674814</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>MaterialControls.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>246B7816ED5F153BCCCEDBF2A2FF69C9</key>
 		<dict>
 			<key>fileRef</key>
@@ -923,10 +1100,25 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>25037792450127253532E3DBC0DC33C0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIView+MDExtension.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/UIView+MDExtension.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>254D05EF67AA8872A3FD8B23FDBB6A8B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CCF247F7E58F1C8DF2214B23E3F5568D</string>
+			<string>4F668078A66E09648E5553A006290FCC</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -943,25 +1135,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>280E4F4697AFCD4B4D825C3B00AFD588</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIView+MDExtension.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/UIView+MDExtension.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>296BC735EA4ACD2C218E6BB1DC960108</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>86DC529517FF0053157F40099AC40FD1</string>
+			<string>F10C0B9EA89453C8D29C77F2EF725A9B</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CONFIGURATION_BUILD_DIR</key>
@@ -1044,33 +1221,14 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>29E93C5D09F6E05C0FB3B17A04B99C70</key>
+		<key>2A70A849CFCBD376CA0C6CB151ED5A93</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDSliderIcon.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Slider/MDSliderIcon.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>29F0D03FAD93126D696C3023A7558171</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDTabBar.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTabBar.m</string>
+			<string>SwiftPaginator.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1087,7 +1245,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>2B0CE35F39623145B7436B784D058FCC</key>
+		<key>2B319094C6366530BBE45BA23F89B3A2</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SwiftPaginator</string>
+			<key>target</key>
+			<string>1761B15F98C24D2116DB856FFF66E019</string>
+			<key>targetProxy</key>
+			<string>869B4E74F88C2238249A77CCCB5E04E8</string>
+		</dict>
+		<key>2C041090682AA8C2FEADA2C61ABA66FD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1095,62 +1264,15 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSDate+MDExtension.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/NSDate+MDExtension.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2B299475F9993A99434EF4AF1FAB71E4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDTextField.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTextField.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2C007070DCF485831C0F055EFBB4B18E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDTimePickerDialog.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDTimePickerDialog.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2C10FFD592DB4E294E8AD06224D11A90</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDSliderIcon.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Slider/MDSliderIcon.m</string>
+			<string>SwiftPaginator-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2D07FBF7D6AE69F7117B155BAB41480B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>198268BD7D25D2B8BE16698D86D6024F</string>
+			<string>A4E6D3A0C229D9CFDBF16ACEA7464F33</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1171,21 +1293,21 @@
 		<key>2E4BFDF4706585C0E7AF1010D427799C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BD88C450F06EBE25B48784A9645276B4</string>
+			<string>56D4085B9BB57F08CC2F509164E02F64</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>2EC7EA96D6184A1409662791F67B2728</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EE941C33D07C58805930475CEB7AA588</string>
+			<string>5965CF9B74638D56C490FD97061B4C82</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>2F052065454CA8DBE1710EA32A8D3613</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B276D0600F5A8E3469FF4374F2AFF2D6</string>
+			<string>8275CE4449E85C4BA9FAB9977F74BE9A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1199,7 +1321,7 @@
 		<key>2F1496011DBBB75777645194AAAFE92D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E987D9F3F79C416C3840BF757E5767CD</string>
+			<string>E88BE1B6226FE323BA14258D513473C0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1220,6 +1342,21 @@
 			<string>35BE2C57761A4F7C56157A08242645EC</string>
 			<key>targetProxy</key>
 			<string>0077457584F081003B297987CA4CD0E0</string>
+		</dict>
+		<key>2F8141B323AA0D3EEF27014FDA6F6B67</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_MESAC_CompanionTests.framework</string>
+			<key>path</key>
+			<string>Pods-MESAC-CompanionTests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>2FDCAAB615C287D16BF7F1F2AA978246</key>
 		<dict>
@@ -1248,18 +1385,18 @@
 		<key>306639CB001924CD2D51AAF6F902F0B5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>CB1AAB5D1B80618F581B189177FC85EA</string>
+			<string>4E47FC574E4910C404F7542509D9B0AB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>3184931F169C96311711FD03F16547E8</key>
 		<dict>
 			<key>fileRef</key>
-			<string>59BBD4017BA1B44327DBEA63EC5383BC</string>
+			<string>FBF98F82E7059784D1D990F8794DA970</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>31F731BA6B4457A7FE76D0315DB118BA</key>
+		<key>320ADD58E6FAB87F05AB029AC6056D18</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1267,28 +1404,8 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDToast.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDToast.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>326F9F7B99D5EA42A1841AA61A32A555</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3B5AA0236A489A619C12161A901AFA0D</string>
-				<string>374E8D969F405BE633D265201A6EAB15</string>
-				<string>FCC98156AE5A060566AB0B8348099B57</string>
-				<string>9A77A3DDB212603B166B20E16EF83820</string>
-				<string>49AD4516FDC0EB2C49A6D27EC18EA7EB</string>
-				<string>DFC80A3B30E0376A19E8EAC0676627D6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
+			<string>FQuery.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1318,20 +1435,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>3459488A3B0A0A0BED2DB293D45D4DA0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>0D8CB62F4D82576D3E358CEC529A5969</string>
-				<string>4861076352EF04433085D01B0461D5E4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>34BBFDFB5F7F76C67192149151D2B67A</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1348,7 +1451,7 @@
 		<key>34C7E28CA0728EE95EB215BA6F3654ED</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E69EDAEE2506AA05E60F47FC3D10BBEB</string>
+			<string>903A926D7F9050FD761092A60C969023</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1359,16 +1462,16 @@
 				</array>
 			</dict>
 		</dict>
-		<key>34C8600875625BB8D243D52E43F51945</key>
+		<key>35166D9606F0823B61ABE171BB0D38EF</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>Info.plist</string>
+			<string>MaterialControls-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1393,11 +1496,73 @@
 			<key>productName</key>
 			<string>MaterialControls-MaterialControls</string>
 			<key>productReference</key>
-			<string>374E8D969F405BE633D265201A6EAB15</string>
+			<string>0C617DB4C86A26BDEEC58D44569CD8F0</string>
 			<key>productType</key>
 			<string>com.apple.product-type.bundle</string>
 		</dict>
-		<key>363C7F57BB2B1DC993B9F99CA066965A</key>
+		<key>36637CAA44F5AC84DE8E44D12CCCA94C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C2B641DCA7F078AB08F807ABC4E2C1B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>3967026620842085FC4F86062F1638EF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Firebase-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3AC1CBAEC4D0167C1F54201A17128929</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FirebaseServerValue.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CF4D50C99DB9EDC1EC59ED72CE85EC1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BFD3B7B440CC77E15278E49B3ADAC06A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3E1E8DA977FF91519C355B8EB5131E5C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDLinearProgressLayer.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Progress/MDLinearProgressLayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3EEBEC4F02BADB6FDE46B045F815CFA1</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1409,170 +1574,6 @@
 			<string>MDSuggestTableView.h</string>
 			<key>path</key>
 			<string>iOSUILib/iOSUILib/SuggestPopup/MDSuggestTableView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>36637CAA44F5AC84DE8E44D12CCCA94C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>47C1033690543575D93F494B723CC592</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>374E8D969F405BE633D265201A6EAB15</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MaterialControls.bundle</string>
-			<key>path</key>
-			<string>MaterialControls.bundle</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3A9C2183E3364FB2FF67F436BACFDFAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDProgressLayer.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Progress/MDProgressLayer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3B2D3BF163735008E8307D345D1AF623</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1CE5808AA3DDB4B334FAECC6FD0B7072</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-MESAC-Companion/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_MESAC_Companion</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>3B5AA0236A489A619C12161A901AFA0D</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Firebase.framework</string>
-			<key>path</key>
-			<string>Firebase.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>3B9FC817CCC064951EC9BA3EA9B96260</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDCalendarYearSelectorViewCell.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarYearSelectorViewCell.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CF4D50C99DB9EDC1EC59ED72CE85EC1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>AA6DD8E0FA68905EECDAB1DA02F4B054</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3E13F9EBCFC2963445E7A83EC55D8094</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDCalendarHeader.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarHeader.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1647,7 +1648,7 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>3FCE655471A6A48F76BD6674C8C776C7</key>
+		<key>40BC8DC26BE0BBD485E1900D18EE1EAD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1656,59 +1657,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDCalendar.h</string>
+			<string>MDTableViewCell.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendar.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3FF070A4F859C795EEAAB6C0C5739FBE</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B7AC9326D819482593FE118E915409D7</string>
-			<key>remoteInfo</key>
-			<string>Firebase</string>
-		</dict>
-		<key>40133B47F721F19A6FEA42B61A2F3244</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDSnackbar.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDSnackbar.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4035F63EA7DF5382F906340D567CA83F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDMathHelper.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/MDMathHelper.m</string>
+			<string>iOSUILib/iOSUILib/MDTableViewCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>40CCF60D83D09083DC28D1005DDA9AE3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2C007070DCF485831C0F055EFBB4B18E</string>
+			<string>924897AA52DE6A6B54A483F0ADD0DB7F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1719,27 +1677,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>42FA0DB7E680918CAB9F01BE2C242AB9</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5B755D962C558C4D289145AA02A0624A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>434619CBC0C8EB081D814A7400E26646</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Firebase-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>45E7A406C9D043D28CD100906BA1AAE0</key>
+		<key>40D77DA0F6F183742F83A248970CD530</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1747,15 +1685,54 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDTabBarViewController.m</string>
 			<key>path</key>
-			<string>Firebase-dummy.m</string>
+			<string>iOSUILib/iOSUILib/MDTabBarViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>42FA0DB7E680918CAB9F01BE2C242AB9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0DDBE076E7010B2B2A9318F8105C78B7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>44157920A2918ADD936F1CEB7EBF3F9E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDCalendarDateHeader.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarDateHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>45484E10CE9A8922A45D09290F9D44EB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIFontHelper.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Helpers/UIFontHelper.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>46880D3789E6320887C18301584BB8CA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C0FEC9E059621AF91D5A63A857E5BCC5</string>
+			<string>1AD4A49234278CC7A1228A4FE96DE8C2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1773,14 +1750,29 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>46FF93B333A11190B2DC5D3E3D5A9E09</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SwiftPaginator.swift</string>
+			<key>path</key>
+			<string>SwiftPaginator/SwiftPaginator.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>4747ED9D78B51A73AEE0D13182447B34</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0E24088C6DFE38D7FF6EBA9D683D3D1D</string>
+			<string>EB2C61CD47DB1277DB6EC75E3441979F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>47C1033690543575D93F494B723CC592</key>
+		<key>476CD223707F073FF91F593ECF1EDF9C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1789,146 +1781,46 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDTabBarViewController.h</string>
+			<string>MDBubbleLabel.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTabBarViewController.h</string>
+			<string>iOSUILib/iOSUILib/Slider/MDBubbleLabel.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>47B3108C10F2DFA5AA1D928618794E44</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Firebase.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>47C5375C7D87E451FF4FBDFBD1FB46CC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C04498B9CF2FDB129F668D67435C3A19</string>
+			<string>35166D9606F0823B61ABE171BB0D38EF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>47F155CF6E08DD1139463868D941AE27</key>
+		<key>47E922B7D8713BA26A461FF33440F253</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDDatePicker.h</string>
+			<string>MDButton.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDDatePicker.h</string>
+			<string>iOSUILib/iOSUILib/MDButton.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4861076352EF04433085D01B0461D5E4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>6EAF200F19A934A1F6BA5124D526AAD7</string>
-				<string>F9B46A178F2D71FBB82E8CB4877A25D4</string>
-				<string>E9202E1CD2429F3371931E19BB96A967</string>
-				<string>B0ECD56DDB95BE55A28ECF35C5419788</string>
-				<string>ECDC9E5B32E3D3E1ADD7926D826982B2</string>
-				<string>FF4DF765AAD51C1591A564662B23E374</string>
-				<string>3FCE655471A6A48F76BD6674C8C776C7</string>
-				<string>A0BBAC48DC080E4CEB60F5F1B86F274D</string>
-				<string>17CFA65B7D5D81B023CB1E5B74360B3F</string>
-				<string>B2532CD650D4E6C4B3CA80AC584FAB97</string>
-				<string>7626C0E8D3C43A65F2C97FE5D1CAE3E8</string>
-				<string>EE941C33D07C58805930475CEB7AA588</string>
-				<string>EE2CE7E492FAC3E58876D53561BD47E3</string>
-				<string>3E13F9EBCFC2963445E7A83EC55D8094</string>
-				<string>8836881E5E4DC24297D0E409770BBA0D</string>
-				<string>CCF247F7E58F1C8DF2214B23E3F5568D</string>
-				<string>3B9FC817CCC064951EC9BA3EA9B96260</string>
-				<string>198268BD7D25D2B8BE16698D86D6024F</string>
-				<string>6181B22E54D57079B94D0CA13443BF8E</string>
-				<string>0E24088C6DFE38D7FF6EBA9D683D3D1D</string>
-				<string>A2498B679EDF7DD28AF12F9B6C98F490</string>
-				<string>C8151805641263F5C01592A1160472C4</string>
-				<string>1EEE8AB4BEDC07BFD743BA89E5CE0258</string>
-				<string>47F155CF6E08DD1139463868D941AE27</string>
-				<string>B96BB0F527D1EB3D503BE709DF14247C</string>
-				<string>DD15BF859D79448BEABFFCF0321E0DBF</string>
-				<string>D8F984C9E50460932A1EB687159A76A8</string>
-				<string>144B778EE2D5D881812F501238AD5EE6</string>
-				<string>9F7A7E66ED6DA264153E4D9C4BFF2095</string>
-				<string>B276D0600F5A8E3469FF4374F2AFF2D6</string>
-				<string>B1219350C890B62AFAB49A88B90C79A3</string>
-				<string>9A20A198151BB9F495706F43AFBB9CFB</string>
-				<string>4035F63EA7DF5382F906340D567CA83F</string>
-				<string>699123654A139D014C308CC0287A7D5E</string>
-				<string>BDF5468ADB300577CBBE7DFA6F537300</string>
-				<string>3A9C2183E3364FB2FF67F436BACFDFAE</string>
-				<string>232AF95336FF6A6CB5E274B631F30E00</string>
-				<string>BA80798A47B151CD11A1560D77E8CE28</string>
-				<string>8D68BE7F1F7EDEC205FB19C26BA0585D</string>
-				<string>4DFAE5644556E978D9AE6B5E9A1722AC</string>
-				<string>5B755D962C558C4D289145AA02A0624A</string>
-				<string>29E93C5D09F6E05C0FB3B17A04B99C70</string>
-				<string>2C10FFD592DB4E294E8AD06224D11A90</string>
-				<string>6FD1000DD0C64EAA0295D5791358155F</string>
-				<string>81785B2DA24571834DE2B34A4C374E0F</string>
-				<string>1C6267F8A8172B94E90F1F49BFE461B3</string>
-				<string>F5E41B6E1762CF27AB9173ABC13AC052</string>
-				<string>B39DDA153FCFEBA16C1F9575CCBF150F</string>
-				<string>40133B47F721F19A6FEA42B61A2F3244</string>
-				<string>542A8CBE2533B9FCB74DBD6FE540483A</string>
-				<string>7C26A78D8CC512F6E7BA74BC7BB5BD86</string>
-				<string>363C7F57BB2B1DC993B9F99CA066965A</string>
-				<string>DBBB3A2AB9FD52729877364AC225FB67</string>
-				<string>2276DACC5B693583829962F6B62C8172</string>
-				<string>AA6DD8E0FA68905EECDAB1DA02F4B054</string>
-				<string>DBC2E81652D16BCEA033070103FF2CEB</string>
-				<string>29F0D03FAD93126D696C3023A7558171</string>
-				<string>47C1033690543575D93F494B723CC592</string>
-				<string>0B59D91B280A6BA74F68AEDB9E4F3755</string>
-				<string>C4B948A3396C3631FBDB5B2ED7F966AF</string>
-				<string>C0FEC9E059621AF91D5A63A857E5BCC5</string>
-				<string>2B299475F9993A99434EF4AF1FAB71E4</string>
-				<string>DFC4D330B7ADD063E9A05DA3ED677B7E</string>
-				<string>2C007070DCF485831C0F055EFBB4B18E</string>
-				<string>BD88C450F06EBE25B48784A9645276B4</string>
-				<string>31F731BA6B4457A7FE76D0315DB118BA</string>
-				<string>860FBD7091663F4801EC71A4BFE9D580</string>
-				<string>C0012D3944AEBE1C17397BC3D434F3DC</string>
-				<string>EC69AE20A7120A0A9CC253EC7645F0C2</string>
-				<string>F0D033A80B6E1C210D0A6CA1C3B06C6B</string>
-				<string>CB1AAB5D1B80618F581B189177FC85EA</string>
-				<string>97046CA89931D7FAAA45082F1AEF6272</string>
-				<string>2B0CE35F39623145B7436B784D058FCC</string>
-				<string>DB2CA4778FF83739258309DE1753C409</string>
-				<string>9E20726F0BF930ADF8EEE4BC1F224D5D</string>
-				<string>19DB7465035C92062A8930BC3E18DA4D</string>
-				<string>68CA72EB9CC3B775EF32CAEE93D6A348</string>
-				<string>83C20CD180C28FC2438D82E244419031</string>
-				<string>DE7F3A0574E1157D923A79296B58DEC3</string>
-				<string>E69EDAEE2506AA05E60F47FC3D10BBEB</string>
-				<string>280E4F4697AFCD4B4D825C3B00AFD588</string>
-				<string>D5E9DAFBEF9DFA20C171FB9032C8E44A</string>
-				<string>59BBD4017BA1B44327DBEA63EC5383BC</string>
-				<string>E85CF06ECED792378084EC79B7106E29</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>MaterialControls</string>
-			<key>path</key>
-			<string>MaterialControls</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49AD4516FDC0EB2C49A6D27EC18EA7EB</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_MESAC_CompanionTests.framework</string>
-			<key>path</key>
-			<string>Pods-MESAC-CompanionTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>49B346C14D532324DCD14D0FA1347BC6</key>
 		<dict>
@@ -1944,86 +1836,34 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>4A150B447555A94CB5667A214C37D467</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>57356DC647F751EAD3430527C801B3CD</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-MESAC-Companion/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_MESAC_Companion</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>4C6417B4B9E4EFA13D9C31081836A224</key>
+		<key>49D395062BDDDEA9A5E620D7FC4AA3EA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDDatePickerDialog.m</string>
 			<key>path</key>
-			<string>FTransactionResult.h</string>
+			<string>iOSUILib/iOSUILib/Calendar/MDDatePickerDialog.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4AD9FBAAD50E89B4899BB7066B708B74</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>9A699CBE25EDCE2CE4FB96CE27E13E39</string>
+				<string>C8E6D89AC87541978D52B6239CB14742</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>4C9A1AB2CF7B6D9E0BD6ACE926F41CAB</key>
 		<dict>
@@ -2037,17 +1877,6 @@
 			<string>PBXHeadersBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-		</dict>
-		<key>4CAE25468B9D22F22E92F30D53344DFB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>MaterialControls.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>4CFA98AA243C1873D6703C4F6A667E33</key>
 		<dict>
@@ -2063,7 +1892,7 @@
 		<key>4D75CF0089B20355B17A851513C4A002</key>
 		<dict>
 			<key>fileRef</key>
-			<string>08F5351C28394EB99FAC14EF6B9D1BA7</string>
+			<string>320ADD58E6FAB87F05AB029AC6056D18</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2074,51 +1903,70 @@
 				</array>
 			</dict>
 		</dict>
-		<key>4DAB0CAC57E968844264DCD9A2DD0F36</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Firebase.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4DFAE5644556E978D9AE6B5E9A1722AC</key>
+		<key>4E47FC574E4910C404F7542509D9B0AB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDSlider.h</string>
+			<string>NSCalendarHelper.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDSlider.h</string>
+			<string>iOSUILib/iOSUILib/Calendar/NSCalendarHelper.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>4FB793B7B6925A31419B01070F5EE8CF</key>
+		<key>4F668078A66E09648E5553A006290FCC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDCalendarYearSelector.m</string>
 			<key>path</key>
-			<string>FMutableData.h</string>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarYearSelector.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4FB0DE262014FE2F58C7AFB7F4CEAA55</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Empty.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5089FFAD9922F5AE2310AEF0079480BD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>81785B2DA24571834DE2B34A4C374E0F</string>
+			<string>01FD7E2E5CAACD656F783432645CDFBD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>50CAFC00395FCD64169E6AC31B42FB4C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_MESAC_CompanionUITests.framework</string>
+			<key>path</key>
+			<string>Pods-MESAC-CompanionUITests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>52B5EF41A0C4DA71CBD032362B324BF7</key>
 		<dict>
@@ -2127,7 +1975,7 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>542A8CBE2533B9FCB74DBD6FE540483A</key>
+		<key>53B3A67BB22A6386EEE254355A7FCF02</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2136,29 +1984,31 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDSuggestPopupView.h</string>
+			<string>MDCalendarYearSelectorViewCell.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/SuggestPopup/MDSuggestPopupView.h</string>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarYearSelectorViewCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>550E407E60FDE242355871019465E7A3</key>
+		<key>53E6F2208FD6EC7423E1D4423BA8A358</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>AE313FED520295D2096E33E9D0697D30</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDSnackbar.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDSnackbar.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>55326D14609E22A4737DD4C2EC629756</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6EAF200F19A934A1F6BA5124D526AAD7</string>
+			<string>03D77CBDCE9AA212DED9870DDE595895</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2169,24 +2019,53 @@
 				</array>
 			</dict>
 		</dict>
-		<key>5617B953A3773F39D9952EF0D6C8C379</key>
+		<key>55CEE783635CB1B31E70A8133E5E07E4</key>
 		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>4A150B447555A94CB5667A214C37D467</string>
-				<string>3B2D3BF163735008E8307D345D1AF623</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>XCConfigurationList</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDCalendarHeader.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarHeader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>56A3F54C623C4FC615C80157D07D43AA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FConfig.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>56D4085B9BB57F08CC2F509164E02F64</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDTimePickerDialog.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDTimePickerDialog.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5717C47F636E8347B35F946C94FBF488</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9E20726F0BF930ADF8EEE4BC1F224D5D</string>
+			<string>8F8AA400406AB68DA416F4F238D71A2D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2203,7 +2082,35 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>59BBD4017BA1B44327DBEA63EC5383BC</key>
+		<key>575AB519E39507B6ED92FC9F9688CE1F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDSlider.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDSlider.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>585CF22D3AF6AA7014084222108C4BFC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FAuthType.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5965CF9B74638D56C490FD97061B4C82</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2212,9 +2119,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIViewHelper.m</string>
+			<string>MDCalendarDateHeader.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/UIViewHelper.m</string>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarDateHeader.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2289,7 +2196,7 @@
 		<key>59E70CB1D01E0610B0B96F14D8901ED0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DE7F3A0574E1157D923A79296B58DEC3</string>
+			<string>45484E10CE9A8922A45D09290F9D44EB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2309,11 +2216,26 @@
 		<key>5B12937FDB4387CF2B17A794F9067F2E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B0ECD56DDB95BE55A28ECF35C5419788</string>
+			<string>CBA521CC063A9F9ACD60E00095385BA7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>5B755D962C558C4D289145AA02A0624A</key>
+		<key>5CDAA823DDBD1E218EB497A0F8E4FF8A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIFontHelper.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Helpers/UIFontHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5D04C74411C621389DAE89545F17CD0C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2322,9 +2244,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDSlider.m</string>
+			<string>MDRippleLayer.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDSlider.m</string>
+			<string>iOSUILib/iOSUILib/MDRippleLayer.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2395,6 +2317,36 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Debug</string>
+		</dict>
+		<key>5D72ACBE8196C4B544B77BA81BB7C3BD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDRippleLayer.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDRippleLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5DB9400DBB5BB17D0376966FFB8FE79F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDCalendarYearSelector.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarYearSelector.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5E62115DE8C09934BF8D2FE5D15FED1E</key>
 		<dict>
@@ -2474,23 +2426,30 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>5F308DB78527083915CAB033D325949C</key>
+		<key>5E8742CD0B26D7522DA962E49AE94D93</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>EBD4E00B7F815DC16720A0AAC0FD4E86</string>
+				<string>2A70A849CFCBD376CA0C6CB151ED5A93</string>
+				<string>BC07BC6E0E963CB0E62F81EACB40868E</string>
+				<string>2C041090682AA8C2FEADA2C61ABA66FD</string>
+				<string>0FDB91EBDBAFC5919E3E716DAAB459FA</string>
+				<string>F637EF4499B81B44CF8220527AABF34C</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>archive.ar</string>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
 			<key>path</key>
-			<string>libFirebaseStatic.a</string>
+			<string>../Target Support Files/SwiftPaginator</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>609A7E414483FF5B41F09AEC9E2ABEAC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DB2CA4778FF83739258309DE1753C409</string>
+			<string>CF86A64C3E59B149EB067F08D943EE18</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2504,7 +2463,7 @@
 		<key>60F9139BDD38565B78214C4FC5F5729D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>434619CBC0C8EB081D814A7400E26646</string>
+			<string>0CC5FEE9E3480ED955989263FC79CBBA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2518,7 +2477,7 @@
 		<key>610216364CAEFAC16D19DD6FFF18F926</key>
 		<dict>
 			<key>fileRef</key>
-			<string>144B778EE2D5D881812F501238AD5EE6</string>
+			<string>6EC442C6265128933D40F2EC03D8090A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2536,32 +2495,47 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6181B22E54D57079B94D0CA13443BF8E</key>
+		<key>627C9426F9AC19C4B9720C741C5F295F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDCircularProgressLayer.h</string>
+			<string>MDProgressLayer.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Progress/MDCircularProgressLayer.h</string>
+			<string>iOSUILib/iOSUILib/Progress/MDProgressLayer.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>63ABDA5F7666999C07AB7E04B619CC22</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2C10FFD592DB4E294E8AD06224D11A90</string>
+			<string>7C8B4BDB6497913480160738ACD6A1CA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>63CCE99D789AE58EC5185950E58174B7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDCollectionViewCell.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDCollectionViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>645AABC6283635A45F04BDA711A512F5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>02D14B5BFA0489617C64D19C00B55A06</string>
+			<string>A629935941B17E50B81029319132E821</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2572,10 +2546,25 @@
 				</array>
 			</dict>
 		</dict>
+		<key>658D88418269381EA6F4EF4D012A57ED</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDSuggestTableView.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/SuggestPopup/MDSuggestTableView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>65E21AE1E3D73E2A32CFB643C17B9E76</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3B9FC817CCC064951EC9BA3EA9B96260</string>
+			<string>53B3A67BB22A6386EEE254355A7FCF02</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2589,7 +2578,7 @@
 		<key>6646DA26298257396C7FFE141BB84CC3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1B9040E646A34B3064ED6560030AE397</string>
+			<string>3AC1CBAEC4D0167C1F54201A17128929</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2603,11 +2592,11 @@
 		<key>673DD459EC34F5B4D05A5CE696BE290B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7C26A78D8CC512F6E7BA74BC7BB5BD86</string>
+			<string>E0C0501E3DE56B8C0B3656A3FEEABD28</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>68CA72EB9CC3B775EF32CAEE93D6A348</key>
+		<key>6870BF2951C180B3E0066E6CE84426EC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2616,24 +2605,25 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>UIColorHelper.m</string>
+			<string>MDCalendar.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/UIColorHelper.m</string>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendar.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>699123654A139D014C308CC0287A7D5E</key>
+		<key>6996093D98855863670D600EBCEFFAC9</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>children</key>
+			<array>
+				<string>46FF93B333A11190B2DC5D3E3D5A9E09</string>
+				<string>5E8742CD0B26D7522DA962E49AE94D93</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>MDProgress.h</string>
+			<string>SwiftPaginator</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDProgress.h</string>
+			<string>SwiftPaginator</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2661,6 +2651,21 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>6DA1596820E0DD9137272979D99B4163</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSCalendarHelper.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/NSCalendarHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>6DE1CA2C649A7D498907EDA2BB79F456</key>
 		<dict>
 			<key>isa</key>
@@ -2674,7 +2679,7 @@
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>6EAF200F19A934A1F6BA5124D526AAD7</key>
+		<key>6EC442C6265128933D40F2EC03D8090A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2683,46 +2688,25 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>AutoResizeTextView.h</string>
+			<string>MDDeviceHelper.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/AutoResizeTextView.h</string>
+			<string>iOSUILib/iOSUILib/Helpers/MDDeviceHelper.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6ECA52E753A804819221201A14EA10C5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3E13F9EBCFC2963445E7A83EC55D8094</string>
+			<string>55CEE783635CB1B31E70A8133E5E07E4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>6F6541CABDB3DA74C74DA64AE24904A5</key>
+		<key>6F11356A318E3BCAF335BDF5553D2E2D</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>18E0BCAE891E1264B607F5CA39BCE021</string>
-			</array>
+			<key>fileRef</key>
+			<string>764F56587A817DAF4471759BE67F5970</string>
 			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6FD1000DD0C64EAA0295D5791358155F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDSliderThumbView.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Slider/MDSliderThumbView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>70F292116B0EE18134D295CD192BFC60</key>
 		<dict>
@@ -2742,21 +2726,36 @@
 		<key>719BF701A265461248B373BDB41A846A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DFC4D330B7ADD063E9A05DA3ED677B7E</string>
+			<string>A30C9AA5A53190BF3C656225C63A9AE9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>71C28309AD3585DF705E667F9166CCB8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDCircularProgressLayer.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Progress/MDCircularProgressLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>71F1479726979A40B7F48C55B03C766B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>29F0D03FAD93126D696C3023A7558171</string>
+			<string>D98BADFB8814411211D370339E503B83</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>71F25318DA7B85E4FAEAD66940257695</key>
 		<dict>
 			<key>fileRef</key>
-			<string>B1219350C890B62AFAB49A88B90C79A3</string>
+			<string>3E1E8DA977FF91519C355B8EB5131E5C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -2784,9 +2783,16 @@
 			<key>productName</key>
 			<string>MaterialControls</string>
 			<key>productReference</key>
-			<string>FCC98156AE5A060566AB0B8348099B57</string>
+			<string>C5DE4ED6FF08F382BEEC317C98CE3B80</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>7262F04732C4E0079B2F1D72FF82B1D2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2C041090682AA8C2FEADA2C61ABA66FD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>7336C3619B6C46F51EBB5A19DD32AEF5</key>
 		<dict>
@@ -2804,7 +2810,7 @@
 		<key>739EF4ED92FE121EC96944FC8CACBB57</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D5E9DAFBEF9DFA20C171FB9032C8E44A</string>
+			<string>8A53EFF5D9EFA14ED6250A901E363FED</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2814,21 +2820,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>7626C0E8D3C43A65F2C97FE5D1CAE3E8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDCalendarDateHeader.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarDateHeader.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>764F56587A817DAF4471759BE67F5970</key>
 		<dict>
@@ -2846,14 +2837,14 @@
 		<key>78CCA07891C201D9052EA19EA79AC2AA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>374E8D969F405BE633D265201A6EAB15</string>
+			<string>0C617DB4C86A26BDEEC58D44569CD8F0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>7C1F8FF8B9F5DDD668D7C1F3CD124F56</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3FCE655471A6A48F76BD6674C8C776C7</string>
+			<string>FE89E43986417E1936AC031E987A32FB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2864,7 +2855,20 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7C26A78D8CC512F6E7BA74BC7BB5BD86</key>
+		<key>7C36023D90376AB29F33CE8CBD69BDA3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C8B4BDB6497913480160738ACD6A1CA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2873,23 +2877,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDSuggestPopupView.m</string>
+			<string>MDSliderIcon.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/SuggestPopup/MDSuggestPopupView.m</string>
+			<string>iOSUILib/iOSUILib/Slider/MDSliderIcon.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7C63BD1B5F3938501DF25D5A53307600</key>
-		<dict>
-			<key>fileRef</key>
-			<string>764F56587A817DAF4471759BE67F5970</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
 		</dict>
 		<key>7CC03930B29E5B90B0441947739FAED3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>97046CA89931D7FAAA45082F1AEF6272</string>
+			<string>144DE354FF67E26D291889245C038E7D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2906,8 +2903,8 @@
 			<array>
 				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
 				<string>14B8B9B15ECBE87983FF987239AB2D7B</string>
-				<string>3459488A3B0A0A0BED2DB293D45D4DA0</string>
-				<string>326F9F7B99D5EA42A1841AA61A32A555</string>
+				<string>DAB0FACE7E3483792DDE25599D0B53ED</string>
+				<string>22577BBB4071FFF0ADECF1ABADAABE61</string>
 				<string>70F292116B0EE18134D295CD192BFC60</string>
 			</array>
 			<key>isa</key>
@@ -2915,16 +2912,18 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>7DFCF56EF717AB18B38113EA5565B84A</key>
+		<key>7E9730B83A4AB9B97F3F5DAB67F13967</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>5F308DB78527083915CAB033D325949C</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>Frameworks</string>
+			<string>MDCalendarCell.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarCell.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2941,10 +2940,25 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>7F1FB9A41880DFD7EC5F46B6954BDAD3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDProgress.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDProgress.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>81034D3CE2E804ADA127757BF07F6345</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8836881E5E4DC24297D0E409770BBA0D</string>
+			<string>5DB9400DBB5BB17D0376966FFB8FE79F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2955,22 +2969,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>81785B2DA24571834DE2B34A4C374E0F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDSliderThumbView.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Slider/MDSliderThumbView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>83C20CD180C28FC2438D82E244419031</key>
+		<key>8275CE4449E85C4BA9FAB9977F74BE9A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2979,48 +2978,103 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIFontHelper.h</string>
+			<string>MDLinearProgressLayer.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/UIFontHelper.h</string>
+			<string>iOSUILib/iOSUILib/Progress/MDLinearProgressLayer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>829DA5FF5710879E082F79817CDAE48D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDButton.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDButton.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>846A73C9B7509DE3675C39A7316D7FEB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDTouchGestureRecognizer.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDTouchGestureRecognizer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>84788DA12C665058939E9B39D4F19A47</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>FE126E0FE8432D65DD40F36252895EED</string>
+				<string>FA9332AD7746ED8BECE479BC0E7D51C1</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>854CE59A7EB0A175F756CEB05F0CAC3E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FAuthData.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>85684491B8AF561DEA4912C4BE045BF2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DBBB3A2AB9FD52729877364AC225FB67</string>
+			<string>658D88418269381EA6F4EF4D012A57ED</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>860FBD7091663F4801EC71A4BFE9D580</key>
+		<key>869B4E74F88C2238249A77CCCB5E04E8</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDToast.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDToast.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>1761B15F98C24D2116DB856FFF66E019</string>
+			<key>remoteInfo</key>
+			<string>SwiftPaginator</string>
 		</dict>
-		<key>86DC529517FF0053157F40099AC40FD1</key>
+		<key>88F9BC116A2DCF7D23AA1E99523AB08E</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6F11356A318E3BCAF335BDF5553D2E2D</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>MaterialControls.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>8836881E5E4DC24297D0E409770BBA0D</key>
+		<key>89DBFB5C16927F385722F858D3C0ED38</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3029,27 +3083,101 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDCalendarYearSelector.h</string>
+			<string>MDTouchGestureRecognizer.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarYearSelector.h</string>
+			<string>iOSUILib/iOSUILib/MDTouchGestureRecognizer.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8A0BCC0A3D06F205DF06C845ACC0C6DD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDTabBar.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDTabBar.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8A53EFF5D9EFA14ED6250A901E363FED</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIViewHelper.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Helpers/UIViewHelper.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>8AC668C84FD6FCB419B627501EADC4BC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BDF5468ADB300577CBBE7DFA6F537300</string>
+			<string>7F1FB9A41880DFD7EC5F46B6954BDAD3</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>8C31A40DC42468551AED71A6C1A2E503</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4AD9FBAAD50E89B4899BB7066B708B74</string>
+			<key>buildPhases</key>
+			<array>
+				<string>FC2396AAA6C9494CE9C00F2B02F5F3D3</string>
+				<string>A318F991BDB72EF0EFB519A26E11E794</string>
+				<string>B06ABF5093D617E2532242400585EE33</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>FE7A4B12536657BFB5AF532067C030FC</string>
+				<string>A11D4A05279DEBAC53407096615C4C3E</string>
+				<string>2B319094C6366530BBE45BA23F89B3A2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-MESAC-Companion</string>
+			<key>productName</key>
+			<string>Pods-MESAC-Companion</string>
+			<key>productReference</key>
+			<string>F9EA3B08360A8E3261CC89C10F76DC50</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
 		</dict>
 		<key>8CDC2E7E38BD2196E350EE5DA887ED45</key>
 		<dict>
 			<key>fileRef</key>
-			<string>860FBD7091663F4801EC71A4BFE9D580</string>
+			<string>A1CDD71186F77A71E39259FB20816BFA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>8D68BE7F1F7EDEC205FB19C26BA0585D</key>
+		<key>8DED1E494868FC30B6CF015D05BE7026</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Firebase.framework</string>
+			<key>path</key>
+			<string>Firebase.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>8EB58A88C21348AEACCDA96D921DDFF7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3058,16 +3186,61 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDRippleLayer.m</string>
+			<string>MDCalendarCell.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDRippleLayer.m</string>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8F8AA400406AB68DA416F4F238D71A2D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSDateHelper.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Helpers/NSDateHelper.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>903A926D7F9050FD761092A60C969023</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIView+MDExtension.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/UIView+MDExtension.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>924897AA52DE6A6B54A483F0ADD0DB7F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDTimePickerDialog.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDTimePickerDialog.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>92AE52177FBBB8D6E5B226C6D7FB50AE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>280E4F4697AFCD4B4D825C3B00AFD588</string>
+			<string>25037792450127253532E3DBC0DC33C0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -3093,29 +3266,29 @@
 		<key>94CA8A05BB326CA06B675654B1C7C22D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F9B46A178F2D71FBB82E8CB4877A25D4</string>
+			<string>D0F14EAEFCC220DED3CE699C0349F472</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>951547472E2C413D5232F3FECD05B374</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EC69AE20A7120A0A9CC253EC7645F0C2</string>
+			<string>846A73C9B7509DE3675C39A7316D7FEB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>97046CA89931D7FAAA45082F1AEF6272</key>
+		<key>9761B5F61BE5673C26981FA60A66D16A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>NSDate+MDExtension.h</string>
+			<string>UIColorHelper.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/NSDate+MDExtension.h</string>
+			<string>iOSUILib/iOSUILib/Helpers/UIColorHelper.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -3129,9 +3302,24 @@
 		<key>98ABEE0387BE6795F50ADC9DE555F68F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2B0CE35F39623145B7436B784D058FCC</string>
+			<string>A001618E8EB56D730124C3100FC99FB2</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>98C4858093155B939C8DBEC3B028E207</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDToast.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDToast.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>98CB7BA6F6D16EB059BC9AD786564251</key>
 		<dict>
@@ -3157,40 +3345,80 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9A20A198151BB9F495706F43AFBB9CFB</key>
+		<key>9A699CBE25EDCE2CE4FB96CE27E13E39</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>baseConfigurationReference</key>
+			<string>57356DC647F751EAD3430527C801B3CD</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-MESAC-Companion/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_MESAC_Companion</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>MDMathHelper.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/MDMathHelper.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9A77A3DDB212603B166B20E16EF83820</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_MESAC_Companion.framework</string>
-			<key>path</key>
-			<string>Pods-MESAC-Companion.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>Debug</string>
 		</dict>
 		<key>9B932B2AFD28EAB7F175C418AFEC80CD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>29E93C5D09F6E05C0FB3B17A04B99C70</string>
+			<string>FE3ACF49110E4C4B2757D00D2CB562F8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3201,21 +3429,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>9DC485058F6BB922507BF23146D544F7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2276DACC5B693583829962F6B62C8172</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>9E20726F0BF930ADF8EEE4BC1F224D5D</key>
+		<key>9CAB925F39F9E685F7F5F45BCF33F891</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3224,16 +3438,43 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>NSDateHelper.m</string>
+			<string>MDSliderTickMarksView.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/NSDateHelper.m</string>
+			<string>iOSUILib/iOSUILib/Slider/MDSliderTickMarksView.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9D8D611BAB93C5B0BFF286E22DD69D58</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B7AC9326D819482593FE118E915409D7</string>
+			<key>remoteInfo</key>
+			<string>Firebase</string>
+		</dict>
+		<key>9DC485058F6BB922507BF23146D544F7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C40CB24F6D207C4D6C4C7F7023C9568C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>9E5F9A409F7A80E320328AA627E5F72F</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>D8ADAD083A59AA3BF63BA27941795E56</string>
+			<string>E73623D46DEC230A8F5AADF9D8E9930C</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -3303,7 +3544,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>9F7A7E66ED6DA264153E4D9C4BFF2095</key>
+		<key>A001618E8EB56D730124C3100FC99FB2</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3312,13 +3553,34 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDDeviceHelper.m</string>
+			<string>NSDate+MDExtension.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/MDDeviceHelper.m</string>
+			<string>iOSUILib/iOSUILib/Calendar/NSDate+MDExtension.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A0AE43800A693C755B3FBB6C38103BA0</key>
+		<key>A052B81C9E80832BC203C8436AAE0A3B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7C36023D90376AB29F33CE8CBD69BDA3</string>
+				<string>23C0BFBB0818E53A43C33F9262674814</string>
+				<string>F10C0B9EA89453C8D29C77F2EF725A9B</string>
+				<string>35166D9606F0823B61ABE171BB0D38EF</string>
+				<string>C81B058D8FDA96179C5DD76F5C6602AF</string>
+				<string>A629935941B17E50B81029319132E821</string>
+				<string>EAC07037C90CE353966D0524583619FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MaterialControls</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A0AFF86DEE9817065CB9641DB0F24A27</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3326,30 +3588,48 @@
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDSuggestPopupView.h</string>
 			<key>path</key>
-			<string>FConfig.h</string>
+			<string>iOSUILib/iOSUILib/SuggestPopup/MDSuggestPopupView.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A0BBAC48DC080E4CEB60F5F1B86F274D</key>
+		<key>A11D4A05279DEBAC53407096615C4C3E</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>PBXTargetDependency</string>
 			<key>name</key>
-			<string>MDCalendar.m</string>
+			<string>MaterialControls</string>
+			<key>target</key>
+			<string>720EA7C4B6AC4D960C9A08E2261B6B22</string>
+			<key>targetProxy</key>
+			<string>E9626FFC861855D80982A72DED0AD03E</string>
+		</dict>
+		<key>A12761A469981C7E984986E8C07A885E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F43C7A81B18BE82A0379599D341AA8CA</string>
+				<string>E73623D46DEC230A8F5AADF9D8E9930C</string>
+				<string>3967026620842085FC4F86062F1638EF</string>
+				<string>120BECBFE893FB1D4A258802ED9580D0</string>
+				<string>0CC5FEE9E3480ED955989263FC79CBBA</string>
+				<string>DA5D4899C431551C2A3179EA1BE1DC02</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendar.m</string>
+			<string>../Target Support Files/Firebase</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A137EDCFE721980B861039D09E3342BD</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>D8ADAD083A59AA3BF63BA27941795E56</string>
+			<string>E73623D46DEC230A8F5AADF9D8E9930C</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -3406,53 +3686,53 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>A2498B679EDF7DD28AF12F9B6C98F490</key>
+		<key>A1CDD71186F77A71E39259FB20816BFA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDCollectionViewCell.h</string>
+			<string>MDToast.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDCollectionViewCell.h</string>
+			<string>iOSUILib/iOSUILib/MDToast.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>A44F2B9A03C79086157BC9B1E7F6BA6E</key>
+		<key>A30C9AA5A53190BF3C656225C63A9AE9</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>5617B953A3773F39D9952EF0D6C8C379</string>
-			<key>buildPhases</key>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDTextField.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDTextField.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A318F991BDB72EF0EFB519A26E11E794</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>6F6541CABDB3DA74C74DA64AE24904A5</string>
-				<string>D2EE2C482CD92D0AC096E8953AC29C70</string>
-				<string>550E407E60FDE242355871019465E7A3</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>CD27ECFED4DC5DEBFA502EBD22DD718C</string>
-				<string>C75C945FD0CA45A967A60E89038602F2</string>
+				<string>BB7738BCEEBB94415440D0850B60BED1</string>
 			</array>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-MESAC-Companion</string>
-			<key>productName</key>
-			<string>Pods-MESAC-Companion</string>
-			<key>productReference</key>
-			<string>9A77A3DDB212603B166B20E16EF83820</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>A47F3F1A990AC3BA0DA656B3F15C648E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2B299475F9993A99434EF4AF1FAB71E4</string>
+			<string>07F103152E7DCBBCD43B8065AA2B0D2A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3462,6 +3742,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>A4E6D3A0C229D9CFDBF16ACEA7464F33</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDCalendarYearSelectorViewCell.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarYearSelectorViewCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A507A9BDA8EA018AF955F8249EF3297D</key>
 		<dict>
@@ -3476,7 +3771,7 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>A5BE94DE8365F053D10C40C5B96F485D</key>
+		<key>A629935941B17E50B81029319132E821</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3485,14 +3780,14 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>FAuthData.h</string>
+			<string>MaterialControls-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A68E4DC3CCFE79A569232E1E459367BD</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BA80798A47B151CD11A1560D77E8CE28</string>
+			<string>5D72ACBE8196C4B544B77BA81BB7C3BD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3516,6 +3811,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>A797BFCBB4620AD805BC5559AB24F79F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E7E4906B73FB2A07564D916DA4B1D519</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>A7E10F383DCD59079712A57B50DCF88E</key>
 		<dict>
@@ -3546,21 +3854,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AA6DD8E0FA68905EECDAB1DA02F4B054</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDSwitch.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDSwitch.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>AC351E950ECA0A6EDD235BE5FB0653F8</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3587,37 +3880,17 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>ADEB2E8623D73299FBD777082E93D6E2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Firebase.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AE313FED520295D2096E33E9D0697D30</key>
+		<key>AD6851C976085AE76CA29FD7B01A9AF2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9EEE30DC0F0D734EDA73DF4244F14A27</string>
+			<string>34BBFDFB5F7F76C67192149151D2B67A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>AE353319CD905DC806494653C19E9810</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4035F63EA7DF5382F906340D567CA83F</string>
+			<string>DA18F39C48F647B9B332DBD079DAED19</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -3635,7 +3908,7 @@
 		<key>AF285C1B981C24F75E0F7E45CA03CF77</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>86DC529517FF0053157F40099AC40FD1</string>
+			<string>F10C0B9EA89453C8D29C77F2EF725A9B</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -3706,6 +3979,19 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>AF772ED21BA2B5A611B1B3C2A398A8BE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B369F475A35405378941A84E38AB4D1E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>AF855CBA41285B112AD204549A08392B</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -3739,65 +4025,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B0ECD56DDB95BE55A28ECF35C5419788</key>
+		<key>B06ABF5093D617E2532242400585EE33</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CEC4C6AAA06177E8671F94E1CD9439E0</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDBubbleLabel.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Slider/MDBubbleLabel.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>B0FEF7C65C53747B09379956AE4F0D9C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Empty.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B1219350C890B62AFAB49A88B90C79A3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDLinearProgressLayer.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Progress/MDLinearProgressLayer.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B2532CD650D4E6C4B3CA80AC584FAB97</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDCalendarCell.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B276D0600F5A8E3469FF4374F2AFF2D6</key>
+		<key>B1B8EA3886C242E1F2C7980106A88A77</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -3806,46 +4047,32 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDLinearProgressLayer.h</string>
+			<string>MDProgress.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Progress/MDLinearProgressLayer.h</string>
+			<string>iOSUILib/iOSUILib/MDProgress.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B32BAA4FD910C11338F617474978E53F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>232AF95336FF6A6CB5E274B631F30E00</string>
+			<string>627C9426F9AC19C4B9720C741C5F295F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>B39DDA153FCFEBA16C1F9575CCBF150F</key>
+		<key>B369F475A35405378941A84E38AB4D1E</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>F637EF4499B81B44CF8220527AABF34C</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDSnackbar.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDSnackbar.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3D19F6F8F64133B431F8B1D11C9BFAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
 		<key>B4F16D78B8053ACB26FDAE9F2D1962AB</key>
 		<dict>
@@ -3868,14 +4095,57 @@
 			<key>productName</key>
 			<string>Pods-MESAC-CompanionTests</string>
 			<key>productReference</key>
-			<string>49AD4516FDC0EB2C49A6D27EC18EA7EB</string>
+			<string>2F8141B323AA0D3EEF27014FDA6F6B67</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>B65916CEEB2C749D8D5C9A3B8A75C86F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4FB0DE262014FE2F58C7AFB7F4CEAA55</string>
+				<string>854CE59A7EB0A175F756CEB05F0CAC3E</string>
+				<string>585CF22D3AF6AA7014084222108C4BFC</string>
+				<string>56A3F54C623C4FC615C80157D07D43AA</string>
+				<string>032E67AC50060A20E945B1491207FB05</string>
+				<string>F6432FC3EFD8F14022C627DC66EFCF5E</string>
+				<string>47B3108C10F2DFA5AA1D928618794E44</string>
+				<string>E88BE1B6226FE323BA14258D513473C0</string>
+				<string>3AC1CBAEC4D0167C1F54201A17128929</string>
+				<string>E2C6C839DCD728494FCE6E559B7DCF4D</string>
+				<string>320ADD58E6FAB87F05AB029AC6056D18</string>
+				<string>0FBA4075AA799DBD718830AF960B1C64</string>
+				<string>A797BFCBB4620AD805BC5559AB24F79F</string>
+				<string>A12761A469981C7E984986E8C07A885E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Firebase</string>
+			<key>path</key>
+			<string>Firebase</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B739DE29BEFA6BD7BDD58566D7FBC353</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDMathHelper.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Helpers/MDMathHelper.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B7A59E2F7A4DB2343CB4D0D96DD30E92</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1EEE8AB4BEDC07BFD743BA89E5CE0258</string>
+			<string>0AEB11CCEE0F9FA09654858E09CDE13B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3907,42 +4177,14 @@
 			<key>productName</key>
 			<string>Firebase</string>
 			<key>productReference</key>
-			<string>3B5AA0236A489A619C12161A901AFA0D</string>
+			<string>8DED1E494868FC30B6CF015D05BE7026</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>B7CDC0D7359E3D0B9F3F3A080061B7B3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Firebase-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B96BB0F527D1EB3D503BE709DF14247C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDDatePicker.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDDatePicker.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>B97E6505686C9477BB2199F552B8244D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A2498B679EDF7DD28AF12F9B6C98F490</string>
+			<string>D3894106D9BC71CF57378027929B2548</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -3953,52 +4195,37 @@
 				</array>
 			</dict>
 		</dict>
-		<key>BA80798A47B151CD11A1560D77E8CE28</key>
+		<key>BA85701BB3F1A3A3CE6A5134A8FF5353</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F39CEF5C7460739930F7E1BC78722A57</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>BB7738BCEEBB94415440D0850B60BED1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>764F56587A817DAF4471759BE67F5970</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BC07BC6E0E963CB0E62F81EACB40868E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDRippleLayer.h</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDRippleLayer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA85701BB3F1A3A3CE6A5134A8FF5353</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6FD1000DD0C64EAA0295D5791358155F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>BC1F802588B48A9E24D2D39E4F82C273</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4DAB0CAC57E968844264DCD9A2DD0F36</string>
-				<string>D8ADAD083A59AA3BF63BA27941795E56</string>
-				<string>45E7A406C9D043D28CD100906BA1AAE0</string>
-				<string>B7CDC0D7359E3D0B9F3F3A080061B7B3</string>
-				<string>434619CBC0C8EB081D814A7400E26646</string>
-				<string>34C8600875625BB8D243D52E43F51945</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/Firebase</string>
+			<string>SwiftPaginator.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -4014,36 +4241,6 @@
 			<string>PBXResourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-		</dict>
-		<key>BD88C450F06EBE25B48784A9645276B4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDTimePickerDialog.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDTimePickerDialog.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BDF5468ADB300577CBBE7DFA6F537300</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDProgress.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDProgress.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>BE3BE8F92505A6DEBE098E7B822AA3F7</key>
 		<dict>
@@ -4100,7 +4297,50 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>C0012D3944AEBE1C17397BC3D434F3DC</key>
+		<key>BFD3B7B440CC77E15278E49B3ADAC06A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDSwitch.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDSwitch.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C045A825E55D6748EB7018404B3809E0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>575AB519E39507B6ED92FC9F9688CE1F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C23FCF31260D47CEC1494A292DAA1A1E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>854CE59A7EB0A175F756CEB05F0CAC3E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C2B641DCA7F078AB08F807ABC4E2C1B8</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4109,67 +4349,26 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDTouchGestureRecognizer.h</string>
+			<string>MDTabBarViewController.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTouchGestureRecognizer.h</string>
+			<string>iOSUILib/iOSUILib/MDTabBarViewController.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C04498B9CF2FDB129F668D67435C3A19</key>
+		<key>C40CB24F6D207C4D6C4C7F7023C9568C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>MaterialControls-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C045A825E55D6748EB7018404B3809E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4DFAE5644556E978D9AE6B5E9A1722AC</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>C0FEC9E059621AF91D5A63A857E5BCC5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDTableViewCell.m</string>
+			<string>MDSwitch.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTableViewCell.m</string>
+			<string>iOSUILib/iOSUILib/MDSwitch.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C23FCF31260D47CEC1494A292DAA1A1E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A5BE94DE8365F053D10C40C5B96F485D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>C42CA2EF1E9C7406BDF1F52F1EE57D0C</key>
 		<dict>
@@ -4185,7 +4384,203 @@
 				</array>
 			</dict>
 		</dict>
-		<key>C4B948A3396C3631FBDB5B2ED7F966AF</key>
+		<key>C5538188947DC643C456F4B28BFF6C2D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDDatePicker.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDDatePicker.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C5DE4ED6FF08F382BEEC317C98CE3B80</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>MaterialControls.framework</string>
+			<key>path</key>
+			<string>MaterialControls.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C7F3DB10BADFB736259AA42FA64EBB3E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1CBBCE1DEC4DF790B8E402B6BDB3E40C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C81B058D8FDA96179C5DD76F5C6602AF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MaterialControls-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C8E6D89AC87541978D52B6239CB14742</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1CE5808AA3DDB4B334FAECC6FD0B7072</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-MESAC-Companion/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_MESAC_Companion</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>CACCE0457F9A51CF08E020E8D8EBC091</key>
+		<dict>
+			<key>fileRef</key>
+			<string>49D395062BDDDEA9A5E620D7FC4AA3EA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CB04583A57E3A8EC0C49F4FAED4BCC11</key>
+		<dict>
+			<key>fileRef</key>
+			<string>71C28309AD3585DF705E667F9166CCB8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CBA521CC063A9F9ACD60E00095385BA7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDBubbleLabel.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Slider/MDBubbleLabel.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CBF12F2426D76369088DB676667BA304</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A0AFF86DEE9817065CB9641DB0F24A27</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CE254F3A0DAE30F5D1267494F43C3BC4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>062319CD0E3C1D3BE4C85DBCA73E4D7F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CEC4C6AAA06177E8671F94E1CD9439E0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9EEE30DC0F0D734EDA73DF4244F14A27</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>CF86A64C3E59B149EB067F08D943EE18</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4194,147 +4589,11 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDTableViewCell.h</string>
+			<string>NSDateHelper.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTableViewCell.h</string>
+			<string>iOSUILib/iOSUILib/Helpers/NSDateHelper.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C75C945FD0CA45A967A60E89038602F2</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>MaterialControls</string>
-			<key>target</key>
-			<string>720EA7C4B6AC4D960C9A08E2261B6B22</string>
-			<key>targetProxy</key>
-			<string>0E059CDC0E9441224CC1AE61F8FF4EFA</string>
-		</dict>
-		<key>C7F3DB10BADFB736259AA42FA64EBB3E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>40133B47F721F19A6FEA42B61A2F3244</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C8151805641263F5C01592A1160472C4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDCollectionViewCell.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDCollectionViewCell.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C8746D149F2E04ADC7ACFCFA39964739</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>ResourceBundle-MaterialControls-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CACCE0457F9A51CF08E020E8D8EBC091</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D8F984C9E50460932A1EB687159A76A8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CB04583A57E3A8EC0C49F4FAED4BCC11</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6181B22E54D57079B94D0CA13443BF8E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>CB1AAB5D1B80618F581B189177FC85EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSCalendarHelper.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/NSCalendarHelper.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CBF12F2426D76369088DB676667BA304</key>
-		<dict>
-			<key>fileRef</key>
-			<string>542A8CBE2533B9FCB74DBD6FE540483A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>CCF247F7E58F1C8DF2214B23E3F5568D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDCalendarYearSelector.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarYearSelector.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CD27ECFED4DC5DEBFA502EBD22DD718C</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>Firebase</string>
-			<key>target</key>
-			<string>B7AC9326D819482593FE118E915409D7</string>
-			<key>targetProxy</key>
-			<string>3FF070A4F859C795EEAAB6C0C5739FBE</string>
-		</dict>
-		<key>CE254F3A0DAE30F5D1267494F43C3BC4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>19DB7465035C92062A8930BC3E18DA4D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
 		</dict>
 		<key>CFA07F32FA1116D830F1D43F0E1FD3E3</key>
 		<dict>
@@ -4352,14 +4611,14 @@
 		<key>CFF1C0448E547194A555E680E2A93902</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0B59D91B280A6BA74F68AEDB9E4F3755</string>
+			<string>40D77DA0F6F183742F83A248970CD530</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
 		<key>D04A6AC60C6E52E8D88E05A43F3DEA63</key>
 		<dict>
 			<key>fileRef</key>
-			<string>C0012D3944AEBE1C17397BC3D434F3DC</string>
+			<string>89DBFB5C16927F385722F858D3C0ED38</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4369,6 +4628,21 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>D0F14EAEFCC220DED3CE699C0349F472</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>AutoResizeTextView.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/AutoResizeTextView.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D133BD6C22D1829EE2606A9AD249C3F2</key>
 		<dict>
@@ -4386,7 +4660,7 @@
 		<key>D194DC0F5D2336BF51B61A012621F86F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>363C7F57BB2B1DC993B9F99CA066965A</string>
+			<string>3EEBEC4F02BADB6FDE46B045F815CFA1</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4408,18 +4682,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D2EE2C482CD92D0AC096E8953AC29C70</key>
+		<key>D3894106D9BC71CF57378027929B2548</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7C63BD1B5F3938501DF25D5A53307600</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDCollectionViewCell.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/MDCollectionViewCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D41D8CD98F00B204E9800998ECF8427E</key>
 		<dict>
@@ -4447,7 +4723,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>326F9F7B99D5EA42A1841AA61A32A555</string>
+			<string>22577BBB4071FFF0ADECF1ABADAABE61</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -4459,9 +4735,10 @@
 				<string>B7AC9326D819482593FE118E915409D7</string>
 				<string>720EA7C4B6AC4D960C9A08E2261B6B22</string>
 				<string>35BE2C57761A4F7C56157A08242645EC</string>
-				<string>A44F2B9A03C79086157BC9B1E7F6BA6E</string>
+				<string>8C31A40DC42468551AED71A6C1A2E503</string>
 				<string>B4F16D78B8053ACB26FDAE9F2D1962AB</string>
 				<string>FD52A7E657FA10F3773F834E742F68A5</string>
+				<string>1761B15F98C24D2116DB856FFF66E019</string>
 			</array>
 		</dict>
 		<key>D4AA962E260F5E30F877009B73C23BDD</key>
@@ -4478,14 +4755,7 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>D58FB38264F851CA462A1FA3381B1B85</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FF4DF765AAD51C1591A564662B23E374</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>D5E9DAFBEF9DFA20C171FB9032C8E44A</key>
+		<key>D51FABE9E85BE48057CA29FA0C456F44</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4494,16 +4764,23 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>UIViewHelper.h</string>
+			<string>MDDatePickerDialog.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/UIViewHelper.h</string>
+			<string>iOSUILib/iOSUILib/Calendar/MDDatePickerDialog.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D58FB38264F851CA462A1FA3381B1B85</key>
+		<dict>
+			<key>fileRef</key>
+			<string>47E922B7D8713BA26A461FF33440F253</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>D66A681BDC90F89BFAC211E63EEBEE2D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9A20A198151BB9F495706F43AFBB9CFB</string>
+			<string>B739DE29BEFA6BD7BDD58566D7FBC353</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4540,19 +4817,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D8ADAD083A59AA3BF63BA27941795E56</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Firebase.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>D8EDECC48A632A0D1A970D3F604B25F6</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4566,7 +4830,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D8F984C9E50460932A1EB687159A76A8</key>
+		<key>D98BADFB8814411211D370339E503B83</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4575,9 +4839,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDDatePickerDialog.m</string>
+			<string>MDTabBar.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDDatePickerDialog.m</string>
+			<string>iOSUILib/iOSUILib/MDTabBar.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -4592,17 +4856,60 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>DA18F39C48F647B9B332DBD079DAED19</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MDMathHelper.m</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Helpers/MDMathHelper.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DA5D4899C431551C2A3179EA1BE1DC02</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>DA6A7C1F32E0AA6F4FCF39D28A1BD2D2</key>
 		<dict>
 			<key>fileRef</key>
-			<string>F5E41B6E1762CF27AB9173ABC13AC052</string>
+			<string>9CAB925F39F9E685F7F5F45BCF33F891</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>DAB0FACE7E3483792DDE25599D0B53ED</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B65916CEEB2C749D8D5C9A3B8A75C86F</string>
+				<string>234281ABE60ABA4F7AF010E7D4634BA3</string>
+				<string>6996093D98855863670D600EBCEFFAC9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>DAF89DA9FAD169D24A27AB57CD63A233</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7626C0E8D3C43A65F2C97FE5D1CAE3E8</string>
+			<string>44157920A2918ADD936F1CEB7EBF3F9E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4616,7 +4923,7 @@
 		<key>DB05A9DD8244D10C28B6915C514AE15F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>4FB793B7B6925A31419B01070F5EE8CF</string>
+			<string>E2C6C839DCD728494FCE6E559B7DCF4D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4627,85 +4934,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>DB2CA4778FF83739258309DE1753C409</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSDateHelper.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/NSDateHelper.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBBB3A2AB9FD52729877364AC225FB67</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDSuggestTableView.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/SuggestPopup/MDSuggestTableView.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DBC2E81652D16BCEA033070103FF2CEB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDTabBar.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTabBar.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DD15BF859D79448BEABFFCF0321E0DBF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDDatePickerDialog.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDDatePickerDialog.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DE7F3A0574E1157D923A79296B58DEC3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIFontHelper.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Helpers/UIFontHelper.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>DEE74B3BE87901C6555EFB5CD1E4E414</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8D68BE7F1F7EDEC205FB19C26BA0585D</string>
+			<string>5D04C74411C621389DAE89545F17CD0C</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -4733,7 +4965,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DFC4D330B7ADD063E9A05DA3ED677B7E</key>
+		<key>E08A9FAFB6873DC0CAD4C42AA1FCEED4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDDatePicker.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDDatePicker.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E0C0501E3DE56B8C0B3656A3FEEABD28</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4742,37 +4989,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDTextField.m</string>
+			<string>MDSuggestPopupView.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTextField.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DFC80A3B30E0376A19E8EAC0676627D6</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_MESAC_CompanionUITests.framework</string>
-			<key>path</key>
-			<string>Pods-MESAC-CompanionUITests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>E0B54F277DD206F45B0988EA54CEBBE4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>MaterialControls-prefix.pch</string>
+			<string>iOSUILib/iOSUILib/SuggestPopup/MDSuggestPopupView.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -4792,7 +5011,7 @@
 		<key>E1631D636040786DFE29DA882D8BB886</key>
 		<dict>
 			<key>fileRef</key>
-			<string>47F155CF6E08DD1139463868D941AE27</string>
+			<string>E08A9FAFB6873DC0CAD4C42AA1FCEED4</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4803,10 +5022,23 @@
 				</array>
 			</dict>
 		</dict>
+		<key>E2C6C839DCD728494FCE6E559B7DCF4D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FMutableData.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>E51DAA3C96B51A0EF194BDD28F4F127D</key>
 		<dict>
 			<key>fileRef</key>
-			<string>17CFA65B7D5D81B023CB1E5B74360B3F</string>
+			<string>7E9730B83A4AB9B97F3F5DAB67F13967</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4820,7 +5052,7 @@
 		<key>E60FA42EEC3ECC48701DB55986D25D69</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A0AE43800A693C755B3FBB6C38103BA0</string>
+			<string>56A3F54C623C4FC615C80157D07D43AA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4831,21 +5063,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>E69EDAEE2506AA05E60F47FC3D10BBEB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIView+MDExtension.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/UIView+MDExtension.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>E6CED172F1F207AB7F40E563001CDDCF</key>
 		<dict>
 			<key>fileRef</key>
@@ -4853,10 +5070,36 @@
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>E73623D46DEC230A8F5AADF9D8E9930C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Firebase.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7E4906B73FB2A07564D916DA4B1D519</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>archive.ar</string>
+			<key>path</key>
+			<string>libFirebaseStatic.a</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>E7EC19B27D81B27844F18CAF2B5573B5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>31F731BA6B4457A7FE76D0315DB118BA</string>
+			<string>98C4858093155B939C8DBEC3B028E207</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4870,7 +5113,7 @@
 		<key>E81EF43951E0E7C453E0E64F2B37F7AF</key>
 		<dict>
 			<key>fileRef</key>
-			<string>DD15BF859D79448BEABFFCF0321E0DBF</string>
+			<string>D51FABE9E85BE48057CA29FA0C456F44</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -4881,64 +5124,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>E85CF06ECED792378084EC79B7106E29</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B3D19F6F8F64133B431F8B1D11C9BFAE</string>
-				<string>4CAE25468B9D22F22E92F30D53344DFB</string>
-				<string>86DC529517FF0053157F40099AC40FD1</string>
-				<string>C04498B9CF2FDB129F668D67435C3A19</string>
-				<string>E0B54F277DD206F45B0988EA54CEBBE4</string>
-				<string>02D14B5BFA0489617C64D19C00B55A06</string>
-				<string>C8746D149F2E04ADC7ACFCFA39964739</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/MaterialControls</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E8B534D15D2B25919ACD898217266891</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F5F2D94E3D9384B190A068EAC273B065</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>E9202E1CD2429F3371931E19BB96A967</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDBubbleLabel.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Slider/MDBubbleLabel.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E967C23A8A5B8F8D2058CC2D63C82A1F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B96BB0F527D1EB3D503BE709DF14247C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E987D9F3F79C416C3840BF757E5767CD</key>
+		<key>E88BE1B6226FE323BA14258D513473C0</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4951,20 +5137,61 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E9BDD848924AF22F3823F327A22D4672</key>
+		<key>E8B534D15D2B25919ACD898217266891</key>
+		<dict>
+			<key>fileRef</key>
+			<string>032E67AC50060A20E945B1491207FB05</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E9626FFC861855D80982A72DED0AD03E</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>720EA7C4B6AC4D960C9A08E2261B6B22</string>
+			<key>remoteInfo</key>
+			<string>MaterialControls</string>
+		</dict>
+		<key>E967C23A8A5B8F8D2058CC2D63C82A1F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C5538188947DC643C456F4B28BFF6C2D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EA2A6F7C21C43864FB97A14DCD7562C5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>46FF93B333A11190B2DC5D3E3D5A9E09</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EAC07037C90CE353966D0524583619FA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>text.plist.xml</string>
 			<key>path</key>
-			<string>FAuthType.h</string>
+			<string>ResourceBundle-MaterialControls-Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>EC69AE20A7120A0A9CC253EC7645F0C2</key>
+		<key>EB2C61CD47DB1277DB6EC75E3441979F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -4973,16 +5200,44 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>MDTouchGestureRecognizer.m</string>
+			<string>MDCircularProgressLayer.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDTouchGestureRecognizer.m</string>
+			<string>iOSUILib/iOSUILib/Progress/MDCircularProgressLayer.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EB80614C74310582CC563EC26330CBFD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDCalendarHeader.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendarHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EBD4E00B7F815DC16720A0AAC0FD4E86</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>EC6A9902C35657D324DD9A5CDEF62CFE</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>86DC529517FF0053157F40099AC40FD1</string>
+			<string>F10C0B9EA89453C8D29C77F2EF725A9B</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CONFIGURATION_BUILD_DIR</key>
@@ -5011,36 +5266,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>ECDC9E5B32E3D3E1ADD7926D826982B2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDButton.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDButton.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EE2CE7E492FAC3E58876D53561BD47E3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MDCalendarHeader.h</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarHeader.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>EE612BB81E08F9A42E4D8DD8C393A6C9</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -5051,21 +5276,6 @@
 			<string>text.plist.xml</string>
 			<key>path</key>
 			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EE941C33D07C58805930475CEB7AA588</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDCalendarDateHeader.m</string>
-			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/MDCalendarDateHeader.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -5083,7 +5293,20 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>F0D033A80B6E1C210D0A6CA1C3B06C6B</key>
+		<key>F10C0B9EA89453C8D29C77F2EF725A9B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>MaterialControls.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F39CEF5C7460739930F7E1BC78722A57</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -5092,16 +5315,16 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>NSCalendarHelper.h</string>
+			<string>MDSliderThumbView.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Calendar/NSCalendarHelper.h</string>
+			<string>iOSUILib/iOSUILib/Slider/MDSliderThumbView.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F41DCEA20F038A942CA07C38D8266B0B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EE2CE7E492FAC3E58876D53561BD47E3</string>
+			<string>EB80614C74310582CC563EC26330CBFD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -5112,22 +5335,32 @@
 				</array>
 			</dict>
 		</dict>
-		<key>F5E41B6E1762CF27AB9173ABC13AC052</key>
+		<key>F43C7A81B18BE82A0379599D341AA8CA</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>MDSliderTickMarksView.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/Slider/MDSliderTickMarksView.m</string>
+			<string>Firebase.modulemap</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F5F2D94E3D9384B190A068EAC273B065</key>
+		<key>F5FCA1B879D0024A66B96E9EFDCB82D4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9761B5F61BE5673C26981FA60A66D16A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F610575FD33C89B7F886E12600369099</key>
+		<dict>
+			<key>fileRef</key>
+			<string>63CCE99D789AE58EC5185950E58174B7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F637EF4499B81B44CF8220527AABF34C</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -5136,23 +5369,22 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>path</key>
-			<string>FDataSnapshot.h</string>
+			<string>SwiftPaginator-umbrella.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F5FCA1B879D0024A66B96E9EFDCB82D4</key>
+		<key>F6432FC3EFD8F14022C627DC66EFCF5E</key>
 		<dict>
-			<key>fileRef</key>
-			<string>68CA72EB9CC3B775EF32CAEE93D6A348</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F610575FD33C89B7F886E12600369099</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C8151805641263F5C01592A1160472C4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FEventType.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F72828A294F2595E3191FE1ADC1D6248</key>
 		<dict>
@@ -5167,7 +5399,97 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F9B46A178F2D71FBB82E8CB4877A25D4</key>
+		<key>F7ECB2F43BB6E9D29C1B7317B50453BD</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>SwiftPaginator.framework</string>
+			<key>path</key>
+			<string>SwiftPaginator.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F9EA3B08360A8E3261CC89C10F76DC50</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_MESAC_Companion.framework</string>
+			<key>path</key>
+			<string>Pods-MESAC-Companion.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>FA9332AD7746ED8BECE479BC0E7D51C1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BC07BC6E0E963CB0E62F81EACB40868E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SwiftPaginator/SwiftPaginator-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/SwiftPaginator/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/SwiftPaginator/SwiftPaginator.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>SwiftPaginator</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>FBF98F82E7059784D1D990F8794DA970</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -5176,9 +5498,9 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>name</key>
-			<string>AutoResizeTextView.m</string>
+			<string>UIViewHelper.m</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/AutoResizeTextView.m</string>
+			<string>iOSUILib/iOSUILib/Helpers/UIViewHelper.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -5195,20 +5517,18 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>FCC98156AE5A060566AB0B8348099B57</key>
+		<key>FC2396AAA6C9494CE9C00F2B02F5F3D3</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AD6851C976085AE76CA29FD7B01A9AF2</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>MaterialControls.framework</string>
-			<key>path</key>
-			<string>MaterialControls.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>FD52A7E657FA10F3773F834E742F68A5</key>
 		<dict>
@@ -5231,22 +5551,110 @@
 			<key>productName</key>
 			<string>Pods-MESAC-CompanionUITests</string>
 			<key>productReference</key>
-			<string>DFC80A3B30E0376A19E8EAC0676627D6</string>
+			<string>50CAFC00395FCD64169E6AC31B42FB4C</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
-		<key>FF4DF765AAD51C1591A564662B23E374</key>
+		<key>FE126E0FE8432D65DD40F36252895EED</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BC07BC6E0E963CB0E62F81EACB40868E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SwiftPaginator/SwiftPaginator-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/SwiftPaginator/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/SwiftPaginator/SwiftPaginator.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>SwiftPaginator</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>FE3ACF49110E4C4B2757D00D2CB562F8</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>MDButton.m</string>
+			<string>MDSliderIcon.h</string>
 			<key>path</key>
-			<string>iOSUILib/iOSUILib/MDButton.m</string>
+			<string>iOSUILib/iOSUILib/Slider/MDSliderIcon.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FE7A4B12536657BFB5AF532067C030FC</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Firebase</string>
+			<key>target</key>
+			<string>B7AC9326D819482593FE118E915409D7</string>
+			<key>targetProxy</key>
+			<string>9D8D611BAB93C5B0BFF286E22DD69D58</string>
+		</dict>
+		<key>FE89E43986417E1936AC031E987A32FB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MDCalendar.h</string>
+			<key>path</key>
+			<string>iOSUILib/iOSUILib/Calendar/MDCalendar.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>

@@ -34,9 +34,19 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftPaginator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1761B15F98C24D2116DB856FFF66E019</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>35BE2C57761A4F7C56157A08242645EC</key>
 		<dict>
 			<key>primary</key>
@@ -47,7 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A44F2B9A03C79086157BC9B1E7F6BA6E</key>
+		<key>8C31A40DC42468551AED71A6C1A2E503</key>
 		<dict>
 			<key>primary</key>
 			<true/>
