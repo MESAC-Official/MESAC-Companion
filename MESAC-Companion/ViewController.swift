@@ -7,13 +7,9 @@
 //
 
 import UIKit
-import SwiftPaginator
 
 class ViewController: UIViewController {
     
-    var stringPaginator: Paginator<String>?
-    
-    let source = [["one", "two"], ["three", "four"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()

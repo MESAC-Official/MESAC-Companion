@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1761B15F98C24D2116DB856FFF66E019'
-               BlueprintName = 'SwiftPaginator'
+               BlueprintIdentifier = '47801AB0E1F010546F6EE6AE05B19B58'
+               BlueprintName = 'SEPageViewWithNavigationBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftPaginator.framework'>
+               BuildableName = 'SEPageViewWithNavigationBar.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

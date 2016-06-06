@@ -5,10 +5,9 @@ use_frameworks!
 
 target 'MESAC-Companion’ do
 
-pod 'Firebase', '>= 2.5.1'
-pod 'MaterialControls', '~> 1.0.2'
-pod 'SwiftPaginator'
-
+pod 'Firebase'
+pod 'MaterialControls'
+pod 'SEPageViewWithNavigationBar'
 
 end
 

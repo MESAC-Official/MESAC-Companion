@@ -1,0 +1,6 @@
+framework module SEPageViewWithNavigationBar {
+  umbrella header "SEPageViewWithNavigationBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

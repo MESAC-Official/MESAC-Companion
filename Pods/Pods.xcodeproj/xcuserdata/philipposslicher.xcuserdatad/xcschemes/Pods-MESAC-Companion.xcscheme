@@ -15,7 +15,7 @@
             hideIssues = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8C31A40DC42468551AED71A6C1A2E503"
+               BlueprintIdentifier = "0E0B0A2599EE24F65932AAEBF162E168"
                BuildableName = "Pods_MESAC_Companion.framework"
                BlueprintName = "Pods-MESAC-Companion"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -46,7 +46,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8C31A40DC42468551AED71A6C1A2E503"
+            BlueprintIdentifier = "0E0B0A2599EE24F65932AAEBF162E168"
             BuildableName = "Pods_MESAC_Companion.framework"
             BlueprintName = "Pods-MESAC-Companion"
             ReferencedContainer = "container:Pods.xcodeproj">
