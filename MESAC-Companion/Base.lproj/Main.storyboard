@@ -1,83 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CpO-gc-u3r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="McZ-OQ-xoc">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="Syr-sC-tjR" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wqa-KJ-lxW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ntm-lZ-Tx9">
-                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="jmK-Zb-ijq" kind="relationship" relationship="rootViewController" id="tCr-ds-Rcf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1At-zj-UOH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-122" y="695"/>
-        </scene>
         <!--View Controller-->
-        <scene sceneID="kak-pA-E1I">
+        <scene sceneID="dIR-2F-gVq">
             <objects>
-                <viewController id="MZF-zF-YjO" sceneMemberID="viewController">
+                <viewController id="CpO-gc-u3r" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PLS-Mi-W60"/>
-                        <viewControllerLayoutGuide type="bottom" id="qmE-MC-5za"/>
+                        <viewControllerLayoutGuide type="top" id="NcV-dZ-ED6"/>
+                        <viewControllerLayoutGuide type="bottom" id="e60-p4-QO4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0ta-Sz-lvo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 2" translatesAutoresizingMaskIntoConstraints="NO" id="2aY-Ll-eg7">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="2aY-Ll-eg7" firstAttribute="bottom" secondItem="qmE-MC-5za" secondAttribute="top" id="6Qa-1v-PPW"/>
-                            <constraint firstAttribute="trailing" secondItem="2aY-Ll-eg7" secondAttribute="trailing" id="XZs-lw-vEv"/>
-                            <constraint firstItem="2aY-Ll-eg7" firstAttribute="leading" secondItem="0ta-Sz-lvo" secondAttribute="leading" id="c5A-Vb-0X6"/>
-                            <constraint firstItem="2aY-Ll-eg7" firstAttribute="top" secondItem="0ta-Sz-lvo" secondAttribute="top" id="yE9-uv-Fq5"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kFR-xX-zZJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="30" y="1522"/>
-        </scene>
-        <!--Page View With Navigation Bar-->
-        <scene sceneID="UmE-VL-XFN">
-            <objects>
-                <viewController id="jmK-Zb-ijq" customClass="SEPageViewWithNavigationBar" customModule="SEPageViewWithNavigationBar" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NnM-Jg-Vx5"/>
-                        <viewControllerLayoutGuide type="bottom" id="s80-am-fp7"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e6N-0v-fCD">
+                    <view key="view" contentMode="scaleToFill" id="fZm-aV-MJY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8pX-Ir-fnH"/>
-                    <connections>
-                        <segue destination="MZF-zF-YjO" kind="custom" customClass="SEPageViewSegue" customModule="SEPageViewWithNavigationBar" id="UhX-Wv-p8m"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xno-8k-ouP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YmC-qI-KB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="704" y="767"/>
+            <point key="canvasLocation" x="16" y="1714"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Group 2" width="957" height="1701"/>
-    </resources>
 </document>

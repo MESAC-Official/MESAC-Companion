@@ -7,7 +7,8 @@ target 'MESAC-Companion’ do
 
 pod 'Firebase'
 pod 'MaterialControls'
-pod 'SEPageViewWithNavigationBar'
+pod 'Material'
+
 
 end
 

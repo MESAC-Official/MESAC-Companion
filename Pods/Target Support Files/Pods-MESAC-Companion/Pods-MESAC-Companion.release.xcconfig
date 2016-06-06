@@ -1,9 +1,9 @@
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Firebase" "$PODS_CONFIGURATION_BUILD_DIR/MaterialControls" "$PODS_CONFIGURATION_BUILD_DIR/SEPageViewWithNavigationBar"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/Firebase" "$PODS_CONFIGURATION_BUILD_DIR/Material" "$PODS_CONFIGURATION_BUILD_DIR/MaterialControls"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Firebase/Firebase.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MaterialControls/MaterialControls.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SEPageViewWithNavigationBar/SEPageViewWithNavigationBar.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -ObjC -framework "Firebase" -framework "MaterialControls" -framework "SEPageViewWithNavigationBar"
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/Firebase/Firebase.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Material/Material.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MaterialControls/MaterialControls.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "Firebase" -framework "Material" -framework "MaterialControls"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
