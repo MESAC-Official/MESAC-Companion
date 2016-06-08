@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Material
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let bottomNavigationController: BottomNavigationController = BottomNavigationController()
+        bottomNavigationController.viewControllers = [NavigationController(rootViewController: ViewController()), NavigationController(rootViewController: ViewController())]
     }
 
     override func didReceiveMemoryWarning() {
