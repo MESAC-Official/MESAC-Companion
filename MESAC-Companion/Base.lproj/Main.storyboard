@@ -1,61 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yPh-26-l2Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bxE-Mr-5O3">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="9Sv-KC-1QT">
+        <scene sceneID="8cs-RH-ekC">
             <objects>
-                <viewController wantsFullScreenLayout="YES" id="yPh-26-l2Y" customClass="ViewController" customModule="MESAC_Companion" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4g-BD-llP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="bxE-Mr-5O3" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3tF-7D-qsW"/>
-                        <viewControllerLayoutGuide type="bottom" id="fqw-t9-E2F"/>
+                        <viewControllerLayoutGuide type="top" id="iPg-dQ-ZL1"/>
+                        <viewControllerLayoutGuide type="bottom" id="iin-hK-qr5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vne-Do-7Bs">
+                    <view key="view" contentMode="scaleToFill" id="afx-oU-2jJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0B-7j-erC" customClass="RaisedButton" customModule="Material">
-                                <rect key="frame" x="118" y="115" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYW-qf-C49" customClass="Toolbar" customModule="Material">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okj-AC-bfx" customClass="Toolbar" customModule="Material">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9q-fE-sph">
-                                        <rect key="frame" x="19" y="20" width="24" height="24"/>
-                                        <state key="normal" image="cm_add_white"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niC-DM-jCZ">
+                                        <rect key="frame" x="8" y="25" width="24" height="24"/>
+                                        <state key="normal" image="cm_menu_white"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reg-gg-pgL">
+                                        <rect key="frame" x="51" y="25" width="46" height="24"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH4-EH-WSm">
+                                        <rect key="frame" x="568" y="25" width="24" height="24"/>
+                                        <state key="normal" image="cm_more_vert_white"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="niC-DM-jCZ" firstAttribute="top" secondItem="okj-AC-bfx" secondAttribute="top" constant="25" id="6lS-G6-ccr"/>
+                                    <constraint firstItem="niC-DM-jCZ" firstAttribute="leading" secondItem="okj-AC-bfx" secondAttribute="leadingMargin" id="FcM-9h-adR"/>
+                                    <constraint firstItem="Reg-gg-pgL" firstAttribute="leading" secondItem="niC-DM-jCZ" secondAttribute="trailing" constant="19" id="Jbg-CZ-Zu8"/>
+                                    <constraint firstItem="OH4-EH-WSm" firstAttribute="top" secondItem="okj-AC-bfx" secondAttribute="top" constant="25" id="PN4-rW-4xT"/>
+                                    <constraint firstItem="Reg-gg-pgL" firstAttribute="bottom" secondItem="OH4-EH-WSm" secondAttribute="bottom" id="Tb9-ig-jA2"/>
+                                    <constraint firstAttribute="height" constant="64" id="Xr5-Ca-tqg"/>
+                                    <constraint firstItem="OH4-EH-WSm" firstAttribute="trailing" secondItem="okj-AC-bfx" secondAttribute="trailingMargin" id="dKj-JA-3Cc"/>
+                                    <constraint firstItem="Reg-gg-pgL" firstAttribute="top" secondItem="niC-DM-jCZ" secondAttribute="top" id="yDe-hn-oTj"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.24313732981681824" green="0.31372547149658203" blue="0.70588231086730957" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.2431373298" green="0.31372547150000002" blue="0.70588231089999998" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.93323200941085815" green="0.93339210748672485" blue="0.93322187662124634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="lYW-qf-C49" secondAttribute="bottom" constant="536" id="3Vh-cJ-uZS"/>
-                            <constraint firstItem="w0B-7j-erC" firstAttribute="top" secondItem="lYW-qf-C49" secondAttribute="bottom" constant="51" id="Bi5-BA-m17"/>
-                            <constraint firstItem="lYW-qf-C49" firstAttribute="top" secondItem="vne-Do-7Bs" secondAttribute="top" id="W7q-1t-LRa"/>
-                            <constraint firstItem="w0B-7j-erC" firstAttribute="leading" secondItem="vne-Do-7Bs" secondAttribute="leadingMargin" constant="98" id="h0D-xF-o6B"/>
-                            <constraint firstItem="fqw-t9-E2F" firstAttribute="top" secondItem="w0B-7j-erC" secondAttribute="bottom" constant="455" id="qBP-j2-XvV"/>
-                            <constraint firstItem="lYW-qf-C49" firstAttribute="leading" secondItem="vne-Do-7Bs" secondAttribute="leading" id="t7P-Nh-Lf5"/>
+                            <constraint firstItem="okj-AC-bfx" firstAttribute="leading" secondItem="afx-oU-2jJ" secondAttribute="leadingMargin" constant="-20" id="YbJ-BS-H0y"/>
+                            <constraint firstItem="okj-AC-bfx" firstAttribute="top" secondItem="afx-oU-2jJ" secondAttribute="topMargin" id="hb6-32-eKE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="okj-AC-bfx" secondAttribute="trailing" constant="-20" id="p2P-ma-JeJ"/>
                         </constraints>
                     </view>
-                    <toolbarItems/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="meb-qU-jNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-60" y="1577"/>
+            <point key="canvasLocation" x="-137" y="1717"/>
         </scene>
     </scenes>
     <resources>
-        <image name="cm_add_white" width="24" height="24"/>
+        <image name="cm_menu_white" width="24" height="24"/>
+        <image name="cm_more_vert_white" width="24" height="24"/>
     </resources>
 </document>

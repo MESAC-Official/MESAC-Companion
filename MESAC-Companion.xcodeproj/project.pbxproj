@@ -12,6 +12,7 @@
 		9A19C89693FD374A5094650C /* Pods_MESAC_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D97F4C05764AEE72536FBA /* Pods_MESAC_Companion.framework */; };
 		B877BBB51D087F5100EA083B /* io.cosmicmind.material.fonts.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = B877BBB41D087F5100EA083B /* io.cosmicmind.material.fonts.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B877BBB81D087F5700EA083B /* io.cosmicmind.material.icons.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = B877BBB71D087F5700EA083B /* io.cosmicmind.material.icons.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B877BBBA1D08893700EA083B /* Material Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B877BBB91D08893700EA083B /* Material Assets.xcassets */; };
 		B8A18F891CFAADF90044AA7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A18F881CFAADF90044AA7C /* AppDelegate.swift */; };
 		B8A18F8B1CFAADF90044AA7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A18F8A1CFAADF90044AA7C /* ViewController.swift */; };
 		B8A18F911CFAADF90044AA7C /* MESAC_Companion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8A18F8F1CFAADF90044AA7C /* MESAC_Companion.xcdatamodeld */; };
@@ -64,6 +65,7 @@
 		B86DDCF11CFAF844009B7081 /* MESAC-Companion.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "MESAC-Companion.entitlements"; sourceTree = "<group>"; };
 		B877BBB41D087F5100EA083B /* io.cosmicmind.material.fonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = io.cosmicmind.material.fonts.bundle; path = "/Users/philipposslicher/Library/Developer/Xcode/DerivedData/MESAC-Companion-fcakuyveswivywfbgumgkjppnkqk/Build/Products/Debug-iphoneos/Material/io.cosmicmind.material.fonts.bundle"; sourceTree = "<absolute>"; };
 		B877BBB71D087F5700EA083B /* io.cosmicmind.material.icons.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = io.cosmicmind.material.icons.bundle; path = "/Users/philipposslicher/Library/Developer/Xcode/DerivedData/MESAC-Companion-fcakuyveswivywfbgumgkjppnkqk/Build/Products/Debug-iphoneos/Material/io.cosmicmind.material.icons.bundle"; sourceTree = "<absolute>"; };
+		B877BBB91D08893700EA083B /* Material Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Material Assets.xcassets"; sourceTree = "<group>"; };
 		B8A18F851CFAADF90044AA7C /* MESAC-Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MESAC-Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A18F881CFAADF90044AA7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A18F8A1CFAADF90044AA7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				B8A18F8A1CFAADF90044AA7C /* ViewController.swift */,
 				B8B16B7C1D08106C006B6C1C /* Main.storyboard */,
 				B8A18F921CFAADF90044AA7C /* Assets.xcassets */,
+				B877BBB91D08893700EA083B /* Material Assets.xcassets */,
 				B8A18F941CFAADF90044AA7C /* LaunchScreen.storyboard */,
 				B8A18F971CFAADF90044AA7C /* Info.plist */,
 				B8A18F8F1CFAADF90044AA7C /* MESAC_Companion.xcdatamodeld */,
@@ -316,6 +319,7 @@
 			files = (
 				B8B16B7E1D08106C006B6C1C /* Main.storyboard in Resources */,
 				B8A18F961CFAADF90044AA7C /* LaunchScreen.storyboard in Resources */,
+				B877BBBA1D08893700EA083B /* Material Assets.xcassets in Resources */,
 				B8A18F931CFAADF90044AA7C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
