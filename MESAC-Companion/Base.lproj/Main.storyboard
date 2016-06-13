@@ -40,6 +40,10 @@
                                         <rect key="frame" x="568" y="25" width="24" height="24"/>
                                         <state key="normal" image="cm_more_vert_white"/>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBl-je-x4s">
+                                        <rect key="frame" x="531" y="25" width="24" height="24"/>
+                                        <state key="normal" image="Live Icon"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -69,10 +73,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R4g-BD-llP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-137" y="1717"/>
+            <point key="canvasLocation" x="-143" y="1712"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Live Icon" width="57" height="51"/>
         <image name="cm_menu_white" width="24" height="24"/>
         <image name="cm_more_vert_white" width="24" height="24"/>
     </resources>

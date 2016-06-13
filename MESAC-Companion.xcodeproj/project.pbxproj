@@ -60,7 +60,6 @@
 		B8A18FA71CFAADF90044AA7C /* MESAC-CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MESAC-CompanionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8A18FAB1CFAADF90044AA7C /* MESAC_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESAC_CompanionUITests.swift; sourceTree = "<group>"; };
 		B8A18FAD1CFAADF90044AA7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B8B16B781D080D88006B6C1C /* Material.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Material.framework; path = "/Users/philipposslicher/Library/Developer/Xcode/DerivedData/MESAC-Companion-fcakuyveswivywfbgumgkjppnkqk/Build/Products/Debug-iphoneos/Material/Material.framework"; sourceTree = "<absolute>"; };
 		B8B16B7D1D08106C006B6C1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C39CB6886B5EB7B08E7C18D6 /* Pods_MESAC_CompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MESAC_CompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC8AF74C665B1921E26C9230 /* Pods-MESAC-CompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +120,6 @@
 		B8A18F7C1CFAADF90044AA7C = {
 			isa = PBXGroup;
 			children = (
-				B8B16B781D080D88006B6C1C /* Material.framework */,
 				B8A18F871CFAADF90044AA7C /* MESAC-Companion */,
 				B8A18F9F1CFAADF90044AA7C /* MESAC-CompanionTests */,
 				B8A18FAA1CFAADF90044AA7C /* MESAC-CompanionUITests */,
