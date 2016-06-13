@@ -51,26 +51,26 @@
                                                 <state key="normal" image="Live Icon"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niC-DM-jCZ" userLabel="Burger">
-                                                <rect key="frame" x="17" y="13" width="20" height="18"/>
+                                                <rect key="frame" x="17" y="14" width="20" height="16"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="xxu-b3-q3P"/>
+                                                    <constraint firstAttribute="width" constant="20" id="O27-Bb-Kpy"/>
                                                 </constraints>
                                                 <state key="normal" image="Menu Burger"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Reg-gg-pgL" firstAttribute="leading" secondItem="niC-DM-jCZ" secondAttribute="trailing" constant="19" id="FN3-Dh-dCf"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="top" secondItem="D0y-wc-aeu" secondAttribute="top" constant="14" id="6ue-9y-vPT"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="leading" secondItem="D0y-wc-aeu" secondAttribute="leading" constant="17" id="7hr-bb-x0p"/>
                                             <constraint firstItem="IBl-je-x4s" firstAttribute="top" secondItem="D0y-wc-aeu" secondAttribute="top" constant="13" id="JAA-k4-USX"/>
-                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="top" secondItem="Reg-gg-pgL" secondAttribute="top" id="KBM-5p-gtD"/>
-                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="centerY" secondItem="D0y-wc-aeu" secondAttribute="centerY" id="SKd-3j-u87"/>
-                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="bottom" secondItem="Reg-gg-pgL" secondAttribute="bottom" id="TMf-iT-PKZ"/>
+                                            <constraint firstItem="Reg-gg-pgL" firstAttribute="leading" secondItem="niC-DM-jCZ" secondAttribute="trailing" constant="19" id="JEz-xK-BOm"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="centerY" secondItem="OH4-EH-WSm" secondAttribute="centerY" id="OOc-P1-x2B"/>
                                             <constraint firstItem="Reg-gg-pgL" firstAttribute="top" secondItem="IBl-je-x4s" secondAttribute="top" id="VPG-O4-yt4"/>
                                             <constraint firstItem="OH4-EH-WSm" firstAttribute="leading" secondItem="IBl-je-x4s" secondAttribute="trailing" constant="8" symbolic="YES" id="VqD-9r-cgR"/>
                                             <constraint firstItem="Reg-gg-pgL" firstAttribute="bottom" secondItem="IBl-je-x4s" secondAttribute="bottom" id="acO-hZ-UT0"/>
-                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="centerY" secondItem="OH4-EH-WSm" secondAttribute="centerY" id="j5v-kG-sGb"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="centerY" secondItem="D0y-wc-aeu" secondAttribute="centerY" id="bXZ-EZ-QOq"/>
                                             <constraint firstAttribute="trailing" secondItem="OH4-EH-WSm" secondAttribute="trailing" constant="16" id="oDi-iu-Jyq"/>
-                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="leading" secondItem="D0y-wc-aeu" secondAttribute="leading" constant="17" id="zLK-tD-rcK"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="centerY" secondItem="Reg-gg-pgL" secondAttribute="centerY" id="uud-V7-1MV"/>
                                         </constraints>
                                     </view>
                                 </subviews>
