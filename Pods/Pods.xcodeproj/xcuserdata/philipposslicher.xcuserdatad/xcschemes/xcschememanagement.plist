@@ -24,16 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MaterialControls-MaterialControls.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MaterialControls.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MESAC-Companion.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,21 +42,6 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>35BE2C57761A4F7C56157A08242645EC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>720EA7C4B6AC4D960C9A08E2261B6B22</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>93A3644E6E67E10E9DEC66EB8D7659FC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>958EC39DD79BF94E1C5BECA416A02062</key>
 		<dict>
 			<key>primary</key>
@@ -88,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>DE9B0536CD7D58980FF5CD1F2E927CF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC4F21E3EBF2AF8C1681B213A1F1B9B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -6,7 +6,7 @@ use_frameworks!
 target 'MESAC-Companion’ do
 
 pod 'Firebase'
-pod 'MaterialControls'
+#pod 'MaterialControls'
 pod 'Material'
 
 
