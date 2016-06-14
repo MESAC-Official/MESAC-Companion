@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15G12a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bxE-Mr-5O3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </mutableArray>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8cs-RH-ekC">
+            <objects>
+                <viewController id="bxE-Mr-5O3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iPg-dQ-ZL1"/>
+                        <viewControllerLayoutGuide type="bottom" id="iin-hK-qr5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="afx-oU-2jJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okj-AC-bfx" userLabel="Top Bar" customClass="Toolbar" customModule="Material">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nq-bW-ZYq" userLabel="Status Color">
+                                        <color key="backgroundColor" red="0.18431372549019609" green="0.24313725490196078" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0y-wc-aeu" userLabel="Inner Topbar">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reg-gg-pgL">
+                                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH4-EH-WSm">
+                                                <state key="normal" image="cm_more_vert_white"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBl-je-x4s">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="RBO-l5-LMi"/>
+                                                </constraints>
+                                                <state key="normal" image="Live Icon"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niC-DM-jCZ" userLabel="Burger">
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="O27-Bb-Kpy"/>
+                                                </constraints>
+                                                <state key="normal" image="Menu Burger"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="top" secondItem="D0y-wc-aeu" secondAttribute="top" constant="14" id="6ue-9y-vPT"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="leading" secondItem="D0y-wc-aeu" secondAttribute="leading" constant="17" id="7hr-bb-x0p"/>
+                                            <constraint firstItem="IBl-je-x4s" firstAttribute="top" secondItem="D0y-wc-aeu" secondAttribute="top" constant="13" id="JAA-k4-USX"/>
+                                            <constraint firstItem="Reg-gg-pgL" firstAttribute="leading" secondItem="niC-DM-jCZ" secondAttribute="trailing" constant="19" id="JEz-xK-BOm"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="centerY" secondItem="OH4-EH-WSm" secondAttribute="centerY" id="OOc-P1-x2B"/>
+                                            <constraint firstItem="Reg-gg-pgL" firstAttribute="top" secondItem="IBl-je-x4s" secondAttribute="top" id="VPG-O4-yt4"/>
+                                            <constraint firstItem="OH4-EH-WSm" firstAttribute="leading" secondItem="IBl-je-x4s" secondAttribute="trailing" constant="8" symbolic="YES" id="VqD-9r-cgR"/>
+                                            <constraint firstItem="Reg-gg-pgL" firstAttribute="bottom" secondItem="IBl-je-x4s" secondAttribute="bottom" id="acO-hZ-UT0"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="centerY" secondItem="D0y-wc-aeu" secondAttribute="centerY" id="bXZ-EZ-QOq"/>
+                                            <constraint firstAttribute="trailing" secondItem="OH4-EH-WSm" secondAttribute="trailing" constant="16" id="oDi-iu-Jyq"/>
+                                            <constraint firstItem="niC-DM-jCZ" firstAttribute="centerY" secondItem="Reg-gg-pgL" secondAttribute="centerY" id="uud-V7-1MV"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="8nq-bW-ZYq" firstAttribute="leading" secondItem="okj-AC-bfx" secondAttribute="leading" id="5mh-nj-QbL"/>
+                                    <constraint firstAttribute="bottom" secondItem="D0y-wc-aeu" secondAttribute="bottom" id="Gbh-PX-xku"/>
+                                    <constraint firstAttribute="trailing" secondItem="8nq-bW-ZYq" secondAttribute="trailing" id="PzA-Hh-pSY"/>
+                                    <constraint firstItem="8nq-bW-ZYq" firstAttribute="top" secondItem="okj-AC-bfx" secondAttribute="top" id="RDp-vb-iOn"/>
+                                    <constraint firstAttribute="height" constant="64" id="Xr5-Ca-tqg"/>
+                                    <constraint firstItem="D0y-wc-aeu" firstAttribute="top" secondItem="8nq-bW-ZYq" secondAttribute="bottom" id="djE-Lf-IIk"/>
+                                    <constraint firstItem="D0y-wc-aeu" firstAttribute="top" secondItem="okj-AC-bfx" secondAttribute="top" constant="20" id="inu-xs-KDj"/>
+                                    <constraint firstItem="D0y-wc-aeu" firstAttribute="trailing" secondItem="8nq-bW-ZYq" secondAttribute="trailing" id="qws-32-XtI"/>
+                                    <constraint firstItem="D0y-wc-aeu" firstAttribute="leading" secondItem="8nq-bW-ZYq" secondAttribute="leading" id="uAK-2c-ZUm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.2431373298" green="0.31372547150000002" blue="0.70588231089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91652935743331909" green="0.91670572757720947" blue="0.91649985313415527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="okj-AC-bfx" firstAttribute="leading" secondItem="afx-oU-2jJ" secondAttribute="leadingMargin" constant="-20" id="YbJ-BS-H0y"/>
+                            <constraint firstItem="okj-AC-bfx" firstAttribute="top" secondItem="afx-oU-2jJ" secondAttribute="topMargin" id="hb6-32-eKE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="okj-AC-bfx" secondAttribute="trailing" constant="-20" id="p2P-ma-JeJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R4g-BD-llP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-143" y="1712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Live Icon" width="57" height="51"/>
+        <image name="Menu Burger" width="51" height="42"/>
+        <image name="cm_more_vert_white" width="24" height="24"/>
+    </resources>
+</document>
