@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Firebase.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Material-io.cosmicmind.material.fonts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,6 +37,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>58179F4C84C0F3A9AC14A900E5DAFAB2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>958EC39DD79BF94E1C5BECA416A02062</key>
 		<dict>
 			<key>primary</key>
@@ -57,17 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7AC9326D819482593FE118E915409D7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>DE9B0536CD7D58980FF5CD1F2E927CF6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EC4F21E3EBF2AF8C1681B213A1F1B9B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

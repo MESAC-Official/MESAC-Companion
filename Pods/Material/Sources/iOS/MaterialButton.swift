@@ -450,7 +450,7 @@ public class MaterialButton : UIButton {
 	- Parameter touches: A set of UITouch objects.
 	- Parameter event: A UIEvent object.
 	*/
-	public override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+	public override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent?) {
 		super.touchesCancelled(touches, withEvent: event)
 		MaterialAnimation.pulseContractAnimation(layer, visualLayer: visualLayer, pulseColor: pulseColor, pulseLayers: &pulseLayers, pulseAnimation: pulseAnimation)
 	}

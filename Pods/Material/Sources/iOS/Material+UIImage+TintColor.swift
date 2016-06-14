@@ -40,17 +40,17 @@ public extension UIImage {
 		UIGraphicsBeginImageContextWithOptions(size, false, MaterialDevice.scale)
 		let context = UIGraphicsGetCurrentContext()
 
-		CGContextScaleCTM(context, 1.0, -1.0)
-		CGContextTranslateCTM(context, 0.0, -size.height)
+		CGContextScaleCTM(context!, 1.0, -1.0)
+		CGContextTranslateCTM(context!, 0.0, -size.height)
 		
-		CGContextSetBlendMode(context, .Multiply)
+		CGContextSetBlendMode(context!, .Multiply)
 		
 		let rect = CGRectMake(0, 0, size.width, size.height)
-		CGContextClipToMask(context, rect, CGImage)
+		CGContextClipToMask(context!, rect, CGImage!)
 		color.setFill()
-		CGContextFillRect(context, rect)
+		CGContextFillRect(context!, rect)
 		
-		let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()
+		let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
 		UIGraphicsEndImageContext()
 		return image
 	}
