@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3863437F54197BEDC7A3EEBD /* Pods_MESAC_CompanionUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633628E53582BAE8862BDCE4 /* Pods_MESAC_CompanionUITests.framework */; };
+		967D56E034F20F724BAA0E80 /* Pods_MESAC_CompanionTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBD8F921E12FA4E4080C06D /* Pods_MESAC_CompanionTests.framework */; };
+		B84F95011D490BBD0095E50E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95001D490BBD0095E50E /* AppDelegate.swift */; };
+		B84F95031D490BBD0095E50E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95021D490BBD0095E50E /* ViewController.swift */; };
+		B84F95061D490BBD0095E50E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84F95041D490BBD0095E50E /* Main.storyboard */; };
+		B84F95091D490BBD0095E50E /* MESAC_Companion.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B84F95071D490BBD0095E50E /* MESAC_Companion.xcdatamodeld */; };
+		B84F950B1D490BBD0095E50E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B84F950A1D490BBD0095E50E /* Assets.xcassets */; };
+		B84F950E1D490BBD0095E50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84F950C1D490BBD0095E50E /* LaunchScreen.storyboard */; };
+		B84F95191D490BBD0095E50E /* MESAC_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95181D490BBD0095E50E /* MESAC_CompanionTests.swift */; };
+		B84F95241D490BBD0095E50E /* MESAC_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */; };
+		C4596AFEACE46778456FC8B8 /* Pods_MESAC_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D543576DCF7D92E5AE8BE4 /* Pods_MESAC_Companion.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B84F95151D490BBD0095E50E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B84F94F51D490BBD0095E50E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B84F94FC1D490BBD0095E50E;
+			remoteInfo = "MESAC-Companion";
+		};
+		B84F95201D490BBD0095E50E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B84F94F51D490BBD0095E50E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B84F94FC1D490BBD0095E50E;
+			remoteInfo = "MESAC-Companion";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D8ECB6F829DB5C4AF080C75 /* Pods-MESAC-CompanionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D56768AD49F8C5833323CF3 /* Pods-MESAC-Companion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-Companion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion.debug.xcconfig"; sourceTree = "<group>"; };
+		30212B28F8EDC6E225599F64 /* Pods-MESAC-CompanionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests.release.xcconfig"; sourceTree = "<group>"; };
+		4EBD8F921E12FA4E4080C06D /* Pods_MESAC_CompanionTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MESAC_CompanionTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		633628E53582BAE8862BDCE4 /* Pods_MESAC_CompanionUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MESAC_CompanionUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		783E11BDD7FE8A5BC64869F9 /* Pods-MESAC-Companion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-Companion.release.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion.release.xcconfig"; sourceTree = "<group>"; };
+		B84F94FD1D490BBD0095E50E /* MESAC-Companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MESAC-Companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84F95001D490BBD0095E50E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B84F95021D490BBD0095E50E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B84F95051D490BBD0095E50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B84F95081D490BBD0095E50E /* MESAC_Companion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MESAC_Companion.xcdatamodel; sourceTree = "<group>"; };
+		B84F950A1D490BBD0095E50E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B84F950D1D490BBD0095E50E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B84F950F1D490BBD0095E50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B84F95141D490BBD0095E50E /* MESAC-CompanionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MESAC-CompanionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84F95181D490BBD0095E50E /* MESAC_CompanionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESAC_CompanionTests.swift; sourceTree = "<group>"; };
+		B84F951A1D490BBD0095E50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B84F951F1D490BBD0095E50E /* MESAC-CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MESAC-CompanionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESAC_CompanionUITests.swift; sourceTree = "<group>"; };
+		B84F95251D490BBD0095E50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2BD234FA40F79CAFDE4A9D /* Pods-MESAC-CompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E1A02DFEAB69D558632E9E61 /* Pods-MESAC-CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1D543576DCF7D92E5AE8BE4 /* Pods_MESAC_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MESAC_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B84F94FA1D490BBD0095E50E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4596AFEACE46778456FC8B8 /* Pods_MESAC_Companion.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84F95111D490BBD0095E50E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967D56E034F20F724BAA0E80 /* Pods_MESAC_CompanionTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84F951C1D490BBD0095E50E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3863437F54197BEDC7A3EEBD /* Pods_MESAC_CompanionUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		855EE5370ED85DB4098FC0EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D56768AD49F8C5833323CF3 /* Pods-MESAC-Companion.debug.xcconfig */,
+				783E11BDD7FE8A5BC64869F9 /* Pods-MESAC-Companion.release.xcconfig */,
+				E1A02DFEAB69D558632E9E61 /* Pods-MESAC-CompanionTests.debug.xcconfig */,
+				30212B28F8EDC6E225599F64 /* Pods-MESAC-CompanionTests.release.xcconfig */,
+				1D8ECB6F829DB5C4AF080C75 /* Pods-MESAC-CompanionUITests.debug.xcconfig */,
+				BE2BD234FA40F79CAFDE4A9D /* Pods-MESAC-CompanionUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9D0C64476F325FBA5AA97ED0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1D543576DCF7D92E5AE8BE4 /* Pods_MESAC_Companion.framework */,
+				4EBD8F921E12FA4E4080C06D /* Pods_MESAC_CompanionTests.framework */,
+				633628E53582BAE8862BDCE4 /* Pods_MESAC_CompanionUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B84F94F41D490BBD0095E50E = {
+			isa = PBXGroup;
+			children = (
+				B84F94FF1D490BBD0095E50E /* MESAC-Companion */,
+				B84F95171D490BBD0095E50E /* MESAC-CompanionTests */,
+				B84F95221D490BBD0095E50E /* MESAC-CompanionUITests */,
+				B84F94FE1D490BBD0095E50E /* Products */,
+				855EE5370ED85DB4098FC0EE /* Pods */,
+				9D0C64476F325FBA5AA97ED0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B84F94FE1D490BBD0095E50E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B84F94FD1D490BBD0095E50E /* MESAC-Companion.app */,
+				B84F95141D490BBD0095E50E /* MESAC-CompanionTests.xctest */,
+				B84F951F1D490BBD0095E50E /* MESAC-CompanionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B84F94FF1D490BBD0095E50E /* MESAC-Companion */ = {
+			isa = PBXGroup;
+			children = (
+				B84F95001D490BBD0095E50E /* AppDelegate.swift */,
+				B84F95021D490BBD0095E50E /* ViewController.swift */,
+				B84F95041D490BBD0095E50E /* Main.storyboard */,
+				B84F950A1D490BBD0095E50E /* Assets.xcassets */,
+				B84F950C1D490BBD0095E50E /* LaunchScreen.storyboard */,
+				B84F950F1D490BBD0095E50E /* Info.plist */,
+				B84F95071D490BBD0095E50E /* MESAC_Companion.xcdatamodeld */,
+			);
+			path = "MESAC-Companion";
+			sourceTree = "<group>";
+		};
+		B84F95171D490BBD0095E50E /* MESAC-CompanionTests */ = {
+			isa = PBXGroup;
+			children = (
+				B84F95181D490BBD0095E50E /* MESAC_CompanionTests.swift */,
+				B84F951A1D490BBD0095E50E /* Info.plist */,
+			);
+			path = "MESAC-CompanionTests";
+			sourceTree = "<group>";
+		};
+		B84F95221D490BBD0095E50E /* MESAC-CompanionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */,
+				B84F95251D490BBD0095E50E /* Info.plist */,
+			);
+			path = "MESAC-CompanionUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B84F94FC1D490BBD0095E50E /* MESAC-Companion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B84F95281D490BBD0095E50E /* Build configuration list for PBXNativeTarget "MESAC-Companion" */;
+			buildPhases = (
+				41E3741B33310F9442374B73 /* [CP] Check Pods Manifest.lock */,
+				B84F94F91D490BBD0095E50E /* Sources */,
+				B84F94FA1D490BBD0095E50E /* Frameworks */,
+				B84F94FB1D490BBD0095E50E /* Resources */,
+				F9154BC91A162C0BB5D661A4 /* [CP] Embed Pods Frameworks */,
+				5C6FCAE4F339A7672DCDAC2E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MESAC-Companion";
+			productName = "MESAC-Companion";
+			productReference = B84F94FD1D490BBD0095E50E /* MESAC-Companion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B84F95131D490BBD0095E50E /* MESAC-CompanionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B84F952B1D490BBD0095E50E /* Build configuration list for PBXNativeTarget "MESAC-CompanionTests" */;
+			buildPhases = (
+				1C79DC92B102A71192E1DE7D /* [CP] Check Pods Manifest.lock */,
+				B84F95101D490BBD0095E50E /* Sources */,
+				B84F95111D490BBD0095E50E /* Frameworks */,
+				B84F95121D490BBD0095E50E /* Resources */,
+				0914BBDBE883B96BD0FECAC5 /* [CP] Embed Pods Frameworks */,
+				B884358ABA6E1AC4FEE75F9A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B84F95161D490BBD0095E50E /* PBXTargetDependency */,
+			);
+			name = "MESAC-CompanionTests";
+			productName = "MESAC-CompanionTests";
+			productReference = B84F95141D490BBD0095E50E /* MESAC-CompanionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B84F951E1D490BBD0095E50E /* MESAC-CompanionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B84F952E1D490BBD0095E50E /* Build configuration list for PBXNativeTarget "MESAC-CompanionUITests" */;
+			buildPhases = (
+				73FB5DCFA013A66962402C31 /* [CP] Check Pods Manifest.lock */,
+				B84F951B1D490BBD0095E50E /* Sources */,
+				B84F951C1D490BBD0095E50E /* Frameworks */,
+				B84F951D1D490BBD0095E50E /* Resources */,
+				29776BFB047150A3725D1C94 /* [CP] Embed Pods Frameworks */,
+				48C9AE854C1B11BC8CA357E3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B84F95211D490BBD0095E50E /* PBXTargetDependency */,
+			);
+			name = "MESAC-CompanionUITests";
+			productName = "MESAC-CompanionUITests";
+			productReference = B84F951F1D490BBD0095E50E /* MESAC-CompanionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B84F94F51D490BBD0095E50E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Philippos Slicher & Yajat Dua";
+				TargetAttributes = {
+					B84F94FC1D490BBD0095E50E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4EM2VYKJG8;
+						DevelopmentTeamName = "American Community School Of Abu Dhabi";
+						ProvisioningStyle = Automatic;
+					};
+					B84F95131D490BBD0095E50E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4EM2VYKJG8;
+						DevelopmentTeamName = "American Community School Of Abu Dhabi";
+						ProvisioningStyle = Automatic;
+						TestTargetID = B84F94FC1D490BBD0095E50E;
+					};
+					B84F951E1D490BBD0095E50E = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 4EM2VYKJG8;
+						DevelopmentTeamName = "American Community School Of Abu Dhabi";
+						ProvisioningStyle = Automatic;
+						TestTargetID = B84F94FC1D490BBD0095E50E;
+					};
+				};
+			};
+			buildConfigurationList = B84F94F81D490BBD0095E50E /* Build configuration list for PBXProject "MESAC-Companion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B84F94F41D490BBD0095E50E;
+			productRefGroup = B84F94FE1D490BBD0095E50E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B84F94FC1D490BBD0095E50E /* MESAC-Companion */,
+				B84F95131D490BBD0095E50E /* MESAC-CompanionTests */,
+				B84F951E1D490BBD0095E50E /* MESAC-CompanionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B84F94FB1D490BBD0095E50E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B84F950E1D490BBD0095E50E /* LaunchScreen.storyboard in Resources */,
+				B84F950B1D490BBD0095E50E /* Assets.xcassets in Resources */,
+				B84F95061D490BBD0095E50E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84F95121D490BBD0095E50E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84F951D1D490BBD0095E50E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0914BBDBE883B96BD0FECAC5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C79DC92B102A71192E1DE7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		29776BFB047150A3725D1C94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41E3741B33310F9442374B73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		48C9AE854C1B11BC8CA357E3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C6FCAE4F339A7672DCDAC2E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73FB5DCFA013A66962402C31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B884358ABA6E1AC4FEE75F9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9154BC91A162C0BB5D661A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MESAC-Companion/Pods-MESAC-Companion-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B84F94F91D490BBD0095E50E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B84F95091D490BBD0095E50E /* MESAC_Companion.xcdatamodeld in Sources */,
+				B84F95031D490BBD0095E50E /* ViewController.swift in Sources */,
+				B84F95011D490BBD0095E50E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84F95101D490BBD0095E50E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B84F95191D490BBD0095E50E /* MESAC_CompanionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B84F951B1D490BBD0095E50E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B84F95241D490BBD0095E50E /* MESAC_CompanionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B84F95161D490BBD0095E50E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B84F94FC1D490BBD0095E50E /* MESAC-Companion */;
+			targetProxy = B84F95151D490BBD0095E50E /* PBXContainerItemProxy */;
+		};
+		B84F95211D490BBD0095E50E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B84F94FC1D490BBD0095E50E /* MESAC-Companion */;
+			targetProxy = B84F95201D490BBD0095E50E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B84F95041D490BBD0095E50E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B84F95051D490BBD0095E50E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B84F950C1D490BBD0095E50E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B84F950D1D490BBD0095E50E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B84F95261D490BBD0095E50E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B84F95271D490BBD0095E50E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B84F95291D490BBD0095E50E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D56768AD49F8C5833323CF3 /* Pods-MESAC-Companion.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MESAC-Companion/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-Companion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B84F952A1D490BBD0095E50E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 783E11BDD7FE8A5BC64869F9 /* Pods-MESAC-Companion.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "MESAC-Companion/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-Companion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B84F952C1D490BBD0095E50E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A02DFEAB69D558632E9E61 /* Pods-MESAC-CompanionTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "MESAC-CompanionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-CompanionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MESAC-Companion.app/MESAC-Companion";
+			};
+			name = Debug;
+		};
+		B84F952D1D490BBD0095E50E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30212B28F8EDC6E225599F64 /* Pods-MESAC-CompanionTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "MESAC-CompanionTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-CompanionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MESAC-Companion.app/MESAC-Companion";
+			};
+			name = Release;
+		};
+		B84F952F1D490BBD0095E50E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D8ECB6F829DB5C4AF080C75 /* Pods-MESAC-CompanionUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "MESAC-CompanionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-CompanionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "MESAC-Companion";
+			};
+			name = Debug;
+		};
+		B84F95301D490BBD0095E50E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE2BD234FA40F79CAFDE4A9D /* Pods-MESAC-CompanionUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = "MESAC-CompanionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-CompanionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "MESAC-Companion";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B84F94F81D490BBD0095E50E /* Build configuration list for PBXProject "MESAC-Companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B84F95261D490BBD0095E50E /* Debug */,
+				B84F95271D490BBD0095E50E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B84F95281D490BBD0095E50E /* Build configuration list for PBXNativeTarget "MESAC-Companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B84F95291D490BBD0095E50E /* Debug */,
+				B84F952A1D490BBD0095E50E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B84F952B1D490BBD0095E50E /* Build configuration list for PBXNativeTarget "MESAC-CompanionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B84F952C1D490BBD0095E50E /* Debug */,
+				B84F952D1D490BBD0095E50E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B84F952E1D490BBD0095E50E /* Build configuration list for PBXNativeTarget "MESAC-CompanionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B84F952F1D490BBD0095E50E /* Debug */,
+				B84F95301D490BBD0095E50E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B84F95071D490BBD0095E50E /* MESAC_Companion.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B84F95081D490BBD0095E50E /* MESAC_Companion.xcdatamodel */,
+			);
+			currentVersion = B84F95081D490BBD0095E50E /* MESAC_Companion.xcdatamodel */;
+			path = MESAC_Companion.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B84F94F51D490BBD0095E50E /* Project object */;
+}
