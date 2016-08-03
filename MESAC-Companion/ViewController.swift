@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func toggleDrawer(_ sender: UIButton) {
+        //navigationDrawerController.openLeftView()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
