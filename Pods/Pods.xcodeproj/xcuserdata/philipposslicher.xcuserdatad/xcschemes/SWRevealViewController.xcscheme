@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FD52A7E657FA10F3773F834E742F68A5'
-               BlueprintName = 'Pods-MESAC-CompanionUITests'
+               BlueprintIdentifier = 'BEACA9285F9A46EA800525E9192B0425'
+               BlueprintName = 'SWRevealViewController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-MESAC-CompanionUITests.framework'>
+               BuildableName = 'SWRevealViewController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

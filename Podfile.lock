@@ -1,8 +1,10 @@
 PODS:
   - Material (2.0.0)
+  - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - Material (from `https://github.com/CosmicMind/Material.git`, branch `development`)
+  - SWRevealViewController
 
 EXTERNAL SOURCES:
   Material:
@@ -16,7 +18,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Material: 437cd15bddb544bb0f41ba24215351038e565a1d
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: f137a0c496b8f74347c8c95789827b370880b6f5
+PODFILE CHECKSUM: 12ca9288d92824a4bf917879be02fb68b23b8ef7
 
 COCOAPODS: 1.1.0.beta.1
