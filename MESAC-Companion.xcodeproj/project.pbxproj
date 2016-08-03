@@ -17,6 +17,7 @@
 		B84F950E1D490BBD0095E50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84F950C1D490BBD0095E50E /* LaunchScreen.storyboard */; };
 		B84F95191D490BBD0095E50E /* MESAC_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95181D490BBD0095E50E /* MESAC_CompanionTests.swift */; };
 		B84F95241D490BBD0095E50E /* MESAC_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */; };
+		B86DC3851D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C4596AFEACE46778456FC8B8 /* Pods_MESAC_Companion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D543576DCF7D92E5AE8BE4 /* Pods_MESAC_Companion.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,20 @@
 			remoteInfo = "MESAC-Companion";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B86DC3861D5299E800F22BBF /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B86DC3851D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D8ECB6F829DB5C4AF080C75 /* Pods-MESAC-CompanionUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,6 +73,7 @@
 		B84F951F1D490BBD0095E50E /* MESAC-CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MESAC-CompanionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESAC_CompanionUITests.swift; sourceTree = "<group>"; };
 		B84F95251D490BBD0095E50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = io.cosmicmind.material.fonts.bundle; path = "/Users/philipposslicher/Library/Developer/Xcode/DerivedData/MESAC-Companion-fcakuyveswivywfbgumgkjppnkqk/Build/Products/Debug-iphoneos/Material/io.cosmicmind.material.fonts.bundle"; sourceTree = "<absolute>"; };
 		BE2BD234FA40F79CAFDE4A9D /* Pods-MESAC-CompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E1A02DFEAB69D558632E9E61 /* Pods-MESAC-CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D543576DCF7D92E5AE8BE4 /* Pods_MESAC_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MESAC_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +133,7 @@
 		B84F94F41D490BBD0095E50E = {
 			isa = PBXGroup;
 			children = (
+				B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */,
 				B84F94FF1D490BBD0095E50E /* MESAC-Companion */,
 				B84F95171D490BBD0095E50E /* MESAC-CompanionTests */,
 				B84F95221D490BBD0095E50E /* MESAC-CompanionUITests */,
@@ -181,6 +198,7 @@
 				B84F94FB1D490BBD0095E50E /* Resources */,
 				F9154BC91A162C0BB5D661A4 /* [CP] Embed Pods Frameworks */,
 				5C6FCAE4F339A7672DCDAC2E /* [CP] Copy Pods Resources */,
+				B86DC3861D5299E800F22BBF /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -605,6 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MESAC-Companion/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -618,6 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "MESAC-Companion/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
