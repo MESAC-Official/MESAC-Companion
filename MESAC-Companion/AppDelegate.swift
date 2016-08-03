@@ -12,14 +12,21 @@ import Material
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Load Controllers for Drawer
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController")
+        let homeViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        let drawerController = NavigationDrawerController(rootViewController: homeViewController, leftViewController: leftViewController, rightViewController: nil)
+        
+        window?.rootViewController = drawerController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

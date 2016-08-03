@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="1" id="BYZ-38-t0r" customClass="ViewController" customModule="MESAC_Companion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="MESAC_Companion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -66,7 +66,7 @@
         <!--View Controller-->
         <scene sceneID="PtB-F9-YeG">
             <objects>
-                <viewController storyboardIdentifier="2" id="Pgb-oC-xPN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeftViewController" id="Pgb-oC-xPN" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wqG-9x-hpf"/>
                         <viewControllerLayoutGuide type="bottom" id="VzF-wC-t0R"/>

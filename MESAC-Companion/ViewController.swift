@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func toggleDrawer(_ sender: UIButton) {
-        //navigationDrawerController.openLeftView()
+        navigationDrawerController?.toggleLeftView()
     }
 
     override func viewDidLoad() {
