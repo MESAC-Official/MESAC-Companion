@@ -107,9 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eM3-jG-Kez" customClass="Toolbar" customModule="Material">
-                                <frame key="frameInset" width="375" height="155"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eM3-jG-Kez" customClass="Toolbar" customModule="Material">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;no email attached&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmd-HL-S4k">
                                         <frame key="frameInset" minX="26" minY="118" width="153" height="29"/>
@@ -127,6 +125,9 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173.5" id="fmq-YK-7et"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" red="0.31372549019607843" green="0.68235294117647061" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
@@ -135,6 +136,12 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eM3-jG-Kez" firstAttribute="leading" secondItem="zmh-bz-GvU" secondAttribute="leading" id="476-zH-Ff2"/>
+                            <constraint firstItem="eM3-jG-Kez" firstAttribute="centerX" secondItem="zmh-bz-GvU" secondAttribute="centerX" id="7mM-q1-hAv"/>
+                            <constraint firstAttribute="trailing" secondItem="eM3-jG-Kez" secondAttribute="trailing" id="Qsg-Zi-wJx"/>
+                            <constraint firstItem="eM3-jG-Kez" firstAttribute="top" secondItem="zmh-bz-GvU" secondAttribute="top" id="Tpt-nz-PzM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIY-Gw-qqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
