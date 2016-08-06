@@ -36,7 +36,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-Wt-GEJ" customClass="Toolbar" customModule="Material">
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FF3-La-r5Q">
-                                        <frame key="frameInset" minX="51" minY="15" width="54" height="27"/>
+                                        <frame key="frameInset" minX="61" minY="15" width="54" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -50,9 +50,10 @@
                                             <action selector="toggleDrawer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R7g-KH-G0F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9F-Gl-VAo" customClass="IconButton" customModule="Material">
-                                        <frame key="frameInset" minX="269" minY="18" width="12" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9F-Gl-VAo" customClass="IconButton" customModule="Material">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="B9F-Gl-VAo" secondAttribute="height" multiplier="3:10" id="cWg-Xf-xaA"/>
+                                        </constraints>
                                         <state key="normal" image="More"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bw-v7-HZl" customClass="IconButton" customModule="Material">
@@ -65,9 +66,12 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="H7a-6q-T8e"/>
-                                    <constraint firstAttribute="trailing" secondItem="4Bw-v7-HZl" secondAttribute="trailing" constant="114" id="djU-Bw-LbU"/>
+                                    <constraint firstItem="B9F-Gl-VAo" firstAttribute="top" secondItem="tzt-Wt-GEJ" secondAttribute="top" constant="18" id="VHs-bY-PzF"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Bw-v7-HZl" secondAttribute="trailing" constant="72" id="djU-Bw-LbU"/>
                                     <constraint firstAttribute="bottom" secondItem="4Bw-v7-HZl" secondAttribute="bottom" constant="19" id="hoN-R9-f3q"/>
+                                    <constraint firstAttribute="bottom" secondItem="B9F-Gl-VAo" secondAttribute="bottom" constant="19" id="uXo-pF-V2s"/>
                                     <constraint firstItem="4Bw-v7-HZl" firstAttribute="top" secondItem="tzt-Wt-GEJ" secondAttribute="top" constant="18" id="uqn-H1-Jyz"/>
+                                    <constraint firstAttribute="trailing" secondItem="B9F-Gl-VAo" secondAttribute="trailing" constant="30" id="yS9-iR-Whh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
