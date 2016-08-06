@@ -109,16 +109,12 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eM3-jG-Kez" customClass="Toolbar" customModule="Material">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt;no email attached&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmd-HL-S4k">
-                                        <frame key="frameInset" minX="26" minY="118" width="153" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;no email attached&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmd-HL-S4k">
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anonymous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uui-O4-xNN">
-                                        <frame key="frameInset" minX="142" minY="67" width="91" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anonymous" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uui-O4-xNN">
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -126,7 +122,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="Bmd-HL-S4k" firstAttribute="leading" secondItem="eM3-jG-Kez" secondAttribute="leading" constant="26" id="An5-w1-5gA"/>
+                                    <constraint firstItem="Bmd-HL-S4k" firstAttribute="top" secondItem="eM3-jG-Kez" secondAttribute="top" constant="118" id="HeG-cA-Yzq"/>
+                                    <constraint firstItem="uui-O4-xNN" firstAttribute="top" secondItem="eM3-jG-Kez" secondAttribute="top" constant="76" id="MAh-9z-U9O"/>
+                                    <constraint firstAttribute="bottom" secondItem="uui-O4-xNN" secondAttribute="bottom" constant="76.5" id="PP7-DV-7C0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bmd-HL-S4k" secondAttribute="bottom" constant="26.5" id="Usn-Um-47f"/>
                                     <constraint firstAttribute="height" constant="173.5" id="fmq-YK-7et"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bmd-HL-S4k" secondAttribute="trailing" constant="196" id="hVW-W5-NM2"/>
+                                    <constraint firstAttribute="trailing" secondItem="uui-O4-xNN" secondAttribute="trailing" constant="54" id="sxa-6V-oyN"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
