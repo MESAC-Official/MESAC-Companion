@@ -7,8 +7,6 @@ target 'MESAC-Companion' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for MESAC-Companion
-
   target 'MESAC-CompanionTests' do
     inherit! :search_paths
     # Pods for testing
