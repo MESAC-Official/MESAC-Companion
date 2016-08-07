@@ -30,7 +30,8 @@
 
 import UIKit
 
-public enum PulseAnimation {
+@objc(PulseAnimation)
+public enum PulseAnimation: Int {
 	case none
 	case center
 	case centerWithBacking
@@ -67,9 +68,7 @@ internal extension Animation {
         pulseLayers.insert(bLayer, at: 0)
         visualLayer.addSublayer(bLayer)
         
-        if .centerRadialBeyondBounds == pulseAnimation || .radialBeyondBounds == pulseAnimation {
-            visualLayer.masksToBounds = false
-        }
+        visualLayer.masksToBounds = !(.centerRadialBeyondBounds == pulseAnimation || .radialBeyondBounds == pulseAnimation)
         
         Animation.animationDisabled(animations: {
             bLayer.frame = visualLayer.bounds

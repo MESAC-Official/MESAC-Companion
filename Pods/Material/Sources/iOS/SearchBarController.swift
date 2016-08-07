@@ -48,7 +48,7 @@ public extension UIViewController {
 	}
 }
 
-public class SearchBarController : RootController {
+public class SearchBarController: RootController {
 	/// Reference to the SearchBar.
 	public private(set) var searchBar: SearchBar!
 	
@@ -64,7 +64,7 @@ public class SearchBarController : RootController {
 			
 			let h: CGFloat = Device.height
 			let w: CGFloat = Device.width
-			let p: CGFloat = v.intrinsicContentSize().height + v.grid.layoutInset.top + v.grid.layoutInset.bottom
+			let p: CGFloat = v.intrinsicContentSize.height + v.grid.layoutInset.top + v.grid.layoutInset.bottom
 			
 			v.width = w + v.grid.layoutInset.left + v.grid.layoutInset.right
 			v.height = p

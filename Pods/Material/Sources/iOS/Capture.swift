@@ -31,7 +31,8 @@
 import UIKit
 import AVFoundation
 
-public enum CaptureMode {
+@objc(CaptureMode)
+public enum CaptureMode: Int {
 	case photo
 	case video
 }
@@ -130,7 +131,7 @@ public protocol CaptureDelegate: MaterialDelegate {
     optional func captureDidPressVideoButton(capture: Capture, button: UIButton)
 }
 
-public class Capture : View, UIGestureRecognizerDelegate {
+public class Capture: View, UIGestureRecognizerDelegate {
 	/// A Timer reference for when recording is enabled.
 	private var timer: Timer?
 	

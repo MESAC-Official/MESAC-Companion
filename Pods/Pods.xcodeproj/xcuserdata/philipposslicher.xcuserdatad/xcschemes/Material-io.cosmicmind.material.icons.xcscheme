@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "85CDB899143013D74628361C6C837823"
+               BlueprintIdentifier = "4065C2C098C4D20F1A70F3168BE7760F"
                BuildableName = "io.cosmicmind.material.icons.bundle"
                BlueprintName = "Material-io.cosmicmind.material.icons"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "85CDB899143013D74628361C6C837823"
+            BlueprintIdentifier = "4065C2C098C4D20F1A70F3168BE7760F"
             BuildableName = "io.cosmicmind.material.icons.bundle"
             BlueprintName = "Material-io.cosmicmind.material.icons"
             ReferencedContainer = "container:Pods.xcodeproj">

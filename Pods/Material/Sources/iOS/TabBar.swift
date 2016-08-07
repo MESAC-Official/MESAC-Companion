@@ -30,12 +30,13 @@
 
 import UIKit
 
-public enum TabBarLineAlignment {
+@objc(TabBarLineAlignment)
+public enum TabBarLineAlignment: Int {
 	case top
 	case bottom
 }
 
-public class TabBar : View {
+public class TabBar: View {
 	/// A reference to the line UIView.
 	public private(set) var line: UIView!
 	

@@ -30,7 +30,8 @@
 
 import UIKit
 
-public enum BorderWidthPreset {
+@objc(BorderWidthPreset)
+public enum BorderWidthPreset: Int {
 	case none
 	case border1
 	case border2

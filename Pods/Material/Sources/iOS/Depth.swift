@@ -30,7 +30,8 @@
 
 import UIKit
 
-public enum DepthPreset {
+@objc(DepthPreset)
+public enum DepthPreset: Int {
 	case none
 	case depth1
 	case depth2

@@ -42,18 +42,22 @@ public extension Array where Element: Equatable {
         if e >= count {
             e = count - 1
         }
+        
         guard -1 < start else {
             fatalError("Range out of bounds for \(start) - \(end), should be 0 - \(count).")
         }
+        
         var diff = abs(e - start)
         guard count > diff else {
             return self
         }
+        
         var ret = [Element]()
         while -1 < diff {
             ret.insert(self[start + diff], at: 0)
             diff -= 1
         }
+        
         return ret
     }
 }

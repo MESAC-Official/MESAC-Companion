@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="16A270f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11185.3" systemVersion="16A270f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,7 +128,6 @@
                                     <constraint firstAttribute="bottom" secondItem="uui-O4-xNN" secondAttribute="bottom" constant="76.5" id="PP7-DV-7C0"/>
                                     <constraint firstAttribute="bottom" secondItem="Bmd-HL-S4k" secondAttribute="bottom" constant="26.5" id="Usn-Um-47f"/>
                                     <constraint firstAttribute="height" constant="173.5" id="fmq-YK-7et"/>
-                                    <constraint firstAttribute="trailing" secondItem="Bmd-HL-S4k" secondAttribute="trailing" constant="196" id="hVW-W5-NM2"/>
                                     <constraint firstAttribute="trailing" secondItem="uui-O4-xNN" secondAttribute="trailing" constant="54" id="sxa-6V-oyN"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

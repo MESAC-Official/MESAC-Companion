@@ -30,28 +30,48 @@
 
 import UIKit
 
-public enum ImageFormat {
+@objc(ImageFormat)
+public enum ImageFormat: Int {
 	case png
 	case jpeg
 }
 
-public extension UIImage {
-    /**
-     :name:	width
-     */
+extension UIImage {
+    /// Width of the UIImage.
     public var width: CGFloat {
         return size.width
     }
     
-    /**
-     :name:	height
-     */
+    /// Height of the UIImage.
     public var height: CGFloat {
         return size.height
     }
+}
+
+extension UIImage {
+    /**
+     Resizes an image based on a given width.
+     - Parameter toWidth w: A width value.
+     - Returns: An optional UIImage.
+     */
+    public func resize(toWidth w: CGFloat) -> UIImage? {
+        return internalResize(toWidth: w)
+    }
     
     /**
-     :name:	internalResize
+     Resizes an image based on a given height.
+     - Parameter toHeight h: A height value.
+     - Returns: An optional UIImage.
+     */
+    public func resize(toHeight h: CGFloat) -> UIImage? {
+        return internalResize(toHeight: h)
+    }
+    
+    /**
+     Internally resizes the image.
+     - Parameter toWidth tw: A width.
+     - Parameter toHeight th: A height.
+     - Returns: An optional UIImage.
      */
     private func internalResize(toWidth tw: CGFloat = 0, toHeight th: CGFloat = 0) -> UIImage? {
         var w: CGFloat?
@@ -72,21 +92,9 @@ public extension UIImage {
         
         return g
     }
-    
-    /**
-     :name:	resize
-     */
-    public func resize(toWidth w: CGFloat) -> UIImage? {
-        return internalResize(toWidth: w)
-    }
-    
-    /**
-     :name:	resize
-     */
-    public func resize(toHeight h: CGFloat) -> UIImage? {
-        return internalResize(toHeight: h)
-    }
-    
+}
+
+extension UIImage {
     /**
      Creates a new image with the passed in color.
      - Parameter color: The UIColor to create the image from.
@@ -98,13 +106,13 @@ public extension UIImage {
             return nil
         }
         
-        context.scale(x: 1.0, y: -1.0)
-        context.translate(x: 0.0, y: -size.height)
+        context.scaleBy(x: 1.0, y: -1.0)
+        context.translateBy(x: 0.0, y: -size.height)
         
         context.setBlendMode(.multiply)
         
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        context.clipToMask(rect, mask: cgImage!)
+        context.clip(to: rect, mask: cgImage!)
         color.setFill()
         context.fill(rect)
         
@@ -112,7 +120,9 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
-    
+}
+
+extension UIImage {
     /**
      Creates an Image that is a color.
      - Parameter color: The UIColor to create the image from.
@@ -128,9 +138,14 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
-    
+}
+
+extension UIImage {
     /**
-     :name:	crop
+     Crops an image to a specified width and height.
+     - Parameter toWidth tw: A specified width.
+     - Parameter toHeight th: A specified height.
+     - Returns: An optional UIImage.
      */
     public func crop(toWidth tw: CGFloat, toHeight th: CGFloat) -> UIImage? {
         let g: UIImage?
@@ -148,7 +163,9 @@ public extension UIImage {
         
         return g
     }
-    
+}
+
+extension UIImage {
     /**
      Creates an clear image.
      - Returns: A UIImage that is clear.
@@ -159,15 +176,17 @@ public extension UIImage {
         UIGraphicsEndImageContext()
         return image
     }
-    
+}
+
+extension UIImage {
     /**
      Asynchronously load images with a completion block.
      - Parameter URL: A URL destination to fetch the image from.
      - Parameter completion: A completion block that is executed once the image
      has been retrieved.
      */
-    public class func contentsOfURL(url: URL, completion: ((image: UIImage?, error: NSError?) -> Void)) {
-        URLSession.shared.dataTask(with: URLRequest(url: url)) { (data: Data?, response: URLResponse?, error: NSError?) in
+    public class func contentsOfURL(url: URL, completion: ((image: UIImage?, error: Error?) -> Void)) {
+        URLSession.shared.dataTask(with: URLRequest(url: url)) { (data: Data?, response: URLResponse?, error: Error?) in
             DispatchQueue.main.async {
                 if let v = error {
                     completion(image: nil, error: v)
@@ -177,7 +196,9 @@ public extension UIImage {
             }
         }.resume()
     }
-    
+}
+
+extension UIImage {
     /**
      Adjusts the orientation of the image from the capture orientation.
      This is an issue when taking images, the capture orientation is not set correctly
@@ -194,25 +215,25 @@ public extension UIImage {
         // Rotate if Left, Right, or Down.
         switch imageOrientation {
         case .down, .downMirrored:
-            transform = transform.translateBy(x: size.width, y: size.height)
-            transform = transform.rotate(CGFloat(M_PI))
+            transform = transform.translatedBy(x: size.width, y: size.height)
+            transform = transform.rotated(by: CGFloat(M_PI))
         case .left, .leftMirrored:
-            transform = transform.translateBy(x: size.width, y: 0)
-            transform = transform.rotate(CGFloat(M_PI_2))
+            transform = transform.translatedBy(x: size.width, y: 0)
+            transform = transform.rotated(by: CGFloat(M_PI_2))
         case .right, .rightMirrored:
-            transform = transform.translateBy(x: 0, y: size.height)
-            transform = transform.rotate(-CGFloat(M_PI_2))
+            transform = transform.translatedBy(x: 0, y: size.height)
+            transform = transform.rotated(by: -CGFloat(M_PI_2))
         default:break
         }
         
         // Flip if mirrored.
         switch imageOrientation {
         case .upMirrored, .downMirrored:
-            transform = transform.translateBy(x: size.width, y: 0)
-            transform = transform.scaleBy(x: -1, y: 1)
+            transform = transform.translatedBy(x: size.width, y: 0)
+            transform = transform.scaledBy(x: -1, y: 1)
         case .leftMirrored, .rightMirrored:
-            transform = transform.translateBy(x: size.height, y: 0)
-            transform = transform.scaleBy(x: -1, y: 1)
+            transform = transform.translatedBy(x: size.height, y: 0)
+            transform = transform.scaledBy(x: -1, y: 1)
         default:break
         }
         
@@ -221,7 +242,7 @@ public extension UIImage {
             return nil
         }
         
-        context.concatCTM(transform)
+        context.concatenate(transform)
         
         switch imageOrientation {
         case .left, .leftMirrored, .right, .rightMirrored:

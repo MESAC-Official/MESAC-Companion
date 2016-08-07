@@ -32,7 +32,8 @@ import UIKit
 
 public typealias AnimationFillModeType = String
 
-public enum AnimationFillMode {
+@objc(AnimationFillMode)
+public enum AnimationFillMode: Int {
 	case forwards
 	case backwards
 	case both
@@ -62,7 +63,7 @@ public struct Animation {
 	public static func delay(time: TimeInterval, completion: ()-> Void) ->  AnimationDelayCancelBlock? {
 		
 		func dispatch_later(completion: ()-> Void) {
-			DispatchQueue.main.after(when: DispatchTime.now() + time, execute: completion)
+			DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time, execute: completion)
         }
 		
 		var cancelable: AnimationDelayCancelBlock?

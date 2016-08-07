@@ -30,7 +30,8 @@
 
 import UIKit
 
-public enum InterimSpacePreset {
+@objc(InterimSpacePreset)
+public enum InterimSpacePreset: Int {
     case none
     case interimSpace1
     case interimSpace2

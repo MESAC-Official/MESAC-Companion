@@ -30,8 +30,8 @@
 
 import UIKit
 
-@objc
-public enum NavigationDrawerPosition: NSInteger {
+@objc(NavigationDrawerPosition)
+public enum NavigationDrawerPosition: Int {
 	case left
 	case right
 }
@@ -458,7 +458,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 			}
 			
 			if animated {
-				v.shadowPathAutoSizeEnabled = false
+				v.isShadowPathAutoSizing = false
 				
 				if hide {
 					UIView.animate(withDuration: duration,
@@ -470,7 +470,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 							}
 						}) { [weak self] _ in
 							if let s = self {
-								v.shadowPathAutoSizeEnabled = true
+								v.isShadowPathAutoSizing = true
 								s.layoutSubviews()
 								s.hideView(container: v)
 							}
@@ -485,7 +485,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 							}
 						}) { [weak self] _ in
 							if let s = self {
-								v.shadowPathAutoSizeEnabled = true
+								v.isShadowPathAutoSizing = true
 								s.layoutSubviews()
 								s.showView(container: v)
 							}
@@ -498,12 +498,12 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 					v.position.x = -v.width / 2
 					rootViewController.view.alpha = 1
 				} else {
-					v.shadowPathAutoSizeEnabled = false
+					v.isShadowPathAutoSizing = false
 					
 					showView(container: v)
 					v.position.x = width / 2
 					rootViewController.view.alpha = 0.5
-					v.shadowPathAutoSizeEnabled = true
+					v.isShadowPathAutoSizing = true
 				}
 				layoutSubviews()
 			}
@@ -532,7 +532,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 			}
 			
 			if animated {
-				v.shadowPathAutoSizeEnabled = false
+				v.isShadowPathAutoSizing = false
 				
 				if hide {
 					UIView.animate(withDuration: duration,
@@ -544,7 +544,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 							}
 						}) { [weak self] _ in
 							if let s = self {
-								v.shadowPathAutoSizeEnabled = true
+								v.isShadowPathAutoSizing = true
 								s.layoutSubviews()
 								s.hideView(container: v)
 							}
@@ -559,7 +559,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 							}
 						}) { [weak self] _ in
 							if let s = self {
-								v.shadowPathAutoSizeEnabled = true
+								v.isShadowPathAutoSizing = true
 								s.layoutSubviews()
 								s.showView(container: v)
 							}
@@ -572,12 +572,12 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 					v.position.x = view.bounds.width + v.width / 2
 					rootViewController.view.alpha = 1
 				} else {
-					v.shadowPathAutoSizeEnabled = false
+					v.isShadowPathAutoSizing = false
 					
 					showView(container: v)
 					v.position.x = view.bounds.width - width / 2
 					rootViewController.view.alpha = 0.5
-					v.shadowPathAutoSizeEnabled = true
+					v.isShadowPathAutoSizing = true
 				}
 				layoutSubviews()
 			}
@@ -1022,7 +1022,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 			isStatusBarHidden = false
 			DispatchQueue.main.async { [weak self] in
 				if let s = self {
-					if let v = UIApplication.shared().keyWindow {
+					if let v = UIApplication.shared.keyWindow {
 						v.windowLevel = UIWindowLevelNormal
 						s.delegate?.navigationDrawerStatusBarHiddenState?(navigationDrawerController: s, hidden: false)
 					}
@@ -1038,7 +1038,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 				isStatusBarHidden = true
 				DispatchQueue.main.async { [weak self] in
 					if let s = self {
-						if let v = UIApplication.shared().keyWindow {
+						if let v = UIApplication.shared.keyWindow {
 							v.windowLevel = UIWindowLevelStatusBar + 1
 							s.delegate?.navigationDrawerStatusBarHiddenState?(navigationDrawerController: s, hidden: true)
 						}
