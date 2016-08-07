@@ -26,10 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             print("SignIn Error: \(error)")
         } else {
             print("SignIn Complete. User: \(user)")
+            let userId = user.userID                  // For client-side use only!
+            let idToken = user.authentication.idToken // Safe to send to the server
+            let fullName = user.profile.name
+            let givenName = user.profile.givenName
+            let familyName = user.profile.familyName
+            let email = user.profile.email
         }
     }
     
-    func application(application: UIApplication, openURL url :NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         return GIDSignIn.sharedInstance().handle(url as URL!, sourceApplication: sourceApplication, annotation: annotation)
     }
     

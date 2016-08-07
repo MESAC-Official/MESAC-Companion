@@ -12,12 +12,16 @@ import Material
 
 class ViewController: UIViewController, GIDSignInUIDelegate {//
     
+    
+
     @IBOutlet weak var testLabel: UILabel!
-    
-    
+    //
     @IBAction func testButton(_ sender: AnyObject) {
         rootRef.child("test").setValue("Button")
     }
+    
+    
+    
     //Firebase Ref
     let rootRef = FIRDatabase.database().reference()
     
@@ -25,6 +29,11 @@ class ViewController: UIViewController, GIDSignInUIDelegate {//
         print("Open Drawer")
         navigationDrawerController?.openLeftView()
     }
+    
+    //
+
+    //
+    //
     
     override func viewDidLoad() {
         super.viewDidLoad()
