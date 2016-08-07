@@ -10,8 +10,13 @@ import UIKit
 import Firebase
 import Material
 
-class ViewController: UIViewController {
+class ViewController: UIViewController {//
     
+    @IBOutlet weak var testLabel: UILabel!
+    
+    @IBAction func testButton(_ sender: AnyObject) {
+        rootRef.child("test").setValue("Button")
+    }
     //Firebase Ref
     let rootRef = FIRDatabase.database().reference()
     
@@ -20,9 +25,17 @@ class ViewController: UIViewController {
         navigationDrawerController?.openLeftView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        rootRef.child("test").observe(FIRDataEventType.value) {
+            (snap: FIRDataSnapshot) in
+            self.testLabel.text = snap.value?.description
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +44,5 @@ class ViewController: UIViewController {
     }
 
 
-}
+}//
 
