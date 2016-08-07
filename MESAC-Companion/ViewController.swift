@@ -14,6 +14,7 @@ class ViewController: UIViewController {//
     
     @IBOutlet weak var testLabel: UILabel!
     
+    
     @IBAction func testButton(_ sender: AnyObject) {
         rootRef.child("test").setValue("Button")
     }
@@ -25,10 +26,6 @@ class ViewController: UIViewController {//
         navigationDrawerController?.openLeftView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +33,7 @@ class ViewController: UIViewController {//
             (snap: FIRDataSnapshot) in
             self.testLabel.text = snap.value?.description
         }
+        testLabel.sizeToFit()
     }
 
     override func didReceiveMemoryWarning() {
