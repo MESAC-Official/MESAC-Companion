@@ -63,7 +63,7 @@
                                         <state key="normal" image="Live"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.23921568630000001" green="0.29803921570000003" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="H7a-6q-T8e"/>
                                     <constraint firstItem="B9F-Gl-VAo" firstAttribute="top" secondItem="tzt-Wt-GEJ" secondAttribute="top" constant="18" id="VHs-bY-PzF"/>
@@ -144,7 +144,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muk-VP-Pjl" userLabel="More" customClass="IconButton" customModule="Material">
-                                        <frame key="frameInset" minX="284" minY="18" width="6" height="20"/>
+                                        <frame key="frameInset" minX="339" minY="18" width="6" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="More"/>
                                     </button>
