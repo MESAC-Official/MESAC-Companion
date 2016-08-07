@@ -78,6 +78,7 @@
 		B84F95251D490BBD0095E50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = io.cosmicmind.material.fonts.bundle; path = "/Users/philipposslicher/Library/Developer/Xcode/DerivedData/MESAC-Companion-fcakuyveswivywfbgumgkjppnkqk/Build/Products/Debug-iphoneos/Material/io.cosmicmind.material.fonts.bundle"; sourceTree = "<absolute>"; };
 		B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B8CD186D1D577AAC00CF3755 /* MESAC-Companion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MESAC-Companion-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		BE2BD234FA40F79CAFDE4A9D /* Pods-MESAC-CompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E1A02DFEAB69D558632E9E61 /* Pods-MESAC-CompanionTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionTests/Pods-MESAC-CompanionTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D543576DCF7D92E5AE8BE4 /* Pods_MESAC_Companion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MESAC_Companion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +169,7 @@
 				B84F950F1D490BBD0095E50E /* Info.plist */,
 				B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */,
 				B84F95071D490BBD0095E50E /* MESAC_Companion.xcdatamodeld */,
+				B8CD186D1D577AAC00CF3755 /* MESAC-Companion-Bridging-Header.h */,
 			);
 			path = "MESAC-Companion";
 			sourceTree = "<group>";
@@ -270,6 +272,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 4EM2VYKJG8;
 						DevelopmentTeamName = "American Community School Of Abu Dhabi";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					B84F95131D490BBD0095E50E = {
@@ -635,11 +638,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "MESAC-Companion/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MESAC-Companion-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -650,11 +656,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "MESAC-Companion/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acs.MESAC-Companion";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MESAC-Companion-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
