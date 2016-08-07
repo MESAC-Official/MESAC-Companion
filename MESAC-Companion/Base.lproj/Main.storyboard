@@ -61,6 +61,9 @@
                                             <constraint firstAttribute="width" secondItem="4Bw-v7-HZl" secondAttribute="height" multiplier="1:1" id="HRT-Rb-k2S"/>
                                         </constraints>
                                         <state key="normal" image="Live"/>
+                                        <connections>
+                                            <segue destination="Irb-xN-Tso" kind="presentation" id="P6v-tV-SE6"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.29803921570000003" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="141" y="136"/>
         </scene>
-        <!--View Controller-->
+        <!--Live View Controller-->
         <scene sceneID="2Bd-2q-Ypi">
             <objects>
-                <viewController id="Irb-xN-Tso" customClass="ViewController" customModule="MESAC_Companion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LiveViewController" id="Irb-xN-Tso" customClass="LiveViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JXk-Sk-iUA"/>
                         <viewControllerLayoutGuide type="bottom" id="9cC-JK-YPF"/>
@@ -141,11 +144,13 @@
                                         <state key="normal" image="Menu Burger"/>
                                         <connections>
                                             <action selector="toggleDrawer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kyE-fA-rqD"/>
+                                            <action selector="toggleDrawer:" destination="Irb-xN-Tso" eventType="touchUpInside" id="zYY-el-4Sz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muk-VP-Pjl" userLabel="More" customClass="IconButton" customModule="Material">
-                                        <frame key="frameInset" minX="339" minY="18" width="6" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muk-VP-Pjl" userLabel="More" customClass="IconButton" customModule="Material">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Muk-VP-Pjl" secondAttribute="height" multiplier="3:10" id="bDF-AJ-NfI"/>
+                                        </constraints>
                                         <state key="normal" image="More"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6F-dV-yuH" userLabel="Live" customClass="IconButton" customModule="Material">
@@ -157,7 +162,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.3411764705882353" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Muk-VP-Pjl" secondAttribute="trailing" constant="30" id="006-4l-579"/>
+                                    <constraint firstAttribute="bottom" secondItem="Muk-VP-Pjl" secondAttribute="bottom" constant="19" id="hzF-gG-4YB"/>
                                     <constraint firstAttribute="height" constant="57" id="xW7-Js-HnU"/>
+                                    <constraint firstItem="Muk-VP-Pjl" firstAttribute="top" secondItem="aU9-mI-IbM" secondAttribute="top" constant="18" id="yqv-wB-qK5"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">

@@ -17,6 +17,7 @@
 		B84F950E1D490BBD0095E50E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84F950C1D490BBD0095E50E /* LaunchScreen.storyboard */; };
 		B84F95191D490BBD0095E50E /* MESAC_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95181D490BBD0095E50E /* MESAC_CompanionTests.swift */; };
 		B84F95241D490BBD0095E50E /* MESAC_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */; };
+		B85044891D579BE8000EAFB3 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85044881D579BE8000EAFB3 /* LiveViewController.swift */; };
 		B86DC3851D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B86DE5C11D57628C00C73ABA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */; };
 		B86DE5C21D57628C00C73ABA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */; };
@@ -76,6 +77,7 @@
 		B84F951F1D490BBD0095E50E /* MESAC-CompanionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MESAC-CompanionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESAC_CompanionUITests.swift; sourceTree = "<group>"; };
 		B84F95251D490BBD0095E50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B85044881D579BE8000EAFB3 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
 		B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = io.cosmicmind.material.fonts.bundle; path = "/Users/philipposslicher/Library/Developer/Xcode/DerivedData/MESAC-Companion-fcakuyveswivywfbgumgkjppnkqk/Build/Products/Debug-iphoneos/Material/io.cosmicmind.material.fonts.bundle"; sourceTree = "<absolute>"; };
 		B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8CD186D1D577AAC00CF3755 /* MESAC-Companion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MESAC-Companion-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -163,6 +165,7 @@
 			children = (
 				B84F95001D490BBD0095E50E /* AppDelegate.swift */,
 				B84F95021D490BBD0095E50E /* ViewController.swift */,
+				B85044881D579BE8000EAFB3 /* LiveViewController.swift */,
 				B84F95041D490BBD0095E50E /* Main.storyboard */,
 				B84F950A1D490BBD0095E50E /* Assets.xcassets */,
 				B84F950C1D490BBD0095E50E /* LaunchScreen.storyboard */,
@@ -486,6 +489,7 @@
 			files = (
 				B84F95091D490BBD0095E50E /* MESAC_Companion.xcdatamodeld in Sources */,
 				B84F95031D490BBD0095E50E /* ViewController.swift in Sources */,
+				B85044891D579BE8000EAFB3 /* LiveViewController.swift in Sources */,
 				B84F95011D490BBD0095E50E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
