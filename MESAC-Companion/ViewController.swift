@@ -20,6 +20,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate {//
         rootRef.child("test").setValue("Button")
     }
     
+    @IBAction func goToLive(_ sender: AnyObject) {
+        
+    }
     
     
     //Firebase Ref
