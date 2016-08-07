@@ -8,16 +8,23 @@
 
 import UIKit
 import CoreData
+import Firebase
 import Material
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    override init() {
+        //Initialize Firebase
+        FIRApp.configure()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
 
+        
         //Load Controllers for Drawer
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let leftViewController = storyboard.instantiateViewController(withIdentifier: "LeftViewController")

@@ -4,6 +4,8 @@
 target 'MESAC-Companion' do
     pod ‘Material’, :git => "https://github.com/CosmicMind/Material.git", :branch => “development”
     pod 'Firebase'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 

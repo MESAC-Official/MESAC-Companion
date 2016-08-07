@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
 import Material
 
 class ViewController: UIViewController {
+    
+    //Firebase Ref
+    let rootRef = FIRDatabase.database().reference()
     
     @IBAction func toggleDrawer(_ sender: AnyObject) {
         print("Open Drawer")
