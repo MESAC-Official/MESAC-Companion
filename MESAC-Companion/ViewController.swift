@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Material
 
 class ViewController: UIViewController {
     
     @IBAction func toggleDrawer(_ sender: AnyObject) {
-        //navigationDrawerController?.openLeftView()
+        print("Open Drawer")
+        navigationDrawerController?.openLeftView()
     }
     
     override func viewDidLoad() {
