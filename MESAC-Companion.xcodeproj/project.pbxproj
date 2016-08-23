@@ -18,7 +18,6 @@
 		B84F95191D490BBD0095E50E /* MESAC_CompanionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95181D490BBD0095E50E /* MESAC_CompanionTests.swift */; };
 		B84F95241D490BBD0095E50E /* MESAC_CompanionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */; };
 		B85044891D579BE8000EAFB3 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85044881D579BE8000EAFB3 /* LiveViewController.swift */; };
-		B86DC3851D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B86DE5C11D57628C00C73ABA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */; };
 		B86DE5C21D57628C00C73ABA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */; };
 		B86DE5C31D57628C00C73ABA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */; };
@@ -49,7 +48,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				B86DC3851D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle in Embed PlugIns */,
 			);
 			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +76,6 @@
 		B84F95231D490BBD0095E50E /* MESAC_CompanionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MESAC_CompanionUITests.swift; sourceTree = "<group>"; };
 		B84F95251D490BBD0095E50E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B85044881D579BE8000EAFB3 /* LiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
-		B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; name = io.cosmicmind.material.fonts.bundle; path = "/Users/philipposslicher/Library/Developer/Xcode/DerivedData/MESAC-Companion-fcakuyveswivywfbgumgkjppnkqk/Build/Products/Debug-iphoneos/Material/io.cosmicmind.material.fonts.bundle"; sourceTree = "<absolute>"; };
 		B86DE5C01D57628C00C73ABA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B8CD186D1D577AAC00CF3755 /* MESAC-Companion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MESAC-Companion-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		BE2BD234FA40F79CAFDE4A9D /* Pods-MESAC-CompanionUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MESAC-CompanionUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MESAC-CompanionUITests/Pods-MESAC-CompanionUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +137,6 @@
 		B84F94F41D490BBD0095E50E = {
 			isa = PBXGroup;
 			children = (
-				B86DC3841D5299E800F22BBF /* io.cosmicmind.material.fonts.bundle */,
 				B84F94FF1D490BBD0095E50E /* MESAC-Companion */,
 				B84F95171D490BBD0095E50E /* MESAC-CompanionTests */,
 				B84F95221D490BBD0095E50E /* MESAC-CompanionUITests */,

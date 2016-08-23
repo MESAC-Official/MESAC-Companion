@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import Material
 
-class ViewController: UIViewController, GIDSignInUIDelegate {//
+class ViewController: UIViewController {//
     
     
 
@@ -36,13 +36,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate {//
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Google Sign In Delegate Requirements
-        GIDSignIn.sharedInstance().uiDelegate = self
-        
         //Refresh Test Button
         rootRef.child("test").observe(FIRDataEventType.value) {
             (snap: FIRDataSnapshot) in
-            self.testLabel.text = snap.value?.description
+            self.testLabel.text = (snap.value as AnyObject).description
         }
         testLabel.sizeToFit()
     }

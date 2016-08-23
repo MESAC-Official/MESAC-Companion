@@ -12,7 +12,7 @@ import Firebase
 import Material
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
@@ -21,36 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         FIRApp.configure()
     }
 
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if (error != nil) {
-            print("SignIn Error: \(error)")
-        } else {
-            print("SignIn Complete. User: \(user)")
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
-        }
-    }
-    
-    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url as URL!, sourceApplication: sourceApplication, annotation: annotation)
-    }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
-        //Configure Erroring
-        var configureError: NSError?
-        GGLContext.sharedInstance().configureWithError(&configureError)
-        if (configureError != nil) {
-            print("Error: \(configureError)")
-        }
-        
-        //Google Sign In Delegate Declaration
-        GIDSignIn.sharedInstance().delegate = self
         
         //Load Controllers for Drawer
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

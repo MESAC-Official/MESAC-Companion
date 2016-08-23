@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import Material
 
-class LiveViewController: UIViewController, GIDSignInUIDelegate {//
+class LiveViewController: UIViewController {//
     
     
     //Firebase Ref
@@ -28,8 +28,6 @@ class LiveViewController: UIViewController, GIDSignInUIDelegate {//
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Google Sign In Delegate Requirements
-        GIDSignIn.sharedInstance().uiDelegate = self
     }
     
     override func didReceiveMemoryWarning() {

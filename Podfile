@@ -6,7 +6,7 @@ target 'MESAC-Companion' do
     pod 'Firebase'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
-    pod 'Google/SignIn'
+    
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
@@ -19,5 +19,5 @@ target 'MESAC-Companion' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 end
