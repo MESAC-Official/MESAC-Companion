@@ -54,7 +54,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Material:
-    :commit: ccc5156120f98a96d2e7f7c21a3f91f386f4cb8b
+    :commit: 47da25c80f78d55cec111ed670ef9ef5ce82277c
     :git: https://github.com/CosmicMind/Material.git
 
 SPEC CHECKSUMS:
@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   GoogleSignIn: 09036ed61f8e75f1424100d63f7719480b2428c3
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
-  Material: 437cd15bddb544bb0f41ba24215351038e565a1d
+  Material: 61dcd49507c32d07c1557267ec360ce35bd0b1c5
 
 PODFILE CHECKSUM: 5871038bcd0bf447d986c8718acdb8fbe9b6f9c8
 

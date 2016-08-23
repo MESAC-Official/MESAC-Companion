@@ -28,10 +28,8 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-@objc(Direction)
-public enum Direction: Int {
-    case up
-    case down
-    case left
-    case right
+import UIKit
+
+public class Snackbar: BarView {
+    
 }

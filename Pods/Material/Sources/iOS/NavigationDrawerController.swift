@@ -1,32 +1,32 @@
 /*
-* Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*	*	Redistributions of source code must retain the above copyright notice, this
-*		list of conditions and the following disclaimer.
-*
-*	*	Redistributions in binary form must reproduce the above copyright notice,
-*		this list of conditions and the following disclaimer in the documentation
-*		and/or other materials provided with the distribution.
-*
-*	*	Neither the name of CosmicMind nor the names of its
-*		contributors may be used to endorse or promote products derived from
-*		this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *	*	Redistributions of source code must retain the above copyright notice, this
+ *		list of conditions and the following disclaimer.
+ *
+ *	*	Redistributions in binary form must reproduce the above copyright notice,
+ *		this list of conditions and the following disclaimer in the documentation
+ *		and/or other materials provided with the distribution.
+ *
+ *	*	Neither the name of CosmicMind nor the names of its
+ *		contributors may be used to endorse or promote products derived from
+ *		this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 import UIKit
 
@@ -36,7 +36,7 @@ public enum NavigationDrawerPosition: Int {
 	case right
 }
 
-public extension UIViewController {
+extension UIViewController {
 	/**
 	A convenience property that provides access to the NavigationDrawerController. 
 	This is the recommended method of accessing the NavigationDrawerController
@@ -185,7 +185,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 	A CGFloat property that sets the animation duration of the
 	leftView when closing and opening. Defaults to 0.25.
 	*/
-	@IBInspectable public var animationDuration: CGFloat = 0.25
+	@IBInspectable public var animationDuration: TimeInterval = 0.25
 	
 	/**
 	A Boolean property that enables and disables the leftView from
@@ -619,7 +619,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 				showView(container: v)
 				isUserInteractionEnabled = false
 				delegate?.navigationDrawerWillOpen?(navigationDrawerController: self, position: .left)
-				UIView.animate(withDuration: Double(0 == velocity ? animationDuration : fmax(0.1, fmin(1, Double(v.x / velocity)))),
+				UIView.animate(withDuration: TimeInterval(0 == velocity ? animationDuration : fmax(0.1, fmin(1, Double(v.x / velocity)))),
 					animations: {
 						v.position.x = v.width / 2
 						self.rootViewController.view.alpha = 0.5
@@ -645,7 +645,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 				showView(container: v)
 				isUserInteractionEnabled = false
 				delegate?.navigationDrawerWillOpen?(navigationDrawerController: self, position: .right)
-				UIView.animate(withDuration: Double(0 == velocity ? animationDuration : fmax(0.1, fmin(1, Double(v.x / velocity)))),
+				UIView.animate(withDuration: TimeInterval(0 == velocity ? animationDuration : fmax(0.1, fmin(1, Double(v.x / velocity)))),
 					animations: { [weak self] in
 						if let s = self {
 							v.position.x = s.view.bounds.width - v.width / 2
@@ -671,7 +671,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 			if let v: View = leftView {
 				isUserInteractionEnabled = true
 				delegate?.navigationDrawerWillClose?(navigationDrawerController: self, position: .left)
-				UIView.animate(withDuration: Double(0 == velocity ? animationDuration : fmax(0.1, fmin(1, Double(v.x / velocity)))),
+				UIView.animate(withDuration: TimeInterval(0 == velocity ? animationDuration : fmax(0.1, fmin(1, Double(v.x / velocity)))),
 					animations: { [weak self] in
 						if let s = self {
 							v.position.x = -v.width / 2
@@ -699,7 +699,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 			if let v: View = rightView {
 				isUserInteractionEnabled = true
 				delegate?.navigationDrawerWillClose?(navigationDrawerController: self, position: .right)
-				UIView.animate(withDuration: Double(0 == velocity ? animationDuration : fmax(0.1, fmin(1, Double(v.x / velocity)))),
+				UIView.animate(withDuration: TimeInterval(0 == velocity ? animationDuration : fmax(0.1, fmin(1, Double(v.x / velocity)))),
 					animations: { [weak self] in
 						if let s = self {
 							v.position.x = s.view.bounds.width + v.width / 2

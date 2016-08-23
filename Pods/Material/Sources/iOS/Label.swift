@@ -30,52 +30,128 @@
 
 import UIKit
 
-open class BarView: ControlView {
-    /// Divider layer.
-    open internal(set) var divider: Divider!
-    
+@IBDesignable
+open class Label: UILabel {
 	/**
-     An initializer that initializes the object with a NSCoder object.
-     - Parameter aDecoder: A NSCoder instance.
-     */
+	:name:	layerClass
+	*/
+    open override class var layerClass: AnyClass {
+		return MaterialTextLayer.self
+	}
+	
+	/**
+	:name:	textLayer
+	*/
+	open var textLayer: MaterialTextLayer {
+		return layer as! MaterialTextLayer
+	}
+	
+	/**
+	:name:	text
+	*/
+	@IBInspectable
+    open override var text: String? {
+		didSet {
+			textLayer.text = text
+		}
+	}
+	
+	/**
+	:name:	textColor
+	*/
+	@IBInspectable
+    open override var textColor: UIColor? {
+		didSet {
+			textLayer.textColor = textColor
+		}
+	}
+	
+	/**
+	:name:	font
+	*/
+	open override var font: UIFont! {
+		didSet {
+			textLayer.fontType = font
+		}
+	}
+	
+	/**
+	:name:	textAlignment
+	*/
+	open override var textAlignment: NSTextAlignment {
+		didSet {
+			textLayer.textAlignment = textAlignment
+		}
+	}
+	
+	/**
+	:name:	wrapped
+	*/
+	@IBInspectable
+    open var wrapped: Bool {
+		didSet {
+			textLayer.isWrapped = wrapped
+		}
+	}
+	
+	/**
+	:name:	contentsScale
+	*/
+	@IBInspectable
+    open var contentsScale: CGFloat {
+		didSet {
+			textLayer.contentsScale = contentsScale
+		}
+	}
+	
+	/**
+	:name:	lineBreakMode
+	*/
+	open override var lineBreakMode: NSLineBreakMode {
+		didSet {
+			textLayer.lineBreakMode = lineBreakMode
+		}
+	}
+	
+	/**
+	:name:	init
+	*/
 	public required init?(coder aDecoder: NSCoder) {
+		wrapped = true
+		contentsScale = Device.scale
 		super.init(coder: aDecoder)
+		prepareView()
 	}
 	
 	/**
-     An initializer that initializes the object with a CGRect object.
-     If AutoLayout is used, it is better to initilize the instance
-     using the init() initializer.
-     - Parameter frame: A CGRect instance.
-     */
+	:name:	init
+	*/
 	public override init(frame: CGRect) {
+		wrapped = true
+		contentsScale = Device.scale
 		super.init(frame: frame)
+		prepareView()
 	}
 	
 	/**
-     A convenience initializer with parameter settings.
-     - Parameter leftControls: An Array of UIControls that go on the left side.
-     - Parameter rightControls: An Array of UIControls that go on the right side.
-     */
-	public override init(leftControls: [UIView]? = nil, rightControls: [UIView]? = nil) {
-		super.init(leftControls: leftControls, rightControls: rightControls)
+	:name:	init
+	*/
+	public convenience init() {
+		self.init(frame: .zero)
 	}
 	
 	/**
-     Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
-     to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
-     when subclassing.
-     */
-	open override func prepareView() {
-		super.prepareView()
-		depthPreset = .depth1
-        prepareDivider()
-    }
-    
-    /// Prepares the divider.
-    private func prepareDivider() {
-        divider = Divider(view: self)
-    }
+	:name:	stringSize
+	*/
+	open func stringSize(constrainedToWidth width: Double) -> CGSize {
+		return textLayer.stringSize(constrainedToWidth: width)
+	}
+	
+	/**
+	:name:	prepareView
+	*/
+	open func prepareView() {
+		contentScaleFactor = Device.scale
+		textAlignment = .left
+	}
 }

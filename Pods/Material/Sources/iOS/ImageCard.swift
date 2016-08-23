@@ -1,36 +1,36 @@
 /*
-* Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*	*	Redistributions of source code must retain the above copyright notice, this
-*		list of conditions and the following disclaimer.
-*
-*	*	Redistributions in binary form must reproduce the above copyright notice,
-*		this list of conditions and the following disclaimer in the documentation
-*		and/or other materials provided with the distribution.
-*
-*	*	Neither the name of CosmicMind nor the names of its
-*		contributors may be used to endorse or promote products derived from
-*		this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *	*	Redistributions of source code must retain the above copyright notice, this
+ *		list of conditions and the following disclaimer.
+ *
+ *	*	Redistributions in binary form must reproduce the above copyright notice,
+ *		this list of conditions and the following disclaimer in the documentation
+ *		and/or other materials provided with the distribution.
+ *
+ *	*	Neither the name of CosmicMind nor the names of its
+ *		contributors may be used to endorse or promote products derived from
+ *		this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 import UIKit
 
-public class ImageCard: PulseView {
+open class ImageCard: PulseView {
 	/**
 	:name:	dividerLayer
 	*/
@@ -39,7 +39,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	dividerColor
 	*/
-	@IBInspectable public var dividerColor: UIColor? {
+	@IBInspectable
+    open var dividerColor: UIColor? {
 		didSet {
 			dividerLayer?.backgroundColor = dividerColor?.cgColor
 		}
@@ -48,7 +49,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	divider
 	*/
-	@IBInspectable public var divider: Bool = true {
+	@IBInspectable
+    open var divider = true {
 		didSet {
 			reloadView()
 		}
@@ -57,7 +59,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	dividerInsets
 	*/
-	public var dividerEdgeInsetsPreset: EdgeInsetsPreset = .none {
+	open var dividerEdgeInsetsPreset: EdgeInsetsPreset = .none {
 		didSet {
 			dividerInset = EdgeInsetsPresetToValue(preset: dividerEdgeInsetsPreset)
 		}
@@ -66,7 +68,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	dividerInset
 	*/
-	@IBInspectable public var dividerInset = EdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
+	@IBInspectable
+    open var dividerInset = EdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
 		didSet {
 			reloadView()
 		}
@@ -75,12 +78,13 @@ public class ImageCard: PulseView {
 	/**
 	:name:	imageLayer
 	*/
-	public private(set) var imageLayer: CAShapeLayer?
+	open private(set) var imageLayer: CAShapeLayer?
 	
 	/**
 	:name:	image
 	*/
-	@IBInspectable public override var image: UIImage? {
+	@IBInspectable
+    open override var image: UIImage? {
 		get {
 			return nil == imageLayer?.contents ? nil : UIImage(cgImage: imageLayer?.contents as! CGImage)
 		}
@@ -89,15 +93,15 @@ public class ImageCard: PulseView {
 				prepareImageLayer()
 				imageLayer?.contents = v.cgImage
 				if 0 == maxImageHeight {
-					imageLayer?.frame.size.height = image!.size.height / contentsScale
+					imageLayer?.height = image!.height / contentsScale
 				} else {
-					let h: CGFloat = image!.size.height / contentsScale
-					imageLayer?.frame.size.height = maxImageHeight < h ? maxImageHeight : h
+					let h: CGFloat = image!.height / contentsScale
+					imageLayer?.height = maxImageHeight < h ? maxImageHeight : h
 				}
 				imageLayer?.isHidden = false
 			} else {
 				imageLayer?.contents = nil
-				imageLayer?.frame = CGRect.zero
+				imageLayer?.frame = .zero
 				imageLayer?.isHidden = true
 				imageLayer?.removeFromSuperlayer()
 			}
@@ -108,7 +112,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	maxImageHeight
 	*/
-	@IBInspectable public var maxImageHeight: CGFloat = 0 {
+	@IBInspectable
+    open var maxImageHeight: CGFloat = 0 {
 		didSet {
 			if let v: UIImage = image {
 				if 0 < maxImageHeight {
@@ -127,7 +132,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	contentsRect
 	*/
-	@IBInspectable public override var contentsRect: CGRect {
+	@IBInspectable
+    open override var contentsRect: CGRect {
 		didSet {
 			prepareImageLayer()
 			imageLayer?.contentsRect = contentsRect
@@ -137,7 +143,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	contentsCenter
 	*/
-	@IBInspectable public override var contentsCenter: CGRect {
+	@IBInspectable
+    open override var contentsCenter: CGRect {
 		didSet {
 			prepareImageLayer()
 			imageLayer?.contentsCenter = contentsCenter
@@ -147,7 +154,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	contentsScale
 	*/
-	@IBInspectable public override var contentsScale: CGFloat {
+	@IBInspectable
+    open override var contentsScale: CGFloat {
 		didSet {
 			prepareImageLayer()
 			imageLayer?.contentsScale = contentsScale
@@ -155,7 +163,8 @@ public class ImageCard: PulseView {
 	}
 	
 	/// Determines how content should be aligned within the visualLayer's bounds.
-	@IBInspectable public override var contentsGravity: String {
+	@IBInspectable
+    open override var contentsGravity: String {
 		get {
 			return nil == imageLayer ? "" : imageLayer!.contentsGravity
 		}
@@ -168,7 +177,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	contentInsets
 	*/
-	public var contentEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
+	open var contentEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
 		didSet {
 			contentInset = EdgeInsetsPresetToValue(preset: contentEdgeInsetsPreset)
 		}
@@ -177,7 +186,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	contentInset
 	*/
-	@IBInspectable public var contentInset = EdgeInsetsPresetToValue(preset: .square2) {
+	@IBInspectable
+    open var contentInset = EdgeInsetsPresetToValue(preset: .square2) {
 		didSet {
 			reloadView()
 		}
@@ -186,7 +196,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	titleLabelInsets
 	*/
-	public var titleLabelEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
+	open var titleLabelEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
 		didSet {
 			titleLabelInset = EdgeInsetsPresetToValue(preset: titleLabelEdgeInsetsPreset)
 		}
@@ -195,7 +205,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	titleLabelInset
 	*/
-	@IBInspectable public var titleLabelInset = EdgeInsetsPresetToValue(preset: .square2) {
+	@IBInspectable
+    open var titleLabelInset = EdgeInsetsPresetToValue(preset: .square2) {
 		didSet {
 			reloadView()
 		}
@@ -204,7 +215,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	titleLabel
 	*/
-	@IBInspectable public var titleLabel: UILabel? {
+	@IBInspectable
+    open var titleLabel: UILabel? {
 		didSet {
 			reloadView()
 		}
@@ -213,7 +225,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	contentViewInsets
 	*/
-	public var contentViewEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
+	open var contentViewEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
 		didSet {
 			contentViewInset = EdgeInsetsPresetToValue(preset: contentViewEdgeInsetsPreset)
 		}
@@ -222,7 +234,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	contentViewInset
 	*/
-	@IBInspectable public var contentViewInset = EdgeInsetsPresetToValue(preset: .square2) {
+	@IBInspectable
+    open var contentViewInset = EdgeInsetsPresetToValue(preset: .square2) {
 		didSet {
 			reloadView()
 		}
@@ -231,7 +244,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	contentView
 	*/
-	@IBInspectable public var contentView: UIView? {
+	@IBInspectable
+    open var contentView: UIView? {
 		didSet {
 			reloadView()
 		}
@@ -240,7 +254,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	leftButtonsInsets
 	*/
-	public var leftButtonsEdgeInsetsPreset: EdgeInsetsPreset = .none {
+	open var leftButtonsEdgeInsetsPreset: EdgeInsetsPreset = .none {
 		didSet {
 			leftButtonsInset = EdgeInsetsPresetToValue(preset: leftButtonsEdgeInsetsPreset)
 		}
@@ -249,7 +263,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	leftButtonsInset
 	*/
-	@IBInspectable public var leftButtonsInset = EdgeInsets.zero {
+	@IBInspectable
+    open var leftButtonsInset = EdgeInsets.zero {
 		didSet {
 			reloadView()
 		}
@@ -258,7 +273,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	leftButtons
 	*/
-	public var leftButtons: Array<UIButton>? {
+	open var leftButtons = [UIButton]() {
 		didSet {
 			reloadView()
 		}
@@ -267,7 +282,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	rightButtonsInsets
 	*/
-	public var rightButtonsEdgeInsetsPreset: EdgeInsetsPreset = .none {
+	open var rightButtonsEdgeInsetsPreset: EdgeInsetsPreset = .none {
 		didSet {
 			rightButtonsInset = EdgeInsetsPresetToValue(preset: rightButtonsEdgeInsetsPreset)
 		}
@@ -276,7 +291,8 @@ public class ImageCard: PulseView {
 	/**
 	:name:	rightButtonsInset
 	*/
-	@IBInspectable public var rightButtonsInset = EdgeInsets.zero {
+	@IBInspectable
+    open var rightButtonsInset = EdgeInsets.zero {
 		didSet {
 			reloadView()
 		}
@@ -285,7 +301,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	rightButtons
 	*/
-	public var rightButtons: Array<UIButton>? {
+	open var rightButtons = [UIButton]() {
 		didSet {
 			reloadView()
 		}
@@ -309,21 +325,21 @@ public class ImageCard: PulseView {
 	:name:	init
 	*/
 	public convenience init() {
-		self.init(frame: CGRect.zero)
+		self.init(frame: .zero)
 	}
 	
 	/**
 	:name:	init
 	*/
-	public convenience init?(image: UIImage? = nil, titleLabel: UILabel? = nil, contentView: UIView? = nil, leftButtons: Array<UIButton>? = nil, rightButtons: Array<UIButton>? = nil) {
-		self.init(frame: CGRect.zero)
+	public convenience init?(image: UIImage? = nil, titleLabel: UILabel? = nil, contentView: UIView? = nil, leftButtons: [UIButton]? = nil, rightButtons: [UIButton]? = nil) {
+		self.init(frame: .zero)
 		prepareProperties(image: image, titleLabel: titleLabel, contentView: contentView, leftButtons: leftButtons, rightButtons: rightButtons)
 	}
 	
 	/**
 	:name:	layoutSublayersOfLayer
 	*/
-	public override func layoutSublayers(of layer: CALayer) {
+	open override func layoutSublayers(of layer: CALayer) {
 		super.layoutSublayers(of: layer)
 		if self.layer == layer {
 			// image
@@ -332,10 +348,10 @@ public class ImageCard: PulseView {
 			// divider
 			if divider {
 				var y: CGFloat = contentInset.bottom + dividerInset.bottom
-				if 0 < leftButtons?.count {
-					y += leftButtonsInset.top + leftButtonsInset.bottom + leftButtons![0].frame.height
-				} else if 0 < rightButtons?.count {
-					y += rightButtonsInset.top + rightButtonsInset.bottom + rightButtons![0].frame.height
+				if 0 < leftButtons.count {
+					y += leftButtonsInset.top + leftButtonsInset.bottom + leftButtons[0].frame.height
+				} else if 0 < rightButtons.count {
+					y += rightButtonsInset.top + rightButtonsInset.bottom + rightButtons[0].frame.height
 				}
 				if 0 < y {
 					prepareDivider(y: bounds.height - y - 0.5, width: bounds.width)
@@ -350,7 +366,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	reloadView
 	*/
-	public func reloadView() {
+	open func reloadView() {
 		// clear constraints so new ones do not conflict
 		removeConstraints(constraints)
 		for v in subviews {
@@ -358,8 +374,8 @@ public class ImageCard: PulseView {
 		}
 		
 		var verticalFormat: String = "V:|"
-		var views: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
-		var metrics: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
+		var views: Dictionary<String, Any> = Dictionary<String, Any>()
+		var metrics: Dictionary<String, Any> = Dictionary<String, Any>()
 		
 		if nil != imageLayer?.contents {
 			verticalFormat += "-(insetTop)"
@@ -399,71 +415,67 @@ public class ImageCard: PulseView {
 		}
 		
 		// leftButtons
-		if let v: Array<UIButton> = leftButtons {
-			if 0 < v.count {
-				var h: String = "H:|"
-				var d: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
-				var i: Int = 0
-				for b in v {
-					let k: String = "b\(i)"
-					
-					d[k] = b
-					
-					if 0 == i {
-						h += "-(left)-"
-					} else {
-						h += "-(left_right)-"
-					}
-					
-					h += "[\(k)]"
-					
-					_ = layout(b).bottom(contentInset.bottom + leftButtonsInset.bottom)
-					
-					i += 1
-				}
-				
-				addConstraints(Layout.constraint(format: h, options: [], metrics: ["left" : contentInset.left + leftButtonsInset.left, "left_right" : leftButtonsInset.left + leftButtonsInset.right], views: d))
-			}
-		}
+        if 0 < leftButtons.count {
+            var h: String = "H:|"
+            var d: Dictionary<String, Any> = Dictionary<String, Any>()
+            var i: Int = 0
+            for b in leftButtons {
+                let k: String = "b\(i)"
+                
+                d[k] = b
+                
+                if 0 == i {
+                    h += "-(left)-"
+                } else {
+                    h += "-(left_right)-"
+                }
+                
+                h += "[\(k)]"
+                
+                _ = layout(b).bottom(contentInset.bottom + leftButtonsInset.bottom)
+                
+                i += 1
+            }
+            
+            addConstraints(Layout.constraint(format: h, options: [], metrics: ["left" : contentInset.left + leftButtonsInset.left, "left_right" : leftButtonsInset.left + leftButtonsInset.right], views: d))
+        }
 		
 		// rightButtons
-		if let v: Array<UIButton> = rightButtons {
-			if 0 < v.count {
-				var h: String = "H:"
-				var d: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
-				var i: Int = v.count - 1
-				
-				for b in v {
-					let k: String = "b\(i)"
-					
-					d[k] = b
-					
-					h += "[\(k)]"
-					
-					if 0 == i {
-						h += "-(right)-"
-					} else {
-						h += "-(right_left)-"
-					}
-					
-					_ = layout(b).bottom(contentInset.bottom + rightButtonsInset.bottom)
-					
-					i -= 1
-				}
-				
-				addConstraints(Layout.constraint(format: h + "|", options: [], metrics: ["right" : contentInset.right + rightButtonsInset.right, "right_left" : rightButtonsInset.right + rightButtonsInset.left], views: d))
-			}
-		}
+        if 0 < rightButtons.count {
+            var h: String = "H:"
+            var d: Dictionary<String, Any> = Dictionary<String, Any>()
+            var i: Int = rightButtons.count - 1
+            
+            for b in rightButtons {
+                let k: String = "b\(i)"
+                
+                d[k] = b
+                
+                h += "[\(k)]"
+                
+                if 0 == i {
+                    h += "-(right)-"
+                } else {
+                    h += "-(right_left)-"
+                }
+                
+                _ = layout(b).bottom(contentInset.bottom + rightButtonsInset.bottom)
+                
+                i -= 1
+            }
+            
+            addConstraints(Layout.constraint(format: h + "|", options: [], metrics: ["right" : contentInset.right + rightButtonsInset.right, "right_left" : rightButtonsInset.right + rightButtonsInset.left], views: d))
+        }
 		
 		if nil == imageLayer?.contents {
-			if 0 < leftButtons?.count {
+			if 0 < leftButtons.count {
 				verticalFormat += "-(insetC)-[button]"
-				views["button"] = leftButtons![0]
+				views["button"] = leftButtons[0]
 				metrics["insetC"] = leftButtonsInset.top
 				metrics["insetBottom"] = contentInset.bottom + leftButtonsInset.bottom
-			} else if 0 < rightButtons?.count {
+			} else if 0 < rightButtons.count {
 				verticalFormat += "-(insetC)-[button]"
-				views["button"] = rightButtons![0]
+				views["button"] = rightButtons[0]
 				metrics["insetC"] = rightButtonsInset.top
 				metrics["insetBottom"] = contentInset.bottom + rightButtonsInset.bottom
 			}
@@ -484,14 +496,14 @@ public class ImageCard: PulseView {
 				metrics["insetC"] = (metrics["insetC"] as! CGFloat) + contentInset.top + (divider ? dividerInset.top + dividerInset.bottom : 0)
 			}
 		} else if nil != contentView {
-			if 0 < leftButtons?.count {
+			if 0 < leftButtons.count {
 				verticalFormat += "-(insetC)-[button]"
-				views["button"] = leftButtons![0]
+				views["button"] = leftButtons[0]
 				metrics["insetC"] = leftButtonsInset.top
 				metrics["insetBottom"] = contentInset.bottom + leftButtonsInset.bottom
-			} else if 0 < rightButtons?.count {
+			} else if 0 < rightButtons.count {
 				verticalFormat += "-(insetC)-[button]"
-				views["button"] = rightButtons![0]
+				views["button"] = rightButtons[0]
 				metrics["insetC"] = rightButtonsInset.top
 				metrics["insetBottom"] = contentInset.bottom + rightButtonsInset.bottom
 			}
@@ -502,14 +514,14 @@ public class ImageCard: PulseView {
 				metrics["insetC"] = (metrics["insetC"] as! CGFloat) + contentViewInset.bottom + (divider ? dividerInset.top + dividerInset.bottom : 0)
 			}
 		} else {
-			if 0 < leftButtons?.count {
+			if 0 < leftButtons.count {
 				verticalFormat += "-[button]"
-				views["button"] = leftButtons![0]
+				views["button"] = leftButtons[0]
 				metrics["insetTop"] = (metrics["insetTop"] as! CGFloat) + contentInset.top + leftButtonsInset.top + (divider ? dividerInset.top + dividerInset.bottom : 0)
 				metrics["insetBottom"] = contentInset.bottom + leftButtonsInset.bottom
-			} else if 0 < rightButtons?.count {
+			} else if 0 < rightButtons.count {
 				verticalFormat += "-[button]"
-				views["button"] = rightButtons![0]
+				views["button"] = rightButtons[0]
 				metrics["insetTop"] = (metrics["insetTop"] as! CGFloat) + contentInset.top + rightButtonsInset.top + (divider ? dividerInset.top + dividerInset.bottom : 0)
 				metrics["insetBottom"] = contentInset.bottom + rightButtonsInset.bottom
 			} else {
@@ -530,7 +542,7 @@ public class ImageCard: PulseView {
 	/**
 	:name:	prepareView
 	*/
-	public override func prepareView() {
+	open override func prepareView() {
 		super.prepareView()
 		depthPreset = .depth1
 		dividerColor = Color.grey.lighten3
@@ -565,11 +577,11 @@ public class ImageCard: PulseView {
 	/**
 	:name:	prepareProperties
 	*/
-	internal func prepareProperties(image: UIImage?, titleLabel: UILabel?, contentView: UIView?, leftButtons: Array<UIButton>?, rightButtons: Array<UIButton>?) {
+	internal func prepareProperties(image: UIImage?, titleLabel: UILabel?, contentView: UIView?, leftButtons: [UIButton]?, rightButtons: [UIButton]?) {
 		self.image = image
 		self.titleLabel = titleLabel
 		self.contentView = contentView
-		self.leftButtons = leftButtons
-		self.rightButtons = rightButtons
+		self.leftButtons = leftButtons ?? []
+		self.rightButtons = rightButtons ?? []
 	}
 }

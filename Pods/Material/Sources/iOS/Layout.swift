@@ -1,32 +1,32 @@
 /*
-* Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*	*	Redistributions of source code must retain the above copyright notice, this
-*		list of conditions and the following disclaimer.
-*
-*	*	Redistributions in binary form must reproduce the above copyright notice,
-*		this list of conditions and the following disclaimer in the documentation
-*		and/or other materials provided with the distribution.
-*
-*	*	Neither the name of CosmicMind nor the names of its
-*		contributors may be used to endorse or promote products derived from
-*		this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *	*	Redistributions of source code must retain the above copyright notice, this
+ *		list of conditions and the following disclaimer.
+ *
+ *	*	Redistributions in binary form must reproduce the above copyright notice,
+ *		this list of conditions and the following disclaimer in the documentation
+ *		and/or other materials provided with the distribution.
+ *
+ *	*	Neither the name of CosmicMind nor the names of its
+ *		contributors may be used to endorse or promote products derived from
+ *		this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 import UIKit
 
@@ -134,30 +134,28 @@ public class Layout {
 	/**
      Sets the width and height of a view.
      - Parameter child: A child UIView to layout.
-     - Parameter width: A CGFloat value.
-     - Parameter height: A CGFloat value.
+     - Parameter size: A CGSize value.
      - Returns: The current Layout instance.
      */
-	public func size(_ child: UIView, width: CGFloat, height: CGFloat) -> Layout {
+    public func size(_ child: UIView, size: CGSize) -> Layout {
 		guard let v = parent else {
 			return debugParentNotAvailableMessage()
         }
 		self.child = child
-        Layout.size(parent: v, child: child, width: width, height: height)
+        Layout.size(parent: v, child: child, size: size)
         return self
 	}
     
 	/**
      Sets the width and height of a view assuming a child context view.
-     - Parameter width: A CGFloat value.
-     - Parameter height: A CGFloat value.
+     - Parameter size: A CGSize value.
      - Returns: The current Layout instance.
      */
-	public func size(width: CGFloat, height: CGFloat) -> Layout {
+    public func size(_ size: CGSize = CGSize.zero) -> Layout {
         guard let v = child else {
 			return debugChildNotAvailableMessage()
         }
-        return size(v, width: width, height: height)
+        return self.size(v, size: size)
     }
 	
 	/**
@@ -595,7 +593,7 @@ public class Layout {
 }
 
 /// Layout
-public extension Layout {
+extension Layout {
 	/**
      Sets the width of a view.
      - Parameter parent: A parent UIView context.
@@ -622,12 +620,11 @@ public extension Layout {
      Sets the width and height of a view.
      - Parameter parent: A parent UIView context.
      - Parameter child: A child UIView to layout.
-     - Parameter width: A CGFloat value.
-     - Parameter height: A CGFloat value.
+     - Parameter size: A CGSize value.
      */
-	public class func size(parent: UIView, child: UIView, width: CGFloat = 0, height: CGFloat = 0) {
-		Layout.width(parent: parent, child: child, width: width)
-		Layout.height(parent: parent, child: child, height: height)
+	public class func size(parent: UIView, child: UIView, size: CGSize = CGSize.zero) {
+		Layout.width(parent: parent, child: child, width: size.width)
+		Layout.height(parent: parent, child: child, height: size.height)
 	}
 	
 	/**
@@ -853,11 +850,11 @@ public extension Layout {
      Creats an Array with a NSLayoutConstraint value.
      - Parameter format: The VFL format string.
      - Parameter options: Additional NSLayoutFormatOptions.
-     - Parameter metrics: An optional Dictionary<String, AnyObject> of metric key / value pairs.
-     - Parameter views: A Dictionary<String, AnyObject> of view key / value pairs.
+     - Parameter metrics: An optional Dictionary<String, Any> of metric key / value pairs.
+     - Parameter views: A Dictionary<String, Any> of view key / value pairs.
      - Returns: The Array<NSLayoutConstraint> instance.
      */
-	public class func constraint(format: String, options: NSLayoutFormatOptions, metrics: Dictionary<String, AnyObject>?, views: Dictionary<String, AnyObject>) -> Array<NSLayoutConstraint> {
+	public class func constraint(format: String, options: NSLayoutFormatOptions, metrics: Dictionary<String, Any>?, views: Dictionary<String, Any>) -> Array<NSLayoutConstraint> {
 		for (_, a) in views {
 			if let v = a as? UIView {
 				v.translatesAutoresizingMaskIntoConstraints = false
@@ -903,7 +900,7 @@ public extension Layout {
 private var LayoutKey: UInt8 = 0
 
 /// Layout extension for UIView.
-public extension UIView {
+extension UIView {
 	/// Layout reference.
 	public private(set) var layout: Layout {
 		get {

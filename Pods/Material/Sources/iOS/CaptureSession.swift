@@ -1,32 +1,32 @@
 /*
-* Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*	*	Redistributions of source code must retain the above copyright notice, this
-*		list of conditions and the following disclaimer.
-*
-*	*	Redistributions in binary form must reproduce the above copyright notice,
-*		this list of conditions and the following disclaimer in the documentation
-*		and/or other materials provided with the distribution.
-*
-*	*	Neither the name of CosmicMind nor the names of its
-*		contributors may be used to endorse or promote products derived from
-*		this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *	*	Redistributions of source code must retain the above copyright notice, this
+ *		list of conditions and the following disclaimer.
+ *
+ *	*	Redistributions in binary form must reproduce the above copyright notice,
+ *		this list of conditions and the following disclaimer in the documentation
+ *		and/or other materials provided with the distribution.
+ *
+ *	*	Neither the name of CosmicMind nor the names of its
+ *		contributors may be used to endorse or promote products derived from
+ *		this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 import UIKit
 import AVFoundation
@@ -150,10 +150,10 @@ public protocol CaptureSessionDelegate {
      - Parameter captureSession: A reference to the calling CaptureSession.
      - Parameter captureOut: An AVCaptureFileOutput.
      - Parameter fileURL: A file URL.
-     - Parameter fromConnections: An array of AnyObjects.
+     - Parameter fromConnections: An array of Anys.
      */
     @objc
-	optional func captureSessionDidStartRecordingToOutputFileAtURL(captureSession: CaptureSession, captureOutput: AVCaptureFileOutput, fileURL: NSURL, fromConnections connections: [AnyObject])
+	optional func captureSessionDidStartRecordingToOutputFileAtURL(captureSession: CaptureSession, captureOutput: AVCaptureFileOutput, fileURL: NSURL, fromConnections connections: [Any])
 	
     /**
      A delegation method that is fired when a session finished recording and writing
@@ -161,15 +161,15 @@ public protocol CaptureSessionDelegate {
      - Parameter captureSession: A reference to the calling CaptureSession.
      - Parameter captureOut: An AVCaptureFileOutput.
      - Parameter fileURL: A file URL.
-     - Parameter fromConnections: An array of AnyObjects.
+     - Parameter fromConnections: An array of Anys.
      - Parameter error: A Error corresponding to an error.
      */
     @objc
-	optional func captureSessionDidFinishRecordingToOutputFileAtURL(captureSession: CaptureSession, captureOutput: AVCaptureFileOutput, outputFileURL: NSURL, fromConnections connections: [AnyObject], error: Error!)
+	optional func captureSessionDidFinishRecordingToOutputFileAtURL(captureSession: CaptureSession, captureOutput: AVCaptureFileOutput, outputFileURL: NSURL, fromConnections connections: [Any], error: Error!)
 }
 
 @objc(CaptureSession)
-public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
+open class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	/// A reference to the session DispatchQueue.
     private var sessionQueue: DispatchQueue!
 	
@@ -186,29 +186,29 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	private var movieOutput: AVCaptureMovieFileOutput!
 	
 	/// A reference to the movie output URL.
-	private var movieOutputURL: NSURL?
+	private var movieOutputURL: URL?
 	
 	/// A reference to the AVCaptureSession.
 	internal var session: AVCaptureSession!
 	
     /// A boolean indicating if the session is running.
-	public private(set) var isRunning: Bool = false
+	open private(set) var isRunning: Bool = false
 	
     /// A boolean indicating if the session is recording.
-    public private(set) var isRecording: Bool = false
+    open private(set) var isRecording: Bool = false
 	
 	/// A reference to the recorded time duration.
-    public var recordedDuration: CMTime {
+    open var recordedDuration: CMTime {
 		return movieOutput.recordedDuration
 	}
 	
 	/// An optional reference to the active camera if one exists.
-	public var activeCamera: AVCaptureDevice? {
+	open var activeCamera: AVCaptureDevice? {
 		return activeVideoInput?.device
 	}
 	
 	/// An optional reference to the inactive camera if one exists.
-	public var inactiveCamera: AVCaptureDevice? {
+	open var inactiveCamera: AVCaptureDevice? {
 		var device: AVCaptureDevice?
 		if 1 < cameraCount {
 			if activeCamera?.position == .back {
@@ -221,42 +221,42 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// Available number of cameras.
-	public var cameraCount: Int {
+	open var cameraCount: Int {
 		return AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo).count
 	}
 	
 	/// A boolean indicating whether the camera can switch to another.
-	public var canSwitchCameras: Bool {
+	open var canSwitchCameras: Bool {
 		return 1 < cameraCount
 	}
 	
 	/// A booealn indicating whether the camrea supports focus.
-	public var isFocusPointOfInterestSupported: Bool {
+	open var isFocusPointOfInterestSupported: Bool {
 		return nil == activeCamera ? false : activeCamera!.isFocusPointOfInterestSupported
 	}
 	
     /// A booealn indicating whether the camrea supports exposure.
-    public var isExposurePointOfInterestSupported: Bool {
+    open var isExposurePointOfInterestSupported: Bool {
 		return nil == activeCamera ? false : activeCamera!.isExposurePointOfInterestSupported
 	}
 	
 	/// A boolean indicating if the active camera has flash.
-	public var hasFlash: Bool {
+	open var hasFlash: Bool {
 		return nil == activeCamera ? false : activeCamera!.hasFlash
 	}
 	
     /// A boolean indicating if the active camera has a torch.
-    public var hasTorch: Bool {
+    open var hasTorch: Bool {
 		return nil == activeCamera ? false : activeCamera!.hasTorch
 	}
 	
 	/// A reference to the active camera position if the active camera exists.
-	public var position: AVCaptureDevicePosition? {
+	open var position: AVCaptureDevicePosition? {
 		return activeCamera?.position
 	}
 	
 	/// A reference to the focusMode.
-	public var focusMode: AVCaptureFocusMode {
+	open var focusMode: AVCaptureFocusMode {
 		get {
 			return activeCamera!.focusMode
 		}
@@ -272,7 +272,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 					error = e
 				}
 			} else {
-				var userInfo: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
+				var userInfo: Dictionary<String, Any> = Dictionary<String, Any>()
 				userInfo[NSLocalizedDescriptionKey] = "[Material Error: Unsupported focusMode.]"
 				userInfo[NSLocalizedFailureReasonErrorKey] = "[Material Error: Unsupported focusMode.]"
 				error = NSError(domain: "io.cosmicmind.Material.Capture", code: 0001, userInfo: userInfo)
@@ -285,7 +285,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// A reference to the flashMode.
-	public var flashMode: AVCaptureFlashMode {
+	open var flashMode: AVCaptureFlashMode {
 		get {
 			return activeCamera!.flashMode
 		}
@@ -301,11 +301,11 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 					error = e
 				}
 			} else {
-				var userInfo: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
+				var userInfo: Dictionary<String, Any> = Dictionary<String, Any>()
 				userInfo[NSLocalizedDescriptionKey] = "[Material Error: Unsupported flashMode.]"
 				userInfo[NSLocalizedFailureReasonErrorKey] = "[Material Error: Unsupported flashMode.]"
 				error = NSError(domain: "io.cosmicmind.Material.Capture", code: 0002, userInfo: userInfo)
-				userInfo[NSUnderlyingErrorKey] = error as? AnyObject
+				userInfo[NSUnderlyingErrorKey] = error
 			}
 			if let e = error {
 				delegate?.captureSessionFailedWithError?(captureSession: self, error: e)
@@ -314,7 +314,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// A reference to the torchMode.
-	public var torchMode: AVCaptureTorchMode {
+	open var torchMode: AVCaptureTorchMode {
 		get {
 			return activeCamera!.torchMode
 		}
@@ -330,11 +330,11 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 					error = e
 				}
 			} else {
-				var userInfo: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
+				var userInfo: Dictionary<String, Any> = Dictionary<String, Any>()
 				userInfo[NSLocalizedDescriptionKey] = "[Material Error: Unsupported torchMode.]"
 				userInfo[NSLocalizedFailureReasonErrorKey] = "[Material Error: Unsupported torchMode.]"
 				error = NSError(domain: "io.cosmicmind.Material.Capture", code: 0003, userInfo: userInfo)
-				userInfo[NSUnderlyingErrorKey] = error as? AnyObject
+				userInfo[NSUnderlyingErrorKey] = error
 			}
 			if let e: NSError = error {
 				delegate?.captureSessionFailedWithError?(captureSession: self, error: e)
@@ -343,14 +343,14 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// The session quality preset.
-	public var preset: CaptureSessionPreset {
+	open var preset: CaptureSessionPreset {
 		didSet {
 			session.sessionPreset = CaptureSessionPresetToString(preset: preset)
 		}
 	}
 	
 	/// The capture video orientation.
-	public var videoOrientation: AVCaptureVideoOrientation {
+	open var videoOrientation: AVCaptureVideoOrientation {
 		var orientation: AVCaptureVideoOrientation
 		switch UIDevice.current.orientation {
 		case .portrait:
@@ -381,7 +381,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// Starts the session.
-	public func startSession() {
+	open func startSession() {
 		if !isRunning {
 			sessionQueue.async() { [weak self] in
 				self?.session.startRunning()
@@ -390,7 +390,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// Stops the session.
-	public func stopSession() {
+	open func stopSession() {
 		if isRunning {
 			sessionQueue.async() { [weak self] in
 				self?.session.stopRunning()
@@ -399,7 +399,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// Switches the camera if possible.
-	public func switchCameras() {
+	open func switchCameras() {
 		if canSwitchCameras {
 			do {
 				if let v: AVCaptureDevicePosition = position {
@@ -428,7 +428,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
      - Parameter focusMode: An AVCaptureFocusMode.
      - Returns: A boolean of the result, true if supported, false otherwise.
      */
-	public func isFocusModeSupported(focusMode: AVCaptureFocusMode) -> Bool {
+	open func isFocusModeSupported(focusMode: AVCaptureFocusMode) -> Bool {
 		return activeCamera!.isFocusModeSupported(focusMode)
 	}
 	
@@ -437,7 +437,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
      - Parameter exposureMode: An AVCaptureExposureMode.
      - Returns: A boolean of the result, true if supported, false otherwise.
      */
-    public func isExposureModeSupported(exposureMode: AVCaptureExposureMode) -> Bool {
+    open func isExposureModeSupported(exposureMode: AVCaptureExposureMode) -> Bool {
 		return activeCamera!.isExposureModeSupported(exposureMode)
 	}
 	
@@ -446,7 +446,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
      - Parameter flashMode: An AVCaptureFlashMode.
      - Returns: A boolean of the result, true if supported, false otherwise.
      */
-    public func isFlashModeSupported(flashMode: AVCaptureFlashMode) -> Bool {
+    open func isFlashModeSupported(flashMode: AVCaptureFlashMode) -> Bool {
 		return activeCamera!.isFlashModeSupported(flashMode)
 	}
 	
@@ -455,7 +455,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
      - Parameter torchMode: An AVCaptureTorchMode.
      - Returns: A boolean of the result, true if supported, false otherwise.
      */
-    public func isTorchModeSupported(torchMode: AVCaptureTorchMode) -> Bool {
+    open func isTorchModeSupported(torchMode: AVCaptureTorchMode) -> Bool {
 		return activeCamera!.isTorchModeSupported(torchMode)
 	}
 	
@@ -463,7 +463,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
      Focuses the camera at a given point.
      - Parameter at: A CGPoint to focus at.
      */
-	public func focus(at point: CGPoint) {
+	open func focus(at point: CGPoint) {
 		var error: NSError?
 		if isFocusPointOfInterestSupported && isFocusModeSupported(focusMode: .autoFocus) {
 			do {
@@ -476,11 +476,11 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 				error = e
 			}
 		} else {
-			var userInfo: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
+			var userInfo: Dictionary<String, Any> = Dictionary<String, Any>()
 			userInfo[NSLocalizedDescriptionKey] = "[Material Error: Unsupported focus.]"
 			userInfo[NSLocalizedFailureReasonErrorKey] = "[Material Error: Unsupported focus.]"
 			error = NSError(domain: "io.cosmicmind.Material.Capture", code: 0004, userInfo: userInfo)
-			userInfo[NSUnderlyingErrorKey] = error as? AnyObject
+			userInfo[NSUnderlyingErrorKey] = error
 		}
 		if let e = error {
 			delegate?.captureSessionFailedWithError?(captureSession: self, error: e)
@@ -491,7 +491,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
      Exposes the camera at a given point.
      - Parameter at: A CGPoint to expose at.
      */
-    public func expose(at point: CGPoint) {
+    open func expose(at point: CGPoint) {
 		var error: NSError?
 		if isExposurePointOfInterestSupported && isExposureModeSupported(exposureMode: .continuousAutoExposure) {
 			do {
@@ -507,22 +507,22 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 				error = e
 			}
 		} else {
-			var userInfo: Dictionary<String, AnyObject> = Dictionary<String, AnyObject>()
+			var userInfo: Dictionary<String, Any> = Dictionary<String, Any>()
 			userInfo[NSLocalizedDescriptionKey] = "[Material Error: Unsupported expose.]"
 			userInfo[NSLocalizedFailureReasonErrorKey] = "[Material Error: Unsupported expose.]"
 			error = NSError(domain: "io.cosmicmind.Material.Capture", code: 0005, userInfo: userInfo)
-			userInfo[NSUnderlyingErrorKey] = error as? AnyObject
+			userInfo[NSUnderlyingErrorKey] = error
 		}
 		if let e = error {
 			delegate?.captureSessionFailedWithError?(captureSession: self, error: e)
 		}
 	}
 	
-	public override func observeValue(forKeyPath keyPath: String?, of object: AnyObject?, change: [NSKeyValueChangeKey: AnyObject]?, context: UnsafeMutablePointer<Void>?) {
+	open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey: Any]?, context: UnsafeMutableRawPointer?) {
 		if context == &CaptureSessionAdjustingExposureContext {
 			let device: AVCaptureDevice = object as! AVCaptureDevice
 			if !device.isAdjustingExposure && device.isExposureModeSupported(.locked) {
-				object!.removeObserver(self, forKeyPath: "adjustingExposure", context: &CaptureSessionAdjustingExposureContext)
+				(object! as AnyObject).removeObserver(self, forKeyPath: "adjustingExposure", context: &CaptureSessionAdjustingExposureContext)
 				DispatchQueue.main.async() {
 					do {
 						try device.lockForConfiguration()
@@ -543,7 +543,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
      - Parameter focus: A boolean indicating to reset the focus.
      - Parameter exposure: A boolean indicating to reset the exposure.
      */
-    public func reset(focus: Bool = true, exposure: Bool = true) {
+    open func reset(focus: Bool = true, exposure: Bool = true) {
 		let device: AVCaptureDevice = activeCamera!
 		let canResetFocus: Bool = device.isFocusPointOfInterestSupported && device.isFocusModeSupported(.continuousAutoFocus)
 		let canResetExposure: Bool = device.isExposurePointOfInterestSupported && device.isExposureModeSupported(.continuousAutoExposure)
@@ -565,32 +565,32 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// Captures a still image.
-	public func captureStillImage() {
+	open func captureStillImage() {
 		sessionQueue.async() { [weak self] in
 			if let s: CaptureSession = self {
 				if let v: AVCaptureConnection = s.imageOutput.connection(withMediaType: AVMediaTypeVideo) {
 					v.videoOrientation = s.videoOrientation
                     s.imageOutput.captureStillImageAsynchronously(from: v) { [weak self] (sampleBuffer: CMSampleBuffer?, error: Error?) -> Void in
-						if let s: CaptureSession = self {
-							var captureError: Error? = error
+						if let s = self {
+							var captureError = error
 							if nil == captureError {
-								let data: NSData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-								if let image1: UIImage = UIImage(data: data as Data) {
-                                    if let image2: UIImage = image1.adjustOrientation() {
+								let data = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)!
+								if let image1 = UIImage(data: data) {
+                                    if let image2 = image1.adjustOrientation() {
 										s.delegate?.captureSessionStillImageAsynchronously?(captureSession: s, image: image2)
 									} else {
-                                        var userInfo = [String: AnyObject]()
+                                        var userInfo = [String: Any]()
 										userInfo[NSLocalizedDescriptionKey] = "[Material Error: Cannot fix image orientation.]"
 										userInfo[NSLocalizedFailureReasonErrorKey] = "[Material Error: Cannot fix image orientation.]"
 										captureError = NSError(domain: "io.cosmicmind.Material.Capture", code: 0006, userInfo: userInfo)
-										userInfo[NSUnderlyingErrorKey] = error as? AnyObject
+										userInfo[NSUnderlyingErrorKey] = error
 									}
 								} else {
-                                    var userInfo = [String: AnyObject]()
+                                    var userInfo = [String: Any]()
 									userInfo[NSLocalizedDescriptionKey] = "[Material Error: Cannot capture image from data.]"
 									userInfo[NSLocalizedFailureReasonErrorKey] = "[Material Error: Cannot capture image from data.]"
 									captureError = NSError(domain: "io.cosmicmind.Material.Capture", code: 0007, userInfo: userInfo)
-									userInfo[NSUnderlyingErrorKey] = error as? AnyObject
+									userInfo[NSUnderlyingErrorKey] = error
 								}
 							}
 							
@@ -605,7 +605,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// Starts recording.
-	public func startRecording() {
+	open func startRecording() {
 		if !isRecording {
 			sessionQueue.async() { [weak self] in
 				if let s: CaptureSession = self {
@@ -625,7 +625,7 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 						}
 						
 						s.movieOutputURL = s.uniqueURL()
-						if let v: NSURL = s.movieOutputURL {
+						if let v = s.movieOutputURL {
 							s.movieOutput.startRecording(toOutputFileURL: v as URL!, recordingDelegate: s)
 						}
 					}
@@ -635,20 +635,20 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// Stops recording.
-	public func stopRecording() {
+	open func stopRecording() {
 		if isRecording {
 			movieOutput.stopRecording()
 		}
 	}
 	
-	public func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [AnyObject]!) {
+	public func capture(_ captureOutput: AVCaptureFileOutput!, didStartRecordingToOutputFileAt fileURL: URL!, fromConnections connections: [Any]!) {
         isRecording = true
-		delegate?.captureSessionDidStartRecordingToOutputFileAtURL?(captureSession: self, captureOutput: captureOutput, fileURL: fileURL, fromConnections: connections)
+		delegate?.captureSessionDidStartRecordingToOutputFileAtURL?(captureSession: self, captureOutput: captureOutput, fileURL: fileURL as NSURL, fromConnections: connections)
 	}
 	
-	public func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [AnyObject]!, error: Error!) {
+	public func capture(_ captureOutput: AVCaptureFileOutput!, didFinishRecordingToOutputFileAt outputFileURL: URL!, fromConnections connections: [Any]!, error: Error!) {
     	isRecording = false
-		delegate?.captureSessionDidFinishRecordingToOutputFileAtURL?(captureSession: self, captureOutput: captureOutput, outputFileURL: outputFileURL, fromConnections: connections, error: error)
+		delegate?.captureSessionDidFinishRecordingToOutputFileAtURL?(captureSession: self, captureOutput: captureOutput, outputFileURL: outputFileURL as NSURL, fromConnections: connections, error: error)
 	}
     
     /// Prepares the sessionQueue.
@@ -721,9 +721,9 @@ public class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
      Creates a unique URL if possible. 
      - Returns: A NSURL if it is possible to create one.
 	*/
-	private func uniqueURL() -> NSURL? {
+	private func uniqueURL() -> URL? {
 		do {
-            let directory: NSURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            let directory = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
 			let dateFormatter = DateFormatter()
 			dateFormatter.dateStyle = .full
 			dateFormatter.timeStyle = .full

@@ -1,55 +1,53 @@
 /*
-* Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*	*	Redistributions of source code must retain the above copyright notice, this
-*		list of conditions and the following disclaimer.
-*
-*	*	Redistributions in binary form must reproduce the above copyright notice,
-*		this list of conditions and the following disclaimer in the documentation
-*		and/or other materials provided with the distribution.
-*
-*	*	Neither the name of CosmicMind nor the names of its
-*		contributors may be used to endorse or promote products derived from
-*		this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *	*	Redistributions of source code must retain the above copyright notice, this
+ *		list of conditions and the following disclaimer.
+ *
+ *	*	Redistributions in binary form must reproduce the above copyright notice,
+ *		this list of conditions and the following disclaimer in the documentation
+ *		and/or other materials provided with the distribution.
+ *
+ *	*	Neither the name of CosmicMind nor the names of its
+ *		contributors may be used to endorse or promote products derived from
+ *		this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 import UIKit
 
 @IBDesignable
 @objc(View)
-public class View: UIView {
+open class View: UIView {
 	/**
      A CAShapeLayer used to manage elements that would be affected by
      the clipToBounds property of the backing layer. For example, this
      allows the dropshadow effect on the backing layer, while clipping
      the image to a desired shape within the visualLayer.
      */
-	public private(set) var visualLayer: CAShapeLayer!
-	
-	/// A base delegate reference used when subclassing View.
-	public weak var delegate: MaterialDelegate?
+	open private(set) var visualLayer: CAShapeLayer!
 	
 	/**
      A property that manages an image for the visualLayer's contents
      property. Images should not be set to the backing layer's contents
      property to avoid conflicts when using clipsToBounds.
      */
-	@IBInspectable public var image: UIImage? {
+	@IBInspectable
+    open var image: UIImage? {
 		didSet {
 			visualLayer.contents = image?.cgImage
 		}
@@ -61,7 +59,8 @@ public class View: UIView {
      much greater flexibility than the contentsGravity property in
      terms of how the image is cropped and stretched.
      */
-	@IBInspectable public var contentsRect: CGRect {
+	@IBInspectable
+    open var contentsRect: CGRect {
 		get {
 			return visualLayer.contentsRect
 		}
@@ -74,7 +73,8 @@ public class View: UIView {
      A CGRect that defines a stretchable region inside the visualLayer
      with a fixed border around the edge.
      */
-	@IBInspectable public var contentsCenter: CGRect {
+	@IBInspectable
+    open var contentsCenter: CGRect {
 		get {
 			return visualLayer.contentsCenter
 		}
@@ -88,7 +88,8 @@ public class View: UIView {
      dimensions of the visualLayer's contents property and the size
      of the view. By default, this value is set to the Device.scale.
      */
-	@IBInspectable public var contentsScale: CGFloat {
+	@IBInspectable
+    open var contentsScale: CGFloat {
 		get {
 			return visualLayer.contentsScale
 		}
@@ -98,14 +99,16 @@ public class View: UIView {
 	}
 	
 	/// A Preset for the contentsGravity property.
-	@IBInspectable public var contentsGravityPreset: MaterialGravity {
+	@IBInspectable
+    open var contentsGravityPreset: MaterialGravity {
 		didSet {
 			contentsGravity = MaterialGravityToValue(gravity: contentsGravityPreset)
 		}
 	}
 	
 	/// Determines how content should be aligned within the visualLayer's bounds.
-	@IBInspectable public var contentsGravity: String {
+	@IBInspectable
+    open var contentsGravity: String {
 		get {
 			return visualLayer.contentsGravity
 		}
@@ -115,7 +118,8 @@ public class View: UIView {
 	}
 	
 	/// A property that accesses the backing layer's backgroundColor.
-	@IBInspectable public override var backgroundColor: UIColor? {
+	@IBInspectable
+    open override var backgroundColor: UIColor? {
 		didSet {
 			layer.backgroundColor = backgroundColor?.cgColor
 		}
@@ -145,10 +149,10 @@ public class View: UIView {
 	
 	/// A convenience initializer.
 	public convenience init() {
-		self.init(frame: CGRect.zero)
+		self.init(frame: .zero)
 	}
 	
-	public override func layoutSublayers(of layer: CALayer) {
+	open override func layoutSublayers(of layer: CALayer) {
 		super.layoutSublayers(of: layer)
 		if self.layer == layer {
 			layoutShape()
@@ -156,7 +160,7 @@ public class View: UIView {
 		}
 	}
 	
-	public override func layoutSubviews() {
+	open override func layoutSubviews() {
 		super.layoutSubviews()
 		layoutShadowPath()
 	}
@@ -168,7 +172,7 @@ public class View: UIView {
      The super.prepareView method should always be called immediately
      when subclassing.
      */
-	public func prepareView() {
+	open func prepareView() {
 		contentScaleFactor = Device.scale
 		backgroundColor = Color.white
 		prepareVisualLayer()

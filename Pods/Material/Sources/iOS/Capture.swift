@@ -1,32 +1,32 @@
 /*
-* Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*	*	Redistributions of source code must retain the above copyright notice, this
-*		list of conditions and the following disclaimer.
-*
-*	*	Redistributions in binary form must reproduce the above copyright notice,
-*		this list of conditions and the following disclaimer in the documentation
-*		and/or other materials provided with the distribution.
-*
-*	*	Neither the name of CosmicMind nor the names of its
-*		contributors may be used to endorse or promote products derived from
-*		this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *	*	Redistributions of source code must retain the above copyright notice, this
+ *		list of conditions and the following disclaimer.
+ *
+ *	*	Redistributions in binary form must reproduce the above copyright notice,
+ *		this list of conditions and the following disclaimer in the documentation
+ *		and/or other materials provided with the distribution.
+ *
+ *	*	Neither the name of CosmicMind nor the names of its
+ *		contributors may be used to endorse or promote products derived from
+ *		this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 import UIKit
 import AVFoundation
@@ -38,7 +38,7 @@ public enum CaptureMode: Int {
 }
 
 @objc(CaptureDelegate)
-public protocol CaptureDelegate: MaterialDelegate {
+public protocol CaptureDelegate {
 	/**
      A delegation method that is fired when the record timer has started.
      - Parameter capture: A reference to the calling capture.
@@ -131,8 +131,11 @@ public protocol CaptureDelegate: MaterialDelegate {
     optional func captureDidPressVideoButton(capture: Capture, button: UIButton)
 }
 
-public class Capture: View, UIGestureRecognizerDelegate {
-	/// A Timer reference for when recording is enabled.
+open class Capture: View, UIGestureRecognizerDelegate {
+    /// A delegation reference.
+    public weak var delegate: CaptureDelegate?
+    
+    /// A Timer reference for when recording is enabled.
 	private var timer: Timer?
 	
 	/// A tap gesture reference for focus events.
@@ -145,10 +148,10 @@ public class Capture: View, UIGestureRecognizerDelegate {
     private var tapToResetGesture: UITapGestureRecognizer?
 	
     /// A reference to the capture mode.
-    public lazy var captureMode: CaptureMode = .video
+    open lazy var captureMode: CaptureMode = .video
 	
 	/// A boolean indicating whether to enable tap to focus.
-	@IBInspectable public var enableTapToFocus: Bool = false {
+	@IBInspectable open var enableTapToFocus = false {
 		didSet {
 			if enableTapToFocus {
 				enableTapToReset = true
@@ -166,7 +169,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 	}
 	
 	/// A boolean indicating whether to enable tap to expose.
-	@IBInspectable public var enableTapToExpose: Bool = false {
+	@IBInspectable open var enableTapToExpose = false {
 		didSet {
 			if enableTapToExpose {
 				enableTapToReset = true
@@ -184,7 +187,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 	}
 	
 	/// A boolean indicating whether to enable tap to reset.
-	@IBInspectable public var enableTapToReset: Bool = false {
+	@IBInspectable open var enableTapToReset = false {
 		didSet {
 			if enableTapToReset {
 				prepareResetLayer()
@@ -204,36 +207,36 @@ public class Capture: View, UIGestureRecognizerDelegate {
 	}
 	
 	/// Insets preset value for content.
-	public var contentEdgeInsetsPreset: EdgeInsetsPreset = .none {
+	open var contentEdgeInsetsPreset: EdgeInsetsPreset = .none {
 		didSet {
 			contentInset = EdgeInsetsPresetToValue(preset: contentEdgeInsetsPreset)
 		}
 	}
 	
 	/// Content insert value.
-	public var contentInset: EdgeInsets = EdgeInsetsPresetToValue(preset: .square4) {
+	open var contentInset = EdgeInsetsPresetToValue(preset: .square4) {
 		didSet {
 			reloadView()
 		}
 	}
 	
 	/// A reference to the CapturePreview view.
-	public private(set) var previewView: CapturePreview!
+	open private(set) var previewView: CapturePreview!
 	
 	/// A reference to the CaptureSession.
-	public private(set) var captureSession: CaptureSession!
+	open private(set) var captureSession: CaptureSession!
 	
 	/// A reference to the focus layer used in focus animations.
-	public private(set) var focusLayer: Layer?
+	open private(set) var focusLayer: Layer?
 	
     /// A reference to the exposure layer used in exposure animations.
-    public private(set) var exposureLayer: Layer?
+    open private(set) var exposureLayer: Layer?
 	
     /// A reference to the reset layer used in reset animations.
-    public private(set) var resetLayer: Layer?
+    open private(set) var resetLayer: Layer?
 	
 	/// A reference to the cameraButton.
-	public var cameraButton: UIButton? {
+	open var cameraButton: UIButton? {
 		didSet {
 			if let v: UIButton = cameraButton {
 				v.addTarget(self, action: #selector(handleCameraButton), for: .touchUpInside)
@@ -243,7 +246,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 	}
 	
 	/// A reference to the captureButton.
-	public var captureButton: UIButton? {
+	open var captureButton: UIButton? {
 		didSet {
 			if let v: UIButton = captureButton {
 				v.addTarget(self, action: #selector(handleCaptureButton), for: .touchUpInside)
@@ -254,7 +257,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 
 	
 	/// A reference to the videoButton.
-	public var videoButton: UIButton? {
+	open var videoButton: UIButton? {
 		didSet {
 			if let v: UIButton = videoButton {
 				v.addTarget(self, action: #selector(handleVideoButton), for: .touchUpInside)
@@ -264,7 +267,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 	}
 	
 	/// A reference to the switchCameraButton.
-	public var switchCamerasButton: UIButton? {
+	open var switchCamerasButton: UIButton? {
 		didSet {
 			if let v: UIButton = switchCamerasButton {
 				v.addTarget(self, action: #selector(handleSwitchCamerasButton), for: .touchUpInside)
@@ -273,7 +276,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 	}
 	
 	/// A reference to the flashButton.
-	public var flashButton: UIButton? {
+	open var flashButton: UIButton? {
 		didSet {
 			if let v: UIButton = flashButton {
 				v.addTarget(self, action: #selector(handleFlashButton), for: .touchUpInside)
@@ -283,10 +286,10 @@ public class Capture: View, UIGestureRecognizerDelegate {
 	
 	/// A convenience initializer.
 	public convenience init() {
-		self.init(frame: CGRect.zero)
+		self.init(frame: .zero)
 	}
 	
-	public override func layoutSubviews() {
+	open override func layoutSubviews() {
 		super.layoutSubviews()
 		previewView.frame = bounds
 		
@@ -314,7 +317,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
      The super.prepareView method should always be called immediately
      when subclassing.
      */
-	public override func prepareView() {
+	open override func prepareView() {
 		super.prepareView()
 		backgroundColor = Color.black
         prepareCaptureSession()
@@ -322,7 +325,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 	}
 	
 	/// Reloads the view.
-	public func reloadView() {
+	open func reloadView() {
 		// clear constraints so new ones do not conflict
 		removeConstraints(constraints)
 		for v in subviews {
@@ -349,7 +352,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 		timer?.invalidate()
 		timer = Timer(timeInterval: 0.5, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
 		RunLoop.main.add(timer!, forMode: .commonModes)
-		(delegate as? CaptureDelegate)?.captureDidStartRecordTimer?(capture: self)
+		delegate?.captureDidStartRecordTimer?(capture: self)
 	}
 	
 	/// Updates the timer when recording.
@@ -359,7 +362,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 		let hours: Int = Int(time / 3600)
 		let minutes: Int = Int((time / 60).truncatingRemainder(dividingBy: 60))
 		let seconds: Int = Int(time.truncatingRemainder(dividingBy: 60))
-		(delegate as? CaptureDelegate)?.captureDidUpdateRecordTimer?(capture: self, hours: hours, minutes: minutes, seconds: seconds)
+		delegate?.captureDidUpdateRecordTimer?(capture: self, hours: hours, minutes: minutes, seconds: seconds)
 	}
 	
 	/// Stops the timer when recording.
@@ -371,7 +374,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
         let seconds: Int = Int(time.truncatingRemainder(dividingBy: 60))
         timer?.invalidate()
 		timer = nil
-		(delegate as? CaptureDelegate)?.captureDidStopRecordTimer?(capture: self, hours: hours, minutes: minutes, seconds: seconds)
+		delegate?.captureDidStopRecordTimer?(capture: self, hours: hours, minutes: minutes, seconds: seconds)
 	}
 	
 	/**
@@ -379,7 +382,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
      - Parameter button: A UIButton that is associated with the event.
      */
 	internal func handleFlashButton(button: UIButton) {
-		(delegate as? CaptureDelegate)?.captureDidPressFlashButton?(capture: self, button: button)
+		delegate?.captureDidPressFlashButton?(capture: self, button: button)
 	}
 	
     /**
@@ -388,7 +391,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
      */
     internal func handleSwitchCamerasButton(button: UIButton) {
 		captureSession.switchCameras()
-		(delegate as? CaptureDelegate)?.captureDidPressSwitchCamerasButton?(capture: self, button: button)
+		delegate?.captureDidPressSwitchCamerasButton?(capture: self, button: button)
 	}
 	
     /**
@@ -407,7 +410,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 				startTimer()
 			}
 		}
-		(delegate as? CaptureDelegate)?.captureDidPressCaptureButton?(capture: self, button: button)
+		delegate?.captureDidPressCaptureButton?(capture: self, button: button)
 	}
 	
     /**
@@ -416,7 +419,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
      */
     internal func handleCameraButton(button: UIButton) {
 		captureMode = .photo
-		(delegate as? CaptureDelegate)?.captureDidPressCameraButton?(capture: self, button: button)
+		delegate?.captureDidPressCameraButton?(capture: self, button: button)
 	}
 	
     /**
@@ -425,7 +428,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
      */
     internal func handleVideoButton(button: UIButton) {
 		captureMode = .video
-		(delegate as? CaptureDelegate)?.captureDidPressVideoButton?(capture: self, button: button)
+		delegate?.captureDidPressVideoButton?(capture: self, button: button)
 	}
 	
     /**
@@ -438,7 +441,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 			let point: CGPoint = recognizer.location(in: self)
 			captureSession.focus(at: previewView.captureDevicePointOfInterestForPoint(point: point))
 			animateTapLayer(layer: focusLayer!, point: point)
-			(delegate as? CaptureDelegate)?.captureDidTapToFocusAtPoint?(capture: self, point: point)
+			delegate?.captureDidTapToFocusAtPoint?(capture: self, point: point)
 		}
 	}
 	
@@ -452,7 +455,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 			let point: CGPoint = recognizer.location(in: self)
 			captureSession.expose(at: previewView.captureDevicePointOfInterestForPoint(point: point))
 			animateTapLayer(layer: exposureLayer!, point: point)
-			(delegate as? CaptureDelegate)?.captureDidTapToExposeAtPoint?(capture: self, point: point)
+			delegate?.captureDidTapToExposeAtPoint?(capture: self, point: point)
 		}
 	}
 	
@@ -466,7 +469,7 @@ public class Capture: View, UIGestureRecognizerDelegate {
 			captureSession.reset()
             let point: CGPoint = previewView.pointForCaptureDevicePointOfInterest(point: CGPoint(x: 0.5, y: 0.5))
 			animateTapLayer(layer: resetLayer!, point: point)
-			(delegate as? CaptureDelegate)?.captureDidTapToResetAtPoint?(capture: self, point: point)
+			delegate?.captureDidTapToResetAtPoint?(capture: self, point: point)
 		}
 	}
 	

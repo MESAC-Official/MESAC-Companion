@@ -1,32 +1,32 @@
 /*
-* Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*	*	Redistributions of source code must retain the above copyright notice, this
-*		list of conditions and the following disclaimer.
-*
-*	*	Redistributions in binary form must reproduce the above copyright notice,
-*		this list of conditions and the following disclaimer in the documentation
-*		and/or other materials provided with the distribution.
-*
-*	*	Neither the name of CosmicMind nor the names of its
-*		contributors may be used to endorse or promote products derived from
-*		this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *	*	Redistributions of source code must retain the above copyright notice, this
+ *		list of conditions and the following disclaimer.
+ *
+ *	*	Redistributions in binary form must reproduce the above copyright notice,
+ *		this list of conditions and the following disclaimer in the documentation
+ *		and/or other materials provided with the distribution.
+ *
+ *	*	Neither the name of CosmicMind nor the names of its
+ *		contributors may be used to endorse or promote products derived from
+ *		this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 import UIKit
 
@@ -38,12 +38,12 @@ public enum ImageFormat: Int {
 
 extension UIImage {
     /// Width of the UIImage.
-    public var width: CGFloat {
+    open var width: CGFloat {
         return size.width
     }
     
     /// Height of the UIImage.
-    public var height: CGFloat {
+    open var height: CGFloat {
         return size.height
     }
 }
@@ -54,7 +54,7 @@ extension UIImage {
      - Parameter toWidth w: A width value.
      - Returns: An optional UIImage.
      */
-    public func resize(toWidth w: CGFloat) -> UIImage? {
+    open func resize(toWidth w: CGFloat) -> UIImage? {
         return internalResize(toWidth: w)
     }
     
@@ -63,7 +63,7 @@ extension UIImage {
      - Parameter toHeight h: A height value.
      - Returns: An optional UIImage.
      */
-    public func resize(toHeight h: CGFloat) -> UIImage? {
+    open func resize(toHeight h: CGFloat) -> UIImage? {
         return internalResize(toHeight: h)
     }
     
@@ -100,7 +100,7 @@ extension UIImage {
      - Parameter color: The UIColor to create the image from.
      - Returns: A UIImage that is the color passed in.
      */
-    public func tintWithColor(color: UIColor) -> UIImage? {
+    open func tintWithColor(color: UIColor) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, Device.scale)
         guard let context = UIGraphicsGetCurrentContext() else {
             return nil
@@ -129,7 +129,7 @@ extension UIImage {
      - Parameter size: The size of the image to create.
      - Returns: A UIImage that is the color passed in.
      */
-    public class func imageWithColor(color: UIColor, size: CGSize) -> UIImage? {
+    open class func imageWithColor(color: UIColor, size: CGSize) -> UIImage? {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         color.setFill()
@@ -147,7 +147,7 @@ extension UIImage {
      - Parameter toHeight th: A specified height.
      - Returns: An optional UIImage.
      */
-    public func crop(toWidth tw: CGFloat, toHeight th: CGFloat) -> UIImage? {
+    open func crop(toWidth tw: CGFloat, toHeight th: CGFloat) -> UIImage? {
         let g: UIImage?
         let b: Bool = width > height
         let s: CGFloat = b ? th / height : tw / width
@@ -170,7 +170,7 @@ extension UIImage {
      Creates an clear image.
      - Returns: A UIImage that is clear.
      */
-    public class func clear(size: CGSize = CGSize(width: 16, height: 16)) -> UIImage? {
+    open class func clear(size: CGSize = CGSize(width: 16, height: 16)) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -185,13 +185,13 @@ extension UIImage {
      - Parameter completion: A completion block that is executed once the image
      has been retrieved.
      */
-    public class func contentsOfURL(url: URL, completion: ((image: UIImage?, error: Error?) -> Void)) {
+    open class func contentsOfURL(url: URL, completion: ((UIImage?, Error?) -> Void)) {
         URLSession.shared.dataTask(with: URLRequest(url: url)) { (data: Data?, response: URLResponse?, error: Error?) in
             DispatchQueue.main.async {
                 if let v = error {
-                    completion(image: nil, error: v)
+                    completion(nil, v)
                 } else if let v = data {
-                    completion(image: UIImage(data: v), error: nil)
+                    completion(UIImage(data: v), nil)
                 }
             }
         }.resume()
@@ -205,7 +205,7 @@ extension UIImage {
      when using Portrait.
      - Returns: An optional UIImage if successful.
      */
-    public func adjustOrientation() -> UIImage? {
+    open func adjustOrientation() -> UIImage? {
         guard .up != imageOrientation else {
             return self
         }
@@ -246,9 +246,9 @@ extension UIImage {
         
         switch imageOrientation {
         case .left, .leftMirrored, .right, .rightMirrored:
-            context.draw(in: CGRect(x: 0, y: 0, width: size.height, height: size.width), image: cgImage!)
+            context.draw(cgImage!, in: CGRect(x: 0, y: 0, width: size.height, height: size.width))
         default:
-            context.draw(in: CGRect(origin: .zero, size: size), image: cgImage!)
+            context.draw(cgImage!, in: CGRect(origin: .zero, size: size))
         }
         
         guard let cgImage = context.makeImage() else {

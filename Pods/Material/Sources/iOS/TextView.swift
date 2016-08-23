@@ -1,32 +1,32 @@
 /*
-* Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
-* All rights reserved.
-*
-* Redistribution and use in source and binary forms, with or without
-* modification, are permitted provided that the following conditions are met:
-*
-*	*	Redistributions of source code must retain the above copyright notice, this
-*		list of conditions and the following disclaimer.
-*
-*	*	Redistributions in binary form must reproduce the above copyright notice,
-*		this list of conditions and the following disclaimer in the documentation
-*		and/or other materials provided with the distribution.
-*
-*	*	Neither the name of CosmicMind nor the names of its
-*		contributors may be used to endorse or promote products derived from
-*		this software without specific prior written permission.
-*
-* THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-* AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-* IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-* DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-* FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-* DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-* SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-* CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-* OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+ * Copyright (C) 2015 - 2016, Daniel Dahan and CosmicMind, Inc. <http://cosmicmind.io>.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ *	*	Redistributions of source code must retain the above copyright notice, this
+ *		list of conditions and the following disclaimer.
+ *
+ *	*	Redistributions in binary form must reproduce the above copyright notice,
+ *		this list of conditions and the following disclaimer in the documentation
+ *		and/or other materials provided with the distribution.
+ *
+ *	*	Neither the name of CosmicMind nor the names of its
+ *		contributors may be used to endorse or promote products derived from
+ *		this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 import UIKit
 
@@ -134,7 +134,7 @@ public class TextView: UITextView {
 	- Parameter textContainer: A NSTextContainer instance.
 	*/
 	public convenience init(textContainer: NSTextContainer?) {
-		self.init(frame: CGRect.zero, textContainer: textContainer)
+		self.init(frame: .zero, textContainer: textContainer)
 	}
 	
 	/** Denitializer. This should never be called unless you know
@@ -181,21 +181,32 @@ public class TextView: UITextView {
 			p.isHidden = !(true == text?.isEmpty)
 		}
 		
-		if 0 < text?.utf16.count {
-			showTitleLabel()
-		} else if 0 == text?.utf16.count {
-			hideTitleLabel()
-		}
+        guard let t = text else {
+            hideTitleLabel()
+            return
+        }
+        
+        if 0 < t.utf16.count {
+            showTitleLabel()
+        } else {
+            hideTitleLabel()
+        }
 	}
 	
 	/// Notification handler for when text editing ended.
 	internal func handleTextViewTextDidEnd() {
-		if 0 < text?.utf16.count {
-			showTitleLabel()
-		} else if 0 == text?.utf16.count {
-			hideTitleLabel()
-		}
-		titleLabel?.textColor = titleLabelColor
+        guard let t = text else {
+            hideTitleLabel()
+            return
+        }
+        
+        if 0 < t.utf16.count {
+            showTitleLabel()
+        } else {
+            hideTitleLabel()
+        }
+        
+        titleLabel?.textColor = titleLabelColor
 	}
 	
 	/**
@@ -207,7 +218,7 @@ public class TextView: UITextView {
 	*/
 	public func prepareView() {
 		contentScaleFactor = Device.scale
-		textContainerInset = EdgeInsets.zero
+		textContainerInset = .zero
 		backgroundColor = Color.white
 		clipsToBounds = false
 		removeNotificationHandlers()
@@ -233,11 +244,13 @@ public class TextView: UITextView {
 		if let v: UILabel = titleLabel {
 			v.isHidden = true
 			addSubview(v)
-			if 0 < text?.utf16.count {
-				showTitleLabel()
-			} else {
-				v.alpha = 0
-			}
+            
+            guard let t = text, 0 == t.utf16.count else {
+                v.alpha = 0
+                return
+            }
+            
+            showTitleLabel()
 		}
 	}
 	
