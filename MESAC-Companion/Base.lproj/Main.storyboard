@@ -50,29 +50,33 @@
                                             <action selector="toggleDrawer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R7g-KH-G0F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9F-Gl-VAo" userLabel="More" customClass="IconButton" customModule="Material">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMr-iS-Z2b" userLabel="More">
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="B9F-Gl-VAo" secondAttribute="height" multiplier="1:3" id="EoH-Vb-l8l"/>
+                                            <constraint firstAttribute="height" constant="20" id="DfG-v3-HV6"/>
+                                            <constraint firstAttribute="width" constant="8" id="MKS-KI-XN0"/>
                                         </constraints>
                                         <state key="normal" image="More"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bw-v7-HZl" userLabel="Live" customClass="IconButton" customModule="Material">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="27" id="0Xn-BN-6ww"/>
-                                            <constraint firstAttribute="width" secondItem="4Bw-v7-HZl" secondAttribute="height" multiplier="25:27" id="kPr-JA-5c3"/>
+                                            <constraint firstAttribute="width" secondItem="4Bw-v7-HZl" secondAttribute="height" multiplier="1:1" id="qqw-ez-I92"/>
                                         </constraints>
                                         <state key="normal" image="Live"/>
+                                        <connections>
+                                            <action selector="toLive:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lks-Jz-3Ql"/>
+                                            <segue destination="Irb-xN-Tso" kind="show" id="Caz-de-ZQ8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.23921568630000001" green="0.29803921570000003" blue="0.71764705880000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="4Bw-v7-HZl" secondAttribute="bottom" constant="15" id="Aob-aJ-Bx7"/>
-                                    <constraint firstItem="B9F-Gl-VAo" firstAttribute="leading" secondItem="4Bw-v7-HZl" secondAttribute="trailing" constant="37" id="BMR-W1-dm6"/>
-                                    <constraint firstAttribute="trailing" secondItem="B9F-Gl-VAo" secondAttribute="trailing" constant="15" id="CA1-UQ-9Ps"/>
-                                    <constraint firstItem="B9F-Gl-VAo" firstAttribute="top" secondItem="tzt-Wt-GEJ" secondAttribute="top" constant="14" id="FRV-7H-soC"/>
+                                    <constraint firstItem="TMr-iS-Z2b" firstAttribute="leading" secondItem="4Bw-v7-HZl" secondAttribute="trailing" constant="16" id="1up-0X-S6V"/>
+                                    <constraint firstAttribute="trailing" secondItem="TMr-iS-Z2b" secondAttribute="trailing" constant="19" id="6iD-FK-d5L"/>
+                                    <constraint firstItem="TMr-iS-Z2b" firstAttribute="top" secondItem="tzt-Wt-GEJ" secondAttribute="top" constant="18" id="CFW-Au-lzy"/>
                                     <constraint firstAttribute="height" constant="57" id="H7a-6q-T8e"/>
-                                    <constraint firstItem="4Bw-v7-HZl" firstAttribute="top" secondItem="tzt-Wt-GEJ" secondAttribute="top" constant="15" id="Ubc-9f-kvg"/>
-                                    <constraint firstAttribute="bottom" secondItem="B9F-Gl-VAo" secondAttribute="bottom" constant="16" id="W1x-m6-xYK"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Bw-v7-HZl" secondAttribute="bottom" constant="17" id="Nmn-ah-wAr"/>
+                                    <constraint firstAttribute="bottom" secondItem="TMr-iS-Z2b" secondAttribute="bottom" constant="19" id="ZRZ-jX-DZR"/>
+                                    <constraint firstItem="4Bw-v7-HZl" firstAttribute="top" secondItem="tzt-Wt-GEJ" secondAttribute="top" constant="15" id="awA-DT-lXW"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfj-gQ-EqB">
@@ -107,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="134"/>
+            <point key="canvasLocation" x="757.60000000000002" y="133.5832083958021"/>
         </scene>
         <!--Live View Controller-->
         <scene sceneID="2Bd-2q-Ypi">
@@ -138,11 +142,6 @@
                                             <action selector="toggleDrawer:" destination="Irb-xN-Tso" eventType="touchUpInside" id="zYY-el-4Sz"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muk-VP-Pjl" userLabel="More" customClass="IconButton" customModule="Material">
-                                        <frame key="frameInset" minX="351" minY="14" width="9" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="More"/>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvU-aQ-9Ec">
                                         <frame key="frameInset" minX="61" minY="15" width="54" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -150,6 +149,13 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-kO-oJi" userLabel="More">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="17F-JB-aR9"/>
+                                            <constraint firstAttribute="width" constant="8" id="nZu-oz-pT7"/>
+                                        </constraints>
+                                        <state key="normal" image="More"/>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6F-dV-yuH" userLabel="Live" customClass="IconButton" customModule="Material">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Q6F-dV-yuH" secondAttribute="height" multiplier="1:1" id="D50-9h-AxA"/>
@@ -159,7 +165,10 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.3411764705882353" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="U2X-kO-oJi" secondAttribute="trailing" constant="19" id="GvV-z5-LCo"/>
                                     <constraint firstAttribute="height" constant="57" id="M4h-17-L0s"/>
+                                    <constraint firstAttribute="bottom" secondItem="U2X-kO-oJi" secondAttribute="bottom" constant="19" id="rVI-lj-2Bt"/>
+                                    <constraint firstItem="U2X-kO-oJi" firstAttribute="top" secondItem="aU9-mI-IbM" secondAttribute="top" constant="18" id="zr1-Pm-ou0"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="subviews">

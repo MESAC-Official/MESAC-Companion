@@ -13,6 +13,8 @@ import Material
 class ViewController: UIViewController {//
     
     
+    @IBAction func toLive(_ sender: AnyObject) {
+    }
 
     @IBOutlet weak var testLabel: UILabel!
     //
