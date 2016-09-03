@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -107,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="135.38230884557723"/>
+            <point key="canvasLocation" x="758" y="134"/>
         </scene>
         <!--Live View Controller-->
         <scene sceneID="2Bd-2q-Ypi">
@@ -121,21 +121,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-8h-32g" userLabel="StatusBarColor">
-                                <frame key="frameInset" width="375" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-8h-32g" userLabel="StatusBarColor">
                                 <color key="backgroundColor" red="0.83137254901960778" green="0.27843137254901962" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="uAa-wg-FQD"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aU9-mI-IbM" userLabel="Toolbar">
-                                <frame key="frameInset" minY="20" width="375" height="57"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aU9-mI-IbM" userLabel="Toolbar">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Live Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCa-fz-OR5">
-                                        <frame key="frameInset" minX="41" minY="15" width="95" height="27"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUA-B7-eYf" userLabel="Sidebar">
                                         <frame key="frameInset" minX="8" minY="15" width="28" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -150,6 +143,13 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="More"/>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvU-aQ-9Ec">
+                                        <frame key="frameInset" minX="61" minY="15" width="54" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6F-dV-yuH" userLabel="Live" customClass="IconButton" customModule="Material">
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Q6F-dV-yuH" secondAttribute="height" multiplier="1:1" id="D50-9h-AxA"/>
@@ -169,11 +169,19 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aU9-mI-IbM" secondAttribute="trailing" id="2EN-53-sF9"/>
+                            <constraint firstAttribute="trailing" secondItem="kvd-8h-32g" secondAttribute="trailing" id="2et-qx-DuW"/>
+                            <constraint firstItem="aU9-mI-IbM" firstAttribute="leading" secondItem="3g7-eE-4y4" secondAttribute="leading" id="Bfx-pn-ScW"/>
+                            <constraint firstItem="kvd-8h-32g" firstAttribute="leading" secondItem="3g7-eE-4y4" secondAttribute="leading" id="VWD-L9-JZc"/>
+                            <constraint firstItem="aU9-mI-IbM" firstAttribute="top" secondItem="kvd-8h-32g" secondAttribute="bottom" id="Z9d-zU-QcG"/>
+                            <constraint firstItem="kvd-8h-32g" firstAttribute="top" secondItem="3g7-eE-4y4" secondAttribute="top" id="kE6-T6-Sf9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gtq-7H-aOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="134.48275862068968"/>
+            <point key="canvasLocation" x="1590" y="165"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="PtB-F9-YeG">
@@ -236,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIY-Gw-qqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-725.60000000000002" y="88.605697151424295"/>
+            <point key="canvasLocation" x="-132" y="134"/>
         </scene>
     </scenes>
     <resources>
