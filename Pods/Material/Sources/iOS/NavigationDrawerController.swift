@@ -179,7 +179,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 	A NavigationDrawerControllerDelegate property used to bind
 	the delegation object.
 	*/
-	public weak var delegate: NavigationDrawerControllerDelegate?
+	open weak var delegate: NavigationDrawerControllerDelegate?
 	
 	/**
 	A CGFloat property that sets the animation duration of the
@@ -411,8 +411,8 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 			v.height = view.bounds.height
 			leftViewThreshold = leftViewWidth / 2
 			if let vc: UIViewController = leftViewController {
-				vc.view.frame.size.width = v.width
-				vc.view.frame.size.height = v.height
+				vc.view.width = v.width
+				vc.view.height = v.height
                 vc.view.center = CGPoint(x: v.width / 2, y: v.height / 2)
 			}
 		}
@@ -422,8 +422,8 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 			v.height = view.bounds.height
 			rightViewThreshold = view.bounds.width - rightViewWidth / 2
 			if let vc: UIViewController = rightViewController {
-				vc.view.frame.size.width = v.width
-				vc.view.frame.size.height = v.height
+				vc.view.width = v.width
+				vc.view.height = v.height
                 vc.view.center = CGPoint(x: v.width / 2, y: v.height / 2)
 			}
 		}
@@ -739,11 +739,11 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 	}
 	
 	/**
-	A method that is fired when the pan gesture is recognized
-	for the leftView.
-	- Parameter recognizer: A UIPanGestureRecognizer that is
-	passed to the handler when recognized.
-	*/
+     A method that is fired when the pan gesture is recognized
+     for the leftView.
+     - Parameter recognizer: A UIPanGestureRecognizer that is
+     passed to the handler when recognized.
+     */
     @objc
 	internal func handleLeftViewPanGesture(recognizer: UIPanGestureRecognizer) {
 		if enabledLeftView && (openedLeftView || !openedRightView && isPointContainedWithinLeftThreshold(point: recognizer.location(in: view))) {
@@ -788,11 +788,11 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 	}
 	
 	/**
-	A method that is fired when the pan gesture is recognized
-	for the rightView.
-	- Parameter recognizer: A UIPanGestureRecognizer that is
-	passed to the handler when recognized.
-	*/
+     A method that is fired when the pan gesture is recognized
+     for the rightView.
+     - Parameter recognizer: A UIPanGestureRecognizer that is
+     passed to the handler when recognized.
+     */
     @objc
 	internal func handleRightViewPanGesture(recognizer: UIPanGestureRecognizer) {
 		if enabledRightView && (openedRightView || !openedLeftView && isPointContainedWithinRighThreshold(point: recognizer.location(in: view))) {
@@ -837,11 +837,11 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 	}
 	
 	/**
-	A method that is fired when the tap gesture is recognized
-	for the leftView.
-	- Parameter recognizer: A UITapGestureRecognizer that is
-	passed to the handler when recognized.
-	*/
+     A method that is fired when the tap gesture is recognized
+     for the leftView.
+     - Parameter recognizer: A UITapGestureRecognizer that is
+     passed to the handler when recognized.
+     */
     @objc
 	internal func handleLeftViewTapGesture(recognizer: UITapGestureRecognizer) {
 		if openedLeftView {
@@ -855,11 +855,11 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 	}
 	
 	/**
-	A method that is fired when the tap gesture is recognized
-	for the rightView.
-	- Parameter recognizer: A UITapGestureRecognizer that is
-	passed to the handler when recognized.
-	*/
+     A method that is fired when the tap gesture is recognized
+     for the rightView.
+     - Parameter recognizer: A UITapGestureRecognizer that is
+     passed to the handler when recognized.
+     */
     @objc
 	internal func handleRightViewTapGesture(recognizer: UITapGestureRecognizer) {
 		if openedRightView {
@@ -903,7 +903,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 		
 		leftViewWidth = .phone == Device.userInterfaceIdiom ? 280 : 320
 		leftView = View()
-        leftView!.frame = CGRect(x: 0, y: 0, width: leftViewWidth, height: view.frame.height)
+        leftView!.frame = CGRect(x: 0, y: 0, width: leftViewWidth, height: view.height)
 		leftView!.backgroundColor = Color.clear
 		view.addSubview(leftView!)
 		
@@ -923,7 +923,7 @@ public class NavigationDrawerController: RootController, UIGestureRecognizerDele
 		
 		rightViewWidth = .phone == Device.userInterfaceIdiom ? 280 : 320
 		rightView = View()
-        rightView!.frame = CGRect(x: 0, y: 0, width: rightViewWidth, height: view.frame.height)
+        rightView!.frame = CGRect(x: 0, y: 0, width: rightViewWidth, height: view.height)
 		rightView!.backgroundColor = Color.clear
 		view.addSubview(rightView!)
 		

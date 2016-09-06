@@ -30,6 +30,85 @@
 
 import UIKit
 
-public class Snackbar: BarView {
+@objc(SnackbarStatus)
+public enum SnackbarStatus: Int {
+    case visible
+    case hidden
+}
+
+open class Snackbar: BarView {
+    /// A convenience property to set the titleLabel text.
+    public var text: String? {
+        get {
+            return textLabel.text
+        }
+        set(value) {
+            textLabel.text = value
+            layoutSubviews()
+        }
+    }
     
+    /// Text label.
+    public internal(set) lazy var textLabel = UILabel()
+    
+    open override var intrinsicContentSize: CGSize {
+        return CGSize(width: width, height: 49)
+    }
+    
+    /// The status of the snackbar.
+    open internal(set) var status = SnackbarStatus.hidden
+    
+    open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        /**
+         Since the subviews will be outside the bounds of this view,
+         we need to look at the subviews to see if we have a hit.
+         */
+        guard !isHidden else {
+            return nil
+        }
+        
+        for v in subviews {
+            let p = v.convert(point, from: self)
+            if v.bounds.contains(p) {
+                return v.hitTest(p, with: event)
+            }
+        }
+        
+        return super.hitTest(point, with: event)
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        if willRenderView {
+            textLabel.frame = contentView.bounds
+        }
+    }
+    
+    /**
+     Prepares the view instance when intialized. When subclassing,
+     it is recommended to override the prepareView method
+     to initialize property values and other setup operations.
+     The super.prepareView method should always be called immediately
+     when subclassing.
+     */
+    open override func prepareView() {
+        super.prepareView()
+        depthPreset = .none
+        interimSpacePreset = .interimSpace8
+        contentEdgeInsets.left = interimSpace
+        contentEdgeInsets.right = interimSpace
+        backgroundColor = Color.grey.darken3
+        clipsToBounds = false
+        prepareTextLabel()
+    }
+    
+    /// Prepares the textLabel.
+    private func prepareTextLabel() {
+        textLabel.contentScaleFactor = Device.scale
+        textLabel.font = RobotoFont.medium(with: 14)
+        textLabel.textAlignment = .left
+        textLabel.textColor = Color.white
+        textLabel.numberOfLines = 0
+        contentView.addSubview(textLabel)
+    }
 }

@@ -31,7 +31,7 @@
 import UIKit
 import AVFoundation
 
-private var CaptureSessionAdjustingExposureContext: UInt8 = 1
+private var CaptureSessionAdjustingExposureContext: UInt8 = 0
 
 @objc(CaptureSessionPreset)
 public enum CaptureSessionPreset: Int {
@@ -366,7 +366,7 @@ open class CaptureSession: NSObject, AVCaptureFileOutputRecordingDelegate {
 	}
 	
 	/// A delegation property for CaptureSessionDelegate.
-	public weak var delegate: CaptureSessionDelegate?
+	open weak var delegate: CaptureSessionDelegate?
 	
 	/// Initializer.
 	public override init() {

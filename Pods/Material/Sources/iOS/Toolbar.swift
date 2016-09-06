@@ -30,76 +30,41 @@
 
 import UIKit
 
-public class Toolbar: BarView {
+private var ToolbarContext: UInt8 = 0
+
+open class Toolbar: BarView {
 	/// A convenience property to set the titleLabel text.
-	public var title: String? {
+	open var title: String? {
 		get {
-			return titleLabel?.text
+			return titleLabel.text
 		}
 		set(value) {
-			titleLabel?.text = value
+			titleLabel.text = value
 			layoutSubviews()
 		}
 	}
 	
 	/// Title label.
-	public private(set) var titleLabel: UILabel!
-	
+    open internal(set) lazy var titleLabel = UILabel()
+    
 	/// A convenience property to set the detailLabel text.
-	public var detail: String? {
+	open var detail: String? {
 		get {
-			return detailLabel?.text
+			return detailLabel.text
 		}
 		set(value) {
-			detailLabel?.text = value
+			detailLabel.text = value
 			layoutSubviews()
 		}
 	}
 	
 	/// Detail label.
-	public private(set) var detailLabel: UILabel!
+    open internal(set) lazy var detailLabel = UILabel()
 	
-	public override func layoutSubviews() {
-		super.layoutSubviews()
-		if willRenderView {
-
-			if nil != title && "" != title {
-				if nil == titleLabel.superview {
-					contentView.addSubview(titleLabel)
-				}
-				titleLabel.frame = contentView.bounds
-			} else {
-				titleLabel.removeFromSuperview()
-			}
-			
-			if nil != detail && "" != detail {
-				if nil == detailLabel.superview {
-					contentView.addSubview(detailLabel)
-				}
-				
-				if nil == titleLabel.superview {
-					detailLabel.frame = contentView.bounds
-				} else {
-					titleLabel.sizeToFit()
-					detailLabel.sizeToFit()
-					
-					let diff: CGFloat = (contentView.frame.height - titleLabel.frame.height - detailLabel.frame.height) / 2
-					
-					titleLabel.frame.size.height += diff
-					titleLabel.frame.size.width = contentView.frame.width
-					
-					detailLabel.frame.size.height += diff
-					detailLabel.frame.size.width = contentView.frame.width
-					detailLabel.frame.origin.y = titleLabel.frame.height
-				}
-			} else {
-				detailLabel.removeFromSuperview()
-			}
-			
-			contentView.grid.reload()
-		}
-	}
-	
+    deinit {
+        removeObserver(self, forKeyPath: "titleLabel.textAlignment")
+    }
+    
 	/**
      An initializer that initializes the object with a NSCoder object.
      - Parameter aDecoder: A NSCoder instance.
@@ -127,6 +92,52 @@ public class Toolbar: BarView {
 		super.init(leftControls: leftControls, rightControls: rightControls)
 	}
 	
+    open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        guard "titleLabel.textAlignment" == keyPath else {
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+            return
+        }
+        contentViewAlignment = .center == titleLabel.textAlignment ? .center : .any
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        if willRenderView {
+            if nil != title && "" != title {
+                if nil == titleLabel.superview {
+                    contentView.addSubview(titleLabel)
+                }
+                titleLabel.frame = contentView.bounds
+            } else {
+                titleLabel.removeFromSuperview()
+            }
+            
+            if nil != detail && "" != detail {
+                if nil == detailLabel.superview {
+                    contentView.addSubview(detailLabel)
+                }
+                
+                if nil == titleLabel.superview {
+                    detailLabel.frame = contentView.bounds
+                } else {
+                    titleLabel.sizeToFit()
+                    detailLabel.sizeToFit()
+                    
+                    let diff: CGFloat = (contentView.height - titleLabel.height - detailLabel.height) / 2
+                    
+                    titleLabel.height += diff
+                    titleLabel.width = contentView.width
+                    
+                    detailLabel.height += diff
+                    detailLabel.width = contentView.width
+                    detailLabel.y = titleLabel.height
+                }
+            } else {
+                detailLabel.removeFromSuperview()
+            }
+        }
+    }
+
 	/**
      Prepares the view instance when intialized. When subclassing,
      it is recommended to override the prepareView method
@@ -134,31 +145,27 @@ public class Toolbar: BarView {
      The super.prepareView method should always be called immediately
      when subclassing.
      */
-	public override func prepareView() {
+	open override func prepareView() {
 		super.prepareView()
+        contentViewAlignment = .center
+        interimSpacePreset = .interimSpace3
+        contentEdgeInsetsPreset = .square1
 		prepareTitleLabel()
 		prepareDetailLabel()
-        prepareDivider()
 	}
 	
 	/// Prepares the titleLabel.
 	private func prepareTitleLabel() {
-		titleLabel = UILabel()
-		titleLabel.contentScaleFactor = Device.scale
-		titleLabel.font = RobotoFont.mediumWithSize(size: 17)
-		titleLabel.textAlignment = .left
+        titleLabel.contentScaleFactor = Device.scale
+		titleLabel.font = RobotoFont.medium(with: 17)
+        titleLabel.textAlignment = .center
+        addObserver(self, forKeyPath: "titleLabel.textAlignment", options: [], context: &ToolbarContext)
 	}
 	
 	/// Prepares the detailLabel.
 	private func prepareDetailLabel() {
-		detailLabel = UILabel()
-		detailLabel.contentScaleFactor = Device.scale
-		detailLabel.font = RobotoFont.regularWithSize(size: 12)
-		detailLabel.textAlignment = .left
+        detailLabel.contentScaleFactor = Device.scale
+		detailLabel.font = RobotoFont.regular(with: 12)
+        detailLabel.textAlignment = .center
 	}
-    
-    /// Prepares the divider.
-    private func prepareDivider() {
-        divider.alignment = .bottom
-    }
 }

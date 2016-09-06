@@ -43,7 +43,7 @@ public protocol DynamicFontTypeDelegate {
 @objc(DynamicFontType)
 open class DynamicFontType: NSObject {
     /// A weak reference to a DynamicFontTypeDelegate.
-    public weak var delegate: DynamicFontTypeDelegate?
+    open weak var delegate: DynamicFontTypeDelegate?
     
     /// Initializer.
     public override init() {
@@ -51,6 +51,7 @@ open class DynamicFontType: NSObject {
         prepare()
     }
     
+    @objc
     internal func handleContentSizeChange() {
         delegate?.dynamicFontType(dynamicFontType: self)
     }

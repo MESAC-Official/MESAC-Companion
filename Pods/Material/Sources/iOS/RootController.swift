@@ -117,7 +117,7 @@ open class RootController: UIViewController {
 	open func transitionFromRootViewController(toViewController: UIViewController, duration: TimeInterval = 0.5, options: UIViewAnimationOptions = [], animations: (() -> Void)? = nil, completion: ((Bool) -> Void)? = nil) {
 		rootViewController.willMove(toParentViewController: nil)
 		addChildViewController(toViewController)
-		toViewController.view.frame = rootViewController.view.frame
+		toViewController.view.frame = rootViewController.view.bounds
         transition(from: rootViewController,
             to: toViewController,
 			duration: duration,
@@ -138,7 +138,7 @@ open class RootController: UIViewController {
 	
 	/**
      To execute in the order of the layout chain, override this
-     method. LayoutSubviews should be called immediately, unless you
+     method. `layoutSubviews` should be called immediately, unless you
      have a certain need.
      */
 	open func layoutSubviews() {}
@@ -151,9 +151,11 @@ open class RootController: UIViewController {
      when subclassing.
      */
 	open func prepareView() {
-		view.clipsToBounds = true
-		view.contentScaleFactor = Device.scale
-		prepareRootViewController()
+        view.clipsToBounds = true
+        view.backgroundColor = Color.white
+        view.contentScaleFactor = Device.scale
+        
+        prepareRootViewController()
 	}
 	
 	/// A method that prepares the rootViewController.
@@ -174,7 +176,7 @@ open class RootController: UIViewController {
 			addChildViewController(v)
 			container.addSubview(v.view)
 			v.didMove(toParentViewController: self)
-			v.view.clipsToBounds = true
+            v.view.clipsToBounds = true
 			v.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 			v.view.contentScaleFactor = Device.scale
 		}

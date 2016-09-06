@@ -107,6 +107,9 @@ public class GridOffset {
 }
 
 public class Grid {
+    /// Defer the calculation.
+    public var deferred = false
+    
     /// Context view.
     internal weak var context: UIView?
     
@@ -131,7 +134,7 @@ public class Grid {
     public private(set) var axis: GridAxis!
     
     /// Preset inset value for grid.
-    public var layoutEdgeInsetsPreset: EdgeInsetsPreset = .none {
+    public var layoutEdgeInsetsPreset = EdgeInsetsPreset.none {
         didSet {
             layoutEdgeInsets = EdgeInsetsPresetToValue(preset: contentEdgeInsetsPreset)
         }
@@ -145,7 +148,7 @@ public class Grid {
     }
     
     /// Preset inset value for grid.
-    public var contentEdgeInsetsPreset: EdgeInsetsPreset = .none {
+    public var contentEdgeInsetsPreset = EdgeInsetsPreset.none {
         didSet {
             contentEdgeInsets = EdgeInsetsPresetToValue(preset: contentEdgeInsetsPreset)
         }
@@ -173,7 +176,7 @@ public class Grid {
     }
     
     /// An Array of UIButtons.
-    public var views: [UIView] {
+    public var views = [UIView]() {
         didSet {
             reload()
         }
@@ -190,65 +193,82 @@ public class Grid {
         self.rows = rows
         self.columns = columns
         self.interimSpace = interimSpace
-        views = [UIView]()
         offset = GridOffset(grid: self)
         axis = GridAxis(grid: self)
     }
     
+    /// Begins a deferred block.
+    public func begin() {
+        deferred = true
+    }
+    
+    /// Completes a deferred block.
+    public func commit() {
+        deferred = false
+        reload()
+    }
+    
     /// Reload the button layout.
     public func reload() {
-        var n: Int = 0
+        guard !deferred else {
+            return
+        }
         
-        for i in 0..<views.count {
-            let child = views[i]
-            
-            if let parent = context {
-                if parent != child.superview {
-                    child.removeFromSuperview()
-                    parent.addSubview(child)
-                }
-                
-                parent.layoutIfNeeded()
-                
-                switch axis.direction {
-                case .horizontal:
-                    let c = child.grid.columns
-                    let co = child.grid.offset.columns
-                    let w = (parent.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right + interimSpace) / CGFloat(axis.columns)
-                    
-                    child.x = CGFloat(i + n + co) * w + contentEdgeInsets.left + layoutEdgeInsets.left
-                    child.y = contentEdgeInsets.top + layoutEdgeInsets.top
-                    child.width = w * CGFloat(c) - interimSpace
-                    child.height = parent.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom
-                    
-                    n += c + co - 1
-                    
-                case .vertical:
-                    let r = child.grid.rows
-                    let ro = child.grid.offset.rows
-                    let h = (parent.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom + interimSpace) / CGFloat(axis.rows)
-                    
-                    child.x = contentEdgeInsets.left + layoutEdgeInsets.left
-                    child.y = CGFloat(i + n + ro) * h + contentEdgeInsets.top + layoutEdgeInsets.top
-                    child.width = parent.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right
-                    child.height = h * CGFloat(r) - interimSpace
-                    
-                    n += r + ro - 1
-                
-                case .any:
-                    let r = child.grid.rows
-                    let ro = child.grid.offset.rows
-                    let c = child.grid.columns
-                    let co = child.grid.offset.columns
-                    let w = (parent.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right + interimSpace) / CGFloat(axis.columns)
-                    let h = (parent.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom + interimSpace) / CGFloat(axis.rows)
-                    
-                    child.x = CGFloat(co) * w + contentEdgeInsets.left + layoutEdgeInsets.left
-                    child.y = CGFloat(ro) * h + contentEdgeInsets.top + layoutEdgeInsets.top
-                    child.width = w * CGFloat(c) - interimSpace
-                    child.height = h * CGFloat(r) - interimSpace
-                }
+        var n: Int = 0
+        var i: Int = 0
+        
+        for child in views {
+            guard let canvas = context else {
+                return
             }
+            
+            if canvas != child.superview {
+                child.removeFromSuperview()
+                canvas.addSubview(child)
+            }
+            
+            canvas.layoutIfNeeded()
+            
+            switch axis.direction {
+            case .horizontal:
+                let c = child.grid.columns
+                let co = child.grid.offset.columns
+                let w = (canvas.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right + interimSpace) / CGFloat(axis.columns)
+                
+                child.x = CGFloat(i + n + co) * w + contentEdgeInsets.left + layoutEdgeInsets.left
+                child.y = contentEdgeInsets.top + layoutEdgeInsets.top
+                child.width = w * CGFloat(c) - interimSpace
+                child.height = canvas.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom
+                
+                n += c + co - 1
+                
+            case .vertical:
+                let r = child.grid.rows
+                let ro = child.grid.offset.rows
+                let h = (canvas.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom + interimSpace) / CGFloat(axis.rows)
+                
+                child.x = contentEdgeInsets.left + layoutEdgeInsets.left
+                child.y = CGFloat(i + n + ro) * h + contentEdgeInsets.top + layoutEdgeInsets.top
+                child.width = canvas.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right
+                child.height = h * CGFloat(r) - interimSpace
+                
+                n += r + ro - 1
+                
+            case .any:
+                let r = child.grid.rows
+                let ro = child.grid.offset.rows
+                let c = child.grid.columns
+                let co = child.grid.offset.columns
+                let w = (canvas.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right + interimSpace) / CGFloat(axis.columns)
+                let h = (canvas.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom + interimSpace) / CGFloat(axis.rows)
+                
+                child.x = CGFloat(co) * w + contentEdgeInsets.left + layoutEdgeInsets.left
+                child.y = CGFloat(ro) * h + contentEdgeInsets.top + layoutEdgeInsets.top
+                child.width = w * CGFloat(c) - interimSpace
+                child.height = h * CGFloat(r) - interimSpace
+            }
+            
+            i += 1
         }
     }
 }

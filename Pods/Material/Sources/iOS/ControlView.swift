@@ -30,10 +30,23 @@
 
 import UIKit
 
+@objc(ContentViewAlignment)
+public enum ContentViewAlignment: Int {
+    case any
+    case center
+}
+
 open class ControlView: View {
+    /// Should center the contentView.
+    open var contentViewAlignment = ContentViewAlignment.any {
+        didSet {
+            layoutSubviews()
+        }
+    }
+    
 	/// Will render the view.
 	open var willRenderView: Bool {
-		return 0 < width && 0 < height && nil !== superview
+		return 0 < width && 0 < height && nil != superview
 	}
 	
 	/// A preset wrapper around contentInset.
@@ -48,7 +61,7 @@ open class ControlView: View {
 	
 	/// A wrapper around grid.contentInset.
 	@IBInspectable
-    open var contentInset: EdgeInsets {
+    open var contentEdgeInsets: EdgeInsets {
 		get {
 			return grid.contentEdgeInsets
 		}
@@ -88,31 +101,23 @@ open class ControlView: View {
 	}
 
 	/// ContentView that holds the any desired subviews.
-	open private(set) var contentView: View!
+	open private(set) lazy var contentView: UIView = UIView()
 	
 	/// Left side UIControls.
-	open var leftControls: [UIView] {
+	open var leftControls = [UIView]() {
 		didSet {
             for v in oldValue {
                 v.removeFromSuperview()
             }
-			
-            for v in leftControls {
-                addSubview(v)
-            }
-			layoutSubviews()
+            layoutSubviews()
 		}
 	}
 	
 	/// Right side UIControls.
-	open var rightControls: [UIView] {
+	open var rightControls = [UIView]() {
 		didSet {
             for v in oldValue {
                 v.removeFromSuperview()
-            }
-            
-            for v in rightControls {
-                addSubview(v)
             }
             layoutSubviews()
 		}
@@ -123,8 +128,6 @@ open class ControlView: View {
      - Parameter aDecoder: A NSCoder instance.
      */
 	public required init?(coder aDecoder: NSCoder) {
-        leftControls = []
-        rightControls = []
         super.init(coder: aDecoder)
 	}
 	
@@ -135,15 +138,11 @@ open class ControlView: View {
      - Parameter frame: A CGRect instance.
      */
 	public override init(frame: CGRect) {
-        leftControls = []
-        rightControls = []
-		super.init(frame: frame)
+        super.init(frame: frame)
 	}
 	
 	/// Basic initializer.
 	public init() {
-		leftControls = []
-        rightControls = []
 		super.init(frame: .zero)
         frame.size = intrinsicContentSize
 	}
@@ -163,52 +162,54 @@ open class ControlView: View {
 	open override func layoutSubviews() {
 		super.layoutSubviews()
 		if willRenderView {
-			layoutIfNeeded()
-			
-			let g = Int(width / gridFactor)
-            let columns = g + 1
+            var lc = 0
+            var rc = 0
+            let l = (CGFloat(leftControls.count) * interimSpace)
+            let r = (CGFloat(rightControls.count) * interimSpace)
+            let p = width - l - r - contentEdgeInsets.left - contentEdgeInsets.right
+			let columns = Int(p / gridFactor)
             
-            grid.views = []
+            grid.begin()
+            grid.views.removeAll()
             grid.axis.columns = columns
             
-            contentView.grid.columns = columns
-            
-            // leftControls
-            for c in leftControls {
-                let w: CGFloat = c.intrinsicContentSize.width
-                (c as? UIButton)?.contentEdgeInsets = .zero
-                c.height = frame.size.height - contentInset.top - contentInset.bottom
+            for v in leftControls {
+                (v as? UIButton)?.contentEdgeInsets = .zero
+                v.sizeToFit()
+                v.grid.columns = Int(ceil(v.width / gridFactor)) + 1
                 
-                let q: Int = Int(w / gridFactor)
-                c.grid.columns = q + 1
+                lc += v.grid.columns
                 
-                contentView.grid.columns -= c.grid.columns
-                
-                addSubview(c)
-                grid.views.append(c)
+                grid.views.append(v)
             }
             
-            addSubview(contentView)
             grid.views.append(contentView)
             
-            // rightControls
-            for c in rightControls {
-                let w = c.intrinsicContentSize.width
-                (c as? UIButton)?.contentEdgeInsets = .zero
-                c.height = frame.size.height - contentInset.top - contentInset.bottom
+            for v in rightControls {
+                (v as? UIButton)?.contentEdgeInsets = .zero
+                v.sizeToFit()
+                v.grid.columns = Int(ceil(v.width / gridFactor)) + 1
                 
-                let q: Int = Int(w / gridFactor)
-                c.grid.columns = q + 1
+                rc += v.grid.columns
                 
-                contentView.grid.columns -= c.grid.columns
-                
-                addSubview(c)
-                grid.views.append(c)
+                grid.views.append(v)
             }
             
-            grid.contentEdgeInsets = contentInset
-            grid.interimSpace = interimSpace
-            contentView.grid.reload()
+            contentView.grid.begin()
+            if .center == contentViewAlignment {
+                if lc < rc {
+                    contentView.grid.columns = columns - 2 * rc
+                    contentView.grid.offset.columns = rc - lc
+                } else {
+                    contentView.grid.columns = columns - 2 * lc
+                    rightControls.first?.grid.offset.columns = lc - rc
+                }
+            } else {
+                contentView.grid.columns = columns - lc - rc
+            }
+            
+            grid.commit()
+            contentView.grid.commit()
         }
     }
     
@@ -221,16 +222,11 @@ open class ControlView: View {
      */
 	open override func prepareView() {
 		super.prepareView()
-		interimSpacePreset = .interimSpace1
-		contentEdgeInsetsPreset = .square1
-		autoresizingMask = .flexibleWidth
 		prepareContentView()
 	}
 	
 	/// Prepares the contentView.
 	private func prepareContentView() {
-		contentView = View()
 		contentView.backgroundColor = nil
-		addSubview(contentView)
 	}
 }

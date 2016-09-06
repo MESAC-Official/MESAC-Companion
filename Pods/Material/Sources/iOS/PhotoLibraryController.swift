@@ -28,11 +28,11 @@
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-import Photos
+import UIKit
 
 open class PhotoLibraryController: UIViewController, PhotoLibraryDelegate {
     /// A reference to a PhotoLibrary.
-    public private(set) var photoLibrary: PhotoLibrary!
+    public private(set) lazy var photoLibrary: PhotoLibrary = PhotoLibrary()
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,13 +47,14 @@ open class PhotoLibraryController: UIViewController, PhotoLibraryDelegate {
      when subclassing.
      */
     open func prepareView() {
+        view.clipsToBounds = true
+        view.backgroundColor = Color.white
         view.contentScaleFactor = Device.scale
         preparePhotoLibrary()
     }
     
     /// Prepares the photoLibrary.
     private func preparePhotoLibrary() {
-        photoLibrary = PhotoLibrary()
         photoLibrary.delegate = self
     }
 }

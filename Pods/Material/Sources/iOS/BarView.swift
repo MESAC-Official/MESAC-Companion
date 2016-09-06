@@ -61,6 +61,13 @@ open class BarView: ControlView {
 		super.init(leftControls: leftControls, rightControls: rightControls)
 	}
 	
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        if willRenderView {
+            divider.reload()
+        }
+    }
+    
 	/**
      Prepares the view instance when intialized. When subclassing,
      it is recommended to override the prepareView method
@@ -70,7 +77,6 @@ open class BarView: ControlView {
      */
 	open override func prepareView() {
 		super.prepareView()
-		depthPreset = .depth1
         prepareDivider()
     }
     
