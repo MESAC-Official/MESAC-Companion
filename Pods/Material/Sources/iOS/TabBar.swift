@@ -45,7 +45,7 @@ public protocol TabBarDelegate {
      - Parameter button: A UIButton.
      */
     @objc
-    optional func tabBarWillSelectButton(tabBar: TabBar, button: UIButton)
+    optional func tabBar(tabBar: TabBar, willSelect button: UIButton)
     
     /**
      A delegation method that is executed when the button did complete the
@@ -54,19 +54,15 @@ public protocol TabBarDelegate {
      - Parameter button: A UIButton.
      */
     @objc
-    optional func tabBarDidSelectButton(tabBar: TabBar, button: UIButton)
+    optional func tabBar(tabBar: TabBar, didSelect button: UIButton)
 }
 
-open class TabBar: BarView {
+open class TabBar: Bar {
     /// A boolean indicating if the TabBar line is in an animation state.
     open internal(set) var isAnimating = false
     
     /// A delegation reference.
     open weak var delegate: TabBarDelegate?
-    
-    open override var intrinsicContentSize: CGSize {
-        return CGSize(width: width, height: 49)
-    }
     
     /// The currently selected button.
     open internal(set) var selected: UIButton?
@@ -78,7 +74,7 @@ open class TabBar: BarView {
                 b.removeFromSuperview()
             }
 			
-            contentView.grid.views = buttons as [UIView]
+            centerViews = buttons as [UIView]
             
 			layoutSubviews()
 		}
@@ -129,29 +125,30 @@ open class TabBar: BarView {
     
     open override func layoutSubviews() {
 		super.layoutSubviews()
-		if willRenderView {
-            guard 0 < buttons.count else {
-                return
-            }
-            
-            let columns: Int = contentView.grid.axis.columns / buttons.count
-            for b in buttons {
-                b.grid.columns = columns
-                b.contentEdgeInsets = .zero
-                b.cornerRadius = 0
-                
-                if isLineAnimated {
-                    prepareLineAnimationHandler(button: b)
-                }
-            }
-            contentView.grid.reload()
-                
-            if nil == selected {
-                selected = buttons.first
-            }
-                
-            line.frame = CGRect(x: selected!.x, y: .bottom == lineAlignment ? height - lineHeight : 0, width: selected!.width, height: lineHeight)
+        guard willLayout else {
+            return
         }
+        
+        guard 0 < buttons.count else {
+            return
+        }
+            
+        for b in buttons {
+            b.grid.columns = 0
+            b.cornerRadius = 0
+            b.contentEdgeInsets = .zero
+            
+            if isLineAnimated {
+                prepareLineAnimationHandler(button: b)
+            }
+        }
+        contentView.grid.reload()
+            
+        if nil == selected {
+            selected = buttons.first
+        }
+            
+        line.frame = CGRect(x: selected!.x, y: .bottom == lineAlignment ? height - lineHeight : 0, width: selected!.width, height: lineHeight)
 	}
 	
 	/// Handles the button touch event.
@@ -165,7 +162,7 @@ open class TabBar: BarView {
      - Parameter at index: An Int.
      - Paramater completion: An optional completion block.
      */
-    open func select(at index: Int, completion: (@escaping (UIButton) -> Void)? = nil) {
+    open func select(at index: Int, completion: ((UIButton) -> Void)? = nil) {
         guard -1 < index, index < buttons.count else {
             return
         }
@@ -177,8 +174,8 @@ open class TabBar: BarView {
      - Parameter to button: A UIButton.
      - Paramater completion: An optional completion block.
      */
-    open func animate(to button: UIButton, completion: (@escaping (UIButton) -> Void)? = nil) {
-        delegate?.tabBarWillSelectButton?(tabBar: self, button: button)
+    open func animate(to button: UIButton, completion: ((UIButton) -> Void)? = nil) {
+        delegate?.tabBar?(tabBar: self, willSelect: button)
         selected = button
         isAnimating = true
         UIView.animate(withDuration: 0.25, animations: { [weak self, button = button] in
@@ -192,22 +189,22 @@ open class TabBar: BarView {
                 return
             }
             s.isAnimating = false
-            s.delegate?.tabBarDidSelectButton?(tabBar: s, button: button)
+            s.delegate?.tabBar?(tabBar: s, didSelect: button)
             completion?(button)
         }
     }
     
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	open override func prepareView() {
-		super.prepareView()
-        
-        autoresizingMask = .flexibleWidth
+	open override func prepare() {
+		super.prepare()
+        contentEdgeInsetsPreset = .none
+        interimSpacePreset = .none
         prepareLine()
         prepareDivider()
 	}
@@ -215,7 +212,7 @@ open class TabBar: BarView {
 	// Prepares the line.
 	private func prepareLine() {
 		line = UIView()
-        line.zPosition = 5100
+        line.zPosition = 6000
 		lineColor = Color.blueGrey.lighten3
 		lineHeight = 3
         addSubview(line)
@@ -223,7 +220,7 @@ open class TabBar: BarView {
     
     /// Prepares the divider.
     private func prepareDivider() {
-        divider.alignment = .top
+        dividerAlignment = .top
     }
     
     /**

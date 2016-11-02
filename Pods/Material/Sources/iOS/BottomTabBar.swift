@@ -37,12 +37,15 @@ extension UITabBarItem {
 	}
 }
 
-@IBDesignable
 open class BottomTabBar: UITabBar {
+    open override var intrinsicContentSize: CGSize {
+        return CGSize(width: width, height: height)
+    }
+    
     /// Automatically aligns the BottomNavigationBar to the superview.
 	open var isAlignedToParentAutomatically = true
 	
-	/// A property that accesses the backing layer's backgroundColor.
+	/// A property that accesses the backing layer's background
 	@IBInspectable
     open override var backgroundColor: UIColor? {
 		didSet {
@@ -58,7 +61,7 @@ open class BottomTabBar: UITabBar {
 	*/
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
-		prepareView()
+		prepare()
 	}
 	
 	/// A convenience initializer.
@@ -68,14 +71,16 @@ open class BottomTabBar: UITabBar {
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        prepareView()
+        prepare()
     }
 	
     open override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
-        if self.layer == layer {
-            layoutShape()
+        guard self.layer == layer else {
+            return
         }
+        
+        layoutShape()
     }
     
 	open override func layoutSubviews() {
@@ -110,43 +115,26 @@ open class BottomTabBar: UITabBar {
 		super.didMoveToSuperview()
 		if isAlignedToParentAutomatically {
 			if let v = superview {
-				_ = v.layout(self).bottom().horizontally()
+				v.layout(self).bottom().horizontally()
 			}
 		}
 	}
 	
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	public func prepareView() {
-		depthPreset = .depth1
-        divider.alignment = .top
+	public func prepare() {
+		heightPreset = .normal
+        depthPreset = .depth1
+        dividerAlignment = .top
 		contentScaleFactor = Device.scale
-		backgroundColor = Color.white
-        let image = UIImage.imageWithColor(color: Color.clear, size: CGSize(width: 1, height: 1))
+		backgroundColor = .white
+        let image = UIImage.image(with: .clear, size: CGSize(width: 1, height: 1))
 		shadowImage = image
 		backgroundImage = image
 	}
 }
-
-/// A memory reference to the TabBarItem instance.
-private var TabBarKey: UInt8 = 0
-
-extension UITabBar {
-    /// TabBarItem reference.
-    public internal(set) var divider: Divider! {
-        get {
-            return AssociatedObject(base: self, key: &TabBarKey) {
-                return Divider(view: self)
-            }
-        }
-        set(value) {
-            AssociateObject(base: self, key: &TabBarKey, value: value)
-        }
-    }
-}
-

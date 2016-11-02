@@ -30,48 +30,24 @@
 
 import UIKit
 
-/// NavigationBar styles.
-@objc(NavigationBarStyle)
-public enum NavigationBarStyle: Int {
-	case small
-	case medium
-	case large
-}
-
-@IBDesignable
 open class NavigationBar: UINavigationBar {
-    /// A reference to the divider.
-    open internal(set) var divider: Divider!
-    
-    open override var intrinsicContentSize: CGSize {
-        switch navigationBarStyle {
-        case .small:
-            return CGSize(width: Device.width, height: 32)
-        case .medium:
-            return CGSize(width: Device.width, height: 44)
-        case .large:
-            return CGSize(width: Device.width, height: 56)
-        }
+    /// Will layout the view.
+    open var willLayout: Bool {
+        return 0 < width && 0 < height && nil != superview
     }
     
-	/// NavigationBarStyle value.
-	open var navigationBarStyle = NavigationBarStyle.medium
+    open override var intrinsicContentSize: CGSize {
+        return CGSize(width: Device.width, height: height)
+    }
 	
-	internal var animating = false
-	
-	/// Will render the view.
-	open var willRenderView: Bool {
-		return 0 < width && 0 < height && nil != superview
-	}
-	
-	/// A preset wrapper around contentInset.
+	/// A preset wrapper around contentEdgeInsets.
 	open var contentEdgeInsetsPreset = EdgeInsetsPreset.none {
 		didSet {
             contentEdgeInsets = EdgeInsetsPresetToValue(preset: contentEdgeInsetsPreset)
 		}
 	}
 	
-	/// A wrapper around grid.contentInset.
+	/// A reference to EdgeInsets.
 	@IBInspectable
     open var contentEdgeInsets = EdgeInsets.zero {
 		didSet {
@@ -96,7 +72,7 @@ open class NavigationBar: UINavigationBar {
 	
 	/// Grid cell factor.
 	@IBInspectable
-    open var gridFactor: CGFloat = 24 {
+    open var gridFactor: CGFloat = 12 {
 		didSet {
 			assert(0 < gridFactor, "[Material Error: gridFactor must be greater than 0.]")
 			layoutSubviews()
@@ -119,7 +95,7 @@ open class NavigationBar: UINavigationBar {
 		}
 	}
 	
-	/// A property that accesses the backing layer's backgroundColor.
+	/// A property that accesses the backing layer's background
 	@IBInspectable
     open override var backgroundColor: UIColor? {
 		didSet {
@@ -133,7 +109,7 @@ open class NavigationBar: UINavigationBar {
      */
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		prepareView()
+		prepare()
 	}
 	
 	/**
@@ -144,7 +120,7 @@ open class NavigationBar: UINavigationBar {
      */
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
-		prepareView()
+		prepare()
 	}
 	
 	/// A convenience initializer.
@@ -158,16 +134,18 @@ open class NavigationBar: UINavigationBar {
     
     open override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
-        if self.layer == layer {
-            layoutShape()
+        guard self.layer == layer else {
+            return
         }
+        
+        layoutShape()
     }
 	
 	open override func layoutSubviews() {
 		super.layoutSubviews()
         layoutShadowPath()
 		
-		if let v = topItem {
+        if let v = topItem {
 			layoutNavigationItem(item: v)
 		}
 		
@@ -175,9 +153,7 @@ open class NavigationBar: UINavigationBar {
 			layoutNavigationItem(item: v)
 		}
         
-        if let v = divider {
-            v.reload()
-        }
+        divider.reload()
 	}
 	
 	open override func pushItem(_ item: UINavigationItem, animated: Bool) {
@@ -190,120 +166,145 @@ open class NavigationBar: UINavigationBar {
      - Parameter item: A UINavigationItem to layout.
      */
 	internal func layoutNavigationItem(item: UINavigationItem) {
-        if willRenderView {
-            prepareItem(item: item)
-            prepareTitleView(item: item)
-            
-            item.titleView!.frame.origin = .zero
-            item.titleView!.frame.size = intrinsicContentSize
+        guard willLayout else {
+            return
+        }
+        
+        prepareItem(item: item)
+        prepareTitleView(item: item)
+        
+        item.titleView!.frame.origin = .zero
+        item.titleView!.frame.size = intrinsicContentSize
 
-            var lc = 0
-            var rc = 0
-            let l = (CGFloat(item.leftControls.count) * interimSpace)
-            let r = (CGFloat(item.rightControls.count) * interimSpace)
-            let p = width - l - r - contentEdgeInsets.left - contentEdgeInsets.right
-            let columns = Int(p / gridFactor)
-            
-            item.titleView!.grid.begin()
-            item.titleView!.grid.views.removeAll()
-            item.titleView!.grid.axis.columns = columns
-            
-            for v in item.leftControls {
-                (v as? UIButton)?.contentEdgeInsets = .zero
-                v.sizeToFit()
-                v.grid.columns = Int(ceil(v.width / gridFactor)) + 1
-                
-                lc += v.grid.columns
-                
-                item.titleView!.grid.views.append(v)
+        var lc = 0
+        var rc = 0
+        
+        item.titleView!.grid.begin()
+        item.titleView!.grid.views.removeAll()
+        
+        for v in item.leftViews {
+            if let b = v as? UIButton {
+                b.contentEdgeInsets = .zero
+                b.titleEdgeInsets = .zero
             }
             
-            item.titleView!.grid.views.append(item.contentView)
+            v.width = v.intrinsicContentSize.width
+            v.sizeToFit()
+            v.grid.columns = Int(ceil(v.width / gridFactor)) + 2
             
-            for v in item.rightControls {
-                (v as? UIButton)?.contentEdgeInsets = .zero
-                v.sizeToFit()
-                v.grid.columns = Int(ceil(v.width / gridFactor)) + 1
-                
-                rc += v.grid.columns
-                
-                item.titleView!.grid.views.append(v)
+            lc += v.grid.columns
+            
+            item.titleView!.grid.views.append(v)
+        }
+        
+        item.titleView!.grid.views.append(item.contentView)
+        
+        for v in item.rightViews {
+            if let b = v as? UIButton {
+                b.contentEdgeInsets = .zero
+                b.titleEdgeInsets = .zero
             }
             
-            item.contentView.grid.begin()
-            if .center == item.contentViewAlignment {
-                if lc < rc {
-                    item.contentView.grid.columns = columns - 2 * rc
-                    item.contentView.grid.offset.columns = rc - lc
-                } else {
-                    item.contentView.grid.columns = columns - 2 * lc
-                    item.rightControls.first?.grid.offset.columns = lc - rc
-                }
+            v.width = v.intrinsicContentSize.width
+            v.sizeToFit()
+            v.grid.columns = Int(ceil(v.width / gridFactor)) + 2
+            
+            rc += v.grid.columns
+            
+            item.titleView!.grid.views.append(v)
+        }
+        
+        item.contentView.grid.begin()
+        item.contentView.grid.offset.columns = 0
+        
+        var l: CGFloat = 0
+        var r: CGFloat = 0
+        
+        if .center == item.contentViewAlignment {
+            if item.leftViews.count < item.rightViews.count {
+                r = CGFloat(item.rightViews.count) * interimSpace
+                l = r
             } else {
-                item.contentView.grid.columns = columns - lc - rc
+                l = CGFloat(item.leftViews.count) * interimSpace
+                r = l
             }
-            
-            item.titleView!.grid.interimSpace = interimSpace
-            item.titleView!.grid.contentEdgeInsets = contentEdgeInsets
-            item.titleView!.grid.commit()
-            item.contentView.grid.commit()
-            
-            // contentView alignment.
-            if nil != item.title && "" != item.title {
-                if nil == item.titleLabel.superview {
-                    item.contentView.addSubview(item.titleLabel)
-                }
-                item.titleLabel.frame = item.contentView.bounds
+        }
+        
+        let p = width - l - r - contentEdgeInsets.left - contentEdgeInsets.right
+        let columns = Int(ceil(p / gridFactor))
+        
+        if .center == item.contentViewAlignment {
+            if lc < rc {
+                item.contentView.grid.columns = columns - 2 * rc
+                item.contentView.grid.offset.columns = rc - lc
             } else {
-                item.titleLabel.removeFromSuperview()
+                item.contentView.grid.columns = columns - 2 * lc
+                item.rightViews.first?.grid.offset.columns = lc - rc
+            }
+        } else {
+            item.contentView.grid.columns = columns - lc - rc
+        }
+        
+        item.titleView!.grid.axis.columns = columns
+        item.titleView!.grid.interimSpace = interimSpace
+        item.titleView!.grid.contentEdgeInsets = contentEdgeInsets
+        item.titleView!.grid.commit()
+        item.contentView.grid.commit()
+        
+        // contentView alignment.
+        if nil != item.title && "" != item.title {
+            if nil == item.titleLabel.superview {
+                item.contentView.addSubview(item.titleLabel)
+            }
+            item.titleLabel.frame = item.contentView.bounds
+        } else {
+            item.titleLabel.removeFromSuperview()
+        }
+        
+        if nil != item.detail && "" != item.detail {
+            if nil == item.detailLabel.superview {
+                item.contentView.addSubview(item.detailLabel)
             }
             
-            if nil != item.detail && "" != item.detail {
-                if nil == item.detailLabel.superview {
-                    item.contentView.addSubview(item.detailLabel)
-                }
+            if nil == item.titleLabel.superview {
+                item.detailLabel.frame = item.contentView.bounds
+            } else {
+                item.titleLabel.sizeToFit()
+                item.detailLabel.sizeToFit()
                 
-                if nil == item.titleLabel.superview {
-                    item.detailLabel.frame = item.contentView.bounds
-                } else {
-                    item.titleLabel.sizeToFit()
-                    item.detailLabel.sizeToFit()
-                    
-                    let diff = (item.contentView.height - item.titleLabel.height - item.detailLabel.height) / 2
-                    
-                    item.titleLabel.height += diff
-                    item.titleLabel.width = item.contentView.width
-                    
-                    item.detailLabel.height += diff
-                    item.detailLabel.width = item.contentView.width
-                    item.detailLabel.y = item.titleLabel.height
-                }
-            } else {
-                item.detailLabel.removeFromSuperview()
+                let diff = (item.contentView.height - item.titleLabel.height - item.detailLabel.height) / 2
+                
+                item.titleLabel.height += diff
+                item.titleLabel.width = item.contentView.width
+                
+                item.detailLabel.height += diff
+                item.detailLabel.width = item.contentView.width
+                item.detailLabel.y = item.titleLabel.height
             }
+        } else {
+            item.detailLabel.removeFromSuperview()
         }
 	}
 	
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	public func prepareView() {
+	open func prepare() {
         barStyle = .black
-		isTranslucent = false
-		depthPreset = .depth1
-		interimSpacePreset = .interimSpace1
-		contentEdgeInsetsPreset = .square1
-		contentScaleFactor = Device.scale
+        isTranslucent = false
+        depthPreset = .depth1
+        interimSpacePreset = .interimSpace3
+        contentEdgeInsetsPreset = .square1
+        contentScaleFactor = Device.scale
 		backButtonImage = Icon.cm.arrowBack
-        let image = UIImage.imageWithColor(color: Color.clear, size: CGSize(width: 1, height: 1))
+        let image = UIImage.image(with: .clear, size: CGSize(width: 1, height: 1))
 		shadowImage = image
 		setBackgroundImage(image, for: .default)
-		backgroundColor = Color.white
-        prepareDivider()
+		backgroundColor = .white
 	}
 	
 	/**
@@ -325,9 +326,4 @@ open class NavigationBar: UINavigationBar {
         }
         item.titleView = UIView(frame: .zero)
 	}
-	
-    /// Prepares the divider.
-    private func prepareDivider() {
-        divider = Divider(view: self)
-    }
 }

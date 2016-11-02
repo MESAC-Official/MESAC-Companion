@@ -188,7 +188,7 @@ public class Grid {
      - Parameter columns: The number of columns, horizontal axis the grid will use.
      - Parameter interimSpace: The interim space between rows or columns.
      */
-    public init(context: UIView?, rows: Int = 12, columns: Int = 12, interimSpace: InterimSpace = 0) {
+    public init(context: UIView?, rows: Int = 0, columns: Int = 0, interimSpace: InterimSpace = 0) {
         self.context = context
         self.rows = rows
         self.columns = columns
@@ -214,58 +214,69 @@ public class Grid {
             return
         }
         
-        var n: Int = 0
-        var i: Int = 0
+        let count = views.count
         
-        for child in views {
+        guard 0 < count else {
+            return
+        }
+        
+        var n = 0
+        var i = 0
+        
+        for v in views {
             guard let canvas = context else {
                 return
             }
             
-            if canvas != child.superview {
-                child.removeFromSuperview()
-                canvas.addSubview(child)
+            guard 0 < canvas.width && 0 < canvas.height else {
+                return
             }
             
-            canvas.layoutIfNeeded()
+            if canvas != v.superview {
+                v.removeFromSuperview()
+                canvas.addSubview(v)
+            }
+            
+            // Forces the view to adjust accordingly to size changes, ie: UILabel.
+            (v as? UILabel)?.sizeToFit()
             
             switch axis.direction {
             case .horizontal:
-                let c = child.grid.columns
-                let co = child.grid.offset.columns
+                let c = 0 == v.grid.columns ? axis.columns / count : v.grid.columns
+                let co = v.grid.offset.columns
                 let w = (canvas.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right + interimSpace) / CGFloat(axis.columns)
                 
-                child.x = CGFloat(i + n + co) * w + contentEdgeInsets.left + layoutEdgeInsets.left
-                child.y = contentEdgeInsets.top + layoutEdgeInsets.top
-                child.width = w * CGFloat(c) - interimSpace
-                child.height = canvas.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom
+                v.x = CGFloat(i + n + co) * w + contentEdgeInsets.left + layoutEdgeInsets.left
+                v.y = contentEdgeInsets.top + layoutEdgeInsets.top
+                v.width = w * CGFloat(c) - interimSpace
+                v.height = canvas.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom
                 
                 n += c + co - 1
                 
             case .vertical:
-                let r = child.grid.rows
-                let ro = child.grid.offset.rows
+                let r = 0 == v.grid.rows ? axis.rows / count : v.grid.rows
+                let ro = v.grid.offset.rows
                 let h = (canvas.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom + interimSpace) / CGFloat(axis.rows)
                 
-                child.x = contentEdgeInsets.left + layoutEdgeInsets.left
-                child.y = CGFloat(i + n + ro) * h + contentEdgeInsets.top + layoutEdgeInsets.top
-                child.width = canvas.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right
-                child.height = h * CGFloat(r) - interimSpace
+                v.x = contentEdgeInsets.left + layoutEdgeInsets.left
+                v.y = CGFloat(i + n + ro) * h + contentEdgeInsets.top + layoutEdgeInsets.top
+                v.width = canvas.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right
+                v.height = h * CGFloat(r) - interimSpace
                 
                 n += r + ro - 1
                 
             case .any:
-                let r = child.grid.rows
-                let ro = child.grid.offset.rows
-                let c = child.grid.columns
-                let co = child.grid.offset.columns
+                let r = 0 == v.grid.rows ? axis.rows / count : v.grid.rows
+                let ro = v.grid.offset.rows
+                let c = 0 == v.grid.columns ? axis.columns / count : v.grid.columns
+                let co = v.grid.offset.columns
                 let w = (canvas.bounds.width - contentEdgeInsets.left - contentEdgeInsets.right - layoutEdgeInsets.left - layoutEdgeInsets.right + interimSpace) / CGFloat(axis.columns)
                 let h = (canvas.bounds.height - contentEdgeInsets.top - contentEdgeInsets.bottom - layoutEdgeInsets.top - layoutEdgeInsets.bottom + interimSpace) / CGFloat(axis.rows)
                 
-                child.x = CGFloat(co) * w + contentEdgeInsets.left + layoutEdgeInsets.left
-                child.y = CGFloat(ro) * h + contentEdgeInsets.top + layoutEdgeInsets.top
-                child.width = w * CGFloat(c) - interimSpace
-                child.height = h * CGFloat(r) - interimSpace
+                v.x = CGFloat(co) * w + contentEdgeInsets.left + layoutEdgeInsets.left
+                v.y = CGFloat(ro) * h + contentEdgeInsets.top + layoutEdgeInsets.top
+                v.width = w * CGFloat(c) - interimSpace
+                v.height = h * CGFloat(r) - interimSpace
             }
             
             i += 1
@@ -287,6 +298,27 @@ extension UIView {
         }
         set(value) {
             AssociateObject(base: self, key: &GridKey, value: value)
+        }
+    }
+    
+    /// A reference to grid's layoutEdgeInsetsPreset.
+    open var layoutEdgeInsetsPreset: EdgeInsetsPreset {
+        get {
+            return grid.layoutEdgeInsetsPreset
+        }
+        set(value) {
+            grid.layoutEdgeInsetsPreset = value
+        }
+    }
+    
+    /// A reference to grid's layoutEdgeInsets.
+    @IBInspectable
+    open var layoutEdgeInsets: EdgeInsets {
+        get {
+            return grid.layoutEdgeInsets
+        }
+        set(value) {
+            grid.layoutEdgeInsets = value
         }
     }
 }

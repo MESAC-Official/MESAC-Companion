@@ -48,38 +48,49 @@ extension UIViewController {
 	}
 }
 
-open class SearchBarController: RootController {
-	/// Reference to the SearchBar.
-    open internal(set) lazy var searchBar: SearchBar = SearchBar()
-	
-	/**
-     To execute in the order of the layout chain, override this
-     method. LayoutSubviews should be called immediately, unless you
-     have a certain need.
+open class SearchBarController: StatusBarController {
+    /**
+     A Display value to indicate whether or not to
+     display the rootViewController to the full view
+     bounds, or up to the searchBar height.
      */
+    open var display = Display.partial {
+        didSet {
+            layoutSubviews()
+        }
+    }
+    
+    /// Reference to the SearchBar.
+    open private(set) lazy var searchBar: SearchBar = SearchBar()
+	
 	open override func layoutSubviews() {
 		super.layoutSubviews()
+        statusBar.layoutIfNeeded()
         
-        searchBar.grid.layoutEdgeInsets.top = .phone == Device.userInterfaceIdiom && Device.isLandscape ? 0 : 20
+        let y = statusBar.isHidden ? 0 : statusBar.height
+        let p = y + searchBar.height
         
-        let p = searchBar.intrinsicContentSize.height + searchBar.grid.layoutEdgeInsets.top + searchBar.grid.layoutEdgeInsets.bottom
+        searchBar.y = y
+        searchBar.width = view.width
         
-        searchBar.width = view.width + searchBar.grid.layoutEdgeInsets.left + searchBar.grid.layoutEdgeInsets.right
-        searchBar.height = p
-        
-        rootViewController.view.y = p
-        rootViewController.view.height = view.height - p
+        switch display {
+        case .partial:
+            rootViewController.view.y = p
+            rootViewController.view.height = view.height - p
+        case .full:
+            rootViewController.view.frame = view.bounds
+        }
 	}
 	
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	open override func prepareView() {
-		super.prepareView()
+	open override func prepare() {
+		super.prepare()
 		prepareSearchBar()
 	}
 	

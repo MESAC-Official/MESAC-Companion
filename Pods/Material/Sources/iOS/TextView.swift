@@ -33,10 +33,9 @@ import UIKit
 @objc(TextViewDelegate)
 public protocol TextViewDelegate : UITextViewDelegate {}
 
-@IBDesignable
 @objc(TextView)
 public class TextView: UITextView {
-	/// A property that accesses the backing layer's backgroundColor.
+	/// A property that accesses the backing layer's background
 	@IBInspectable public override var backgroundColor: UIColor? {
 		didSet {
 			layer.backgroundColor = backgroundColor?.cgColor
@@ -114,7 +113,7 @@ public class TextView: UITextView {
 	*/
 	public required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		prepareView()
+		prepare()
 	}
 	
 	/**
@@ -126,7 +125,7 @@ public class TextView: UITextView {
 	*/
 	public override init(frame: CGRect, textContainer: NSTextContainer?) {
 		super.init(frame: frame, textContainer: textContainer)
-		prepareView()
+		prepare()
 	}
 	
 	/**
@@ -146,9 +145,11 @@ public class TextView: UITextView {
 	
     public override func layoutSublayers(of layer: CALayer) {
         super.layoutSublayers(of: layer)
-        if self.layer == layer {
-            layoutShape()
+        guard self.layer == layer else {
+            return
         }
+        
+        layoutShape()
     }
     
     public override func layoutSubviews() {
@@ -162,11 +163,11 @@ public class TextView: UITextView {
 	internal func reloadView() {
 		if let p = placeholderLabel {
 			removeConstraints(constraints)
-			_ = layout(p).edges(
-                    top: textContainerInset.top,
-                    left: textContainerInset.left + textContainer.lineFragmentPadding,
-                    bottom: textContainerInset.bottom,
-                    right: textContainerInset.right + textContainer.lineFragmentPadding)
+			layout(p).edges(
+                top: textContainerInset.top,
+                left: textContainerInset.left + textContainer.lineFragmentPadding,
+                bottom: textContainerInset.bottom,
+                right: textContainerInset.right + textContainer.lineFragmentPadding)
 		}
 	}
 	
@@ -214,15 +215,15 @@ public class TextView: UITextView {
 	
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	public func prepareView() {
+	public func prepare() {
 		contentScaleFactor = Device.scale
 		textContainerInset = .zero
-		backgroundColor = Color.white
+		backgroundColor = .white
 		clipsToBounds = false
 		removeNotificationHandlers()
 		prepareNotificationHandlers()
@@ -235,7 +236,7 @@ public class TextView: UITextView {
 			v.font = font
 			v.textAlignment = textAlignment
 			v.numberOfLines = 0
-			v.backgroundColor = Color.clear
+			v.backgroundColor = .clear
 			addSubview(v)
 			reloadView()
 			handleTextViewTextDidChange()

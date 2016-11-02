@@ -59,10 +59,9 @@ public enum BottomNavigationTransitionAnimation: Int {
 	case fade
 }
 
-@IBDesignable
 open class BottomNavigationController: UITabBarController, UITabBarControllerDelegate {
 	/// The transition animation to use when selecting a new tab.
-	open var transitionAnimation: BottomNavigationTransitionAnimation = .fade
+	open var transitionAnimation = BottomNavigationTransitionAnimation.fade
 	
 	/**
      An initializer that initializes the object with a NSCoder object.
@@ -81,13 +80,23 @@ open class BottomNavigationController: UITabBarController, UITabBarControllerDel
 		super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
 	}
 	
+    /// An initializer that accepts no parameters.
 	public init() {
 		super.init(nibName: nil, bundle: nil)
 	}
+    
+    /**
+     An initializer that initializes the object an Array of UIViewControllers.
+     - Parameter viewControllers: An Array of UIViewControllers.
+     */
+    public init(viewControllers: [UIViewController]) {
+        super.init(nibName: nil, bundle: nil)
+        self.viewControllers = viewControllers
+    }
 	
 	open override func viewDidLoad() {
 		super.viewDidLoad()
-		prepareView()
+		prepare()
 	}
 	
 	open override func viewWillLayoutSubviews() {
@@ -124,16 +133,17 @@ open class BottomNavigationController: UITabBarController, UITabBarControllerDel
 	
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	open func prepareView() {
+	open func prepare() {
 		view.clipsToBounds = true
 		view.contentScaleFactor = Device.scale
-		delegate = self
-		prepareTabBar()
+		view.backgroundColor = Color.white
+        delegate = self
+        prepareTabBar()
 	}
 	
 	/// Handles transitions when tabBarItems are pressed.
@@ -148,9 +158,10 @@ open class BottomNavigationController: UITabBarController, UITabBarControllerDel
 	
 	/// Prepares the tabBar.
 	private func prepareTabBar() {
-		tabBar.depthPreset = .depth1
-        tabBar.divider.alignment = .top
-        let image = UIImage.imageWithColor(color: Color.clear, size: CGSize(width: 1, height: 1))
+		tabBar.heightPreset = .normal
+        tabBar.depthPreset = .depth1
+        tabBar.dividerAlignment = .top
+        let image = UIImage.image(with: Color.clear, size: CGSize(width: 1, height: 1))
 		tabBar.shadowImage = image
 		tabBar.backgroundImage = image
 		tabBar.backgroundColor = Color.white

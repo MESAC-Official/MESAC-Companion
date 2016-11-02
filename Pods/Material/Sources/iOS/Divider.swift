@@ -46,9 +46,27 @@ open class Divider {
     internal var line: UIView?
     
     /// A reference to the height.
-    public var height: CGFloat
+    open var thickness: CGFloat {
+        didSet {
+            reload()
+        }
+    }
     
-    /// Divider color.
+    /// A preset wrapper around contentEdgeInsets.
+    open var contentEdgeInsetsPreset = EdgeInsetsPreset.none {
+        didSet {
+            contentEdgeInsets = EdgeInsetsPresetToValue(preset: contentEdgeInsetsPreset)
+        }
+    }
+    
+    /// A reference to EdgeInsets.
+    open var contentEdgeInsets = EdgeInsets.zero {
+        didSet {
+            reload()
+        }
+    }
+    
+    /// A UIColor.
     open var color: UIColor? {
         get {
             return line?.backgroundColor
@@ -79,27 +97,99 @@ open class Divider {
     /**
      Initializer that takes in a UIView.
      - Parameter view: A UIView reference.
+     - Parameter thickness: A CGFloat value.
      */
-    internal init(view: UIView?, height: CGFloat = 1) {
+    internal init(view: UIView?, thickness: CGFloat = 1) {
         self.view = view
-        self.height = height
+        self.thickness = thickness
     }
     
     /// Lays out the divider.
-    internal func reload() {
+    open func reload() {
         guard let l = line, let v = view else {
             return
         }
         
+        let c = contentEdgeInsets
+        
         switch alignment {
         case .top:
-            l.frame = CGRect(x: 0, y: 0, width: v.width, height: height)
+            l.frame = CGRect(x: c.left, y: c.top, width: v.width - c.left - c.right, height: thickness)
         case .bottom:
-            l.frame = CGRect(x: 0, y: v.height - height, width: v.width, height: height)
+            l.frame = CGRect(x: c.left, y: v.height - thickness - c.bottom, width: v.width - c.left - c.right, height: thickness)
         case .left:
-            l.frame = CGRect(x: 0, y: 0, width: height, height: v.height)
+            l.frame = CGRect(x: c.left, y: c.top, width: thickness, height: v.height - c.top - c.bottom)
         case .right:
-            l.frame = CGRect(x: v.width - height, y: 0, width: height, height: v.height)
+            l.frame = CGRect(x: v.width - thickness - c.right, y: c.top, width: thickness, height: v.height - c.top - c.bottom)
+        }
+    }
+}
+
+/// A memory reference to the Divider instance.
+private var DividerKey: UInt8 = 0
+
+extension UIView {
+    /// TabBarItem reference.
+    public private(set) var divider: Divider {
+        get {
+            return AssociatedObject(base: self, key: &DividerKey) {
+                return Divider(view: self)
+            }
+        }
+        set(value) {
+            AssociateObject(base: self, key: &DividerKey, value: value)
+        }
+    }
+    
+    /// A preset wrapper around divider.contentEdgeInsets.
+    open var dividerContentEdgeInsetsPreset: EdgeInsetsPreset {
+        get {
+            return divider.contentEdgeInsetsPreset
+        }
+        set(value) {
+            divider.contentEdgeInsetsPreset = value
+        }
+    }
+    
+    /// A reference to divider.contentEdgeInsets.
+    open var dividerContentEdgeInsets: EdgeInsets {
+        get {
+            return divider.contentEdgeInsets
+        }
+        set(value) {
+            divider.contentEdgeInsets = value
+        }
+    }
+    
+    /// Divider color.
+    @IBInspectable
+    open var dividerColor: UIColor? {
+        get {
+            return divider.color
+        }
+        set(value) {
+            divider.color = value
+        }
+    }
+    
+    /// Divider animation.
+    open var dividerAlignment: DividerAlignment {
+        get {
+            return divider.alignment
+        }
+        set(value) {
+            divider.alignment = value
+        }
+    }
+    
+    /// Divider thickness.
+    @IBInspectable
+    open var dividerThickness: CGFloat {
+        get {
+            return divider.thickness
+        }
+        set(value) {
+            divider.thickness = value
         }
     }
 }

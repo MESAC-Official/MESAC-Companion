@@ -36,9 +36,9 @@ public enum SnackbarStatus: Int {
     case hidden
 }
 
-open class Snackbar: BarView {
+open class Snackbar: Bar {
     /// A convenience property to set the titleLabel text.
-    public var text: String? {
+    open var text: String? {
         get {
             return textLabel.text
         }
@@ -77,22 +77,22 @@ open class Snackbar: BarView {
         return super.hitTest(point, with: event)
     }
     
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        if willRenderView {
-            textLabel.frame = contentView.bounds
-        }
+    /// Reloads the view.
+    open override func reload() {
+        super.reload()
+        
+        centerViews = [textLabel]
     }
     
     /**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-    open override func prepareView() {
-        super.prepareView()
+    open override func prepare() {
+        super.prepare()
         depthPreset = .none
         interimSpacePreset = .interimSpace8
         contentEdgeInsets.left = interimSpace
@@ -109,6 +109,5 @@ open class Snackbar: BarView {
         textLabel.textAlignment = .left
         textLabel.textColor = Color.white
         textLabel.numberOfLines = 0
-        contentView.addSubview(textLabel)
     }
 }

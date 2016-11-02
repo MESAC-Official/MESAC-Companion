@@ -34,15 +34,15 @@ import UIKit
 private var PageTabBarItemKey: UInt8 = 0
 
 open class PageTabBarItem: FlatButton {
-    open override func prepareView() {
-        super.prepareView()
+    open override func prepare() {
+        super.prepare()
         pulseAnimation = .none
     }
 }
 
 open class PageTabBar: TabBar {
-    open override func prepareView() {
-        super.prepareView()
+    open override func prepare() {
+        super.prepare()
         isLineAnimated = false
         lineAlignment = .top
     }
@@ -100,17 +100,24 @@ public protocol PageTabBarControllerDelegate {
 
 @objc(PageTabBarController)
 open class PageTabBarController: RootController {
+    /// Reference to the PageTabBar.
+    open private(set) lazy var pageTabBar: PageTabBar = PageTabBar()
+    
+    /// A boolean that indicates whether bounds is enabled.
+    open var isBounceEnabled: Bool {
+        didSet {
+            scrollView?.bounces = isBounceEnabled
+        }
+    }
+    
     /// Indicates that the tab has been pressed and animating.
     open internal(set) var isTabSelectedAnimation = false
     
     /// The currently selected UIViewController.
-    open internal(set) var selectedIndex: Int = 0
+    open internal(set) var selectedIndex = 0
     
     /// PageTabBar alignment setting.
     open var pageTabBarAlignment = PageTabBarAlignment.bottom
-    
-    /// Reference to the PageTabBar.
-    open internal(set) lazy var pageTabBar: PageTabBar = PageTabBar()
     
     /// Delegation handler.
     open weak var delegate: PageTabBarControllerDelegate?
@@ -120,39 +127,55 @@ open class PageTabBarController: RootController {
         return rootViewController as? UIPageViewController
     }
     
+    /// A reference to the scrollView.
+    open var scrollView: UIScrollView? {
+        guard let v = pageViewController else {
+            return nil
+        }
+        
+        for view in v.view.subviews {
+            if let v = view as? UIScrollView {
+                return v
+            }
+        }
+        
+        return nil
+    }
+    
     /// A reference to the UIViewControllers.
     open var viewControllers = [UIViewController]()
     
     public required init?(coder aDecoder: NSCoder) {
+        isBounceEnabled = true
         super.init(coder: aDecoder)
+        prepare()
     }
     
     public override init(rootViewController: UIViewController) {
+        isBounceEnabled = true
         super.init(rootViewController: UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil))
         viewControllers.append(rootViewController)
         setViewControllers(viewControllers, direction: .forward, animated: true)
+        prepare()
     }
     
-    public init(viewControllers: [UIViewController], selectedIndex: Int, direction: UIPageViewControllerNavigationDirection, animated: Bool) {
+    public init(viewControllers: [UIViewController], selectedIndex: Int) {
+        isBounceEnabled = true
         super.init(rootViewController: UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil))
         self.selectedIndex = selectedIndex
         self.viewControllers.append(contentsOf: viewControllers)
-        setViewControllers([self.viewControllers[selectedIndex]], direction: direction, animated: animated)
+        setViewControllers([self.viewControllers[selectedIndex]], direction: .forward, animated: true)
+        prepare()
     }
     
-    /**
-     To execute in the order of the layout chain, override this
-     method. LayoutSubviews should be called immediately, unless you
-     have a certain need.
-     */
     open override func layoutSubviews() {
         super.layoutSubviews()
         
-        let p = pageTabBar.intrinsicContentSize.height + pageTabBar.grid.layoutEdgeInsets.top + pageTabBar.grid.layoutEdgeInsets.bottom
+        let p = pageTabBar.intrinsicContentSize.height + pageTabBar.layoutEdgeInsets.top + pageTabBar.layoutEdgeInsets.bottom
         let y = view.height - p
         
         pageTabBar.height = p
-        pageTabBar.width = view.width + pageTabBar.grid.layoutEdgeInsets.left + pageTabBar.grid.layoutEdgeInsets.right
+        pageTabBar.width = view.width + pageTabBar.layoutEdgeInsets.left + pageTabBar.layoutEdgeInsets.right
         
         rootViewController.view.height = y
         
@@ -173,24 +196,25 @@ open class PageTabBarController: RootController {
      - Parameter animated: A boolean indicating to include animation.
      - Parameter completion: An optional completion block.
      */
-    open func setViewControllers(_ viewControllers: [UIViewController], direction: UIPageViewControllerNavigationDirection, animated: Bool, completion: (@escaping (Bool) -> Void)? = nil) {
+    open func setViewControllers(_ viewControllers: [UIViewController], direction: UIPageViewControllerNavigationDirection, animated: Bool, completion: ((Bool) -> Void)? = nil) {
         pageViewController?.setViewControllers(viewControllers, direction: direction, animated: animated, completion: completion)
-        preparePageTabBarItems()
+        prepare()
     }
     
     /**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-    open override func prepareView() {
-        super.prepareView()
+    open override func prepare() {
+        super.prepare()
         preparePageTabBar()
+        preparePageTabBarItems()
     }
     
-    override func prepareRootViewController() {
+    open override func prepareRootViewController() {
         super.prepareRootViewController()
         
         guard let v = pageViewController else {
@@ -201,11 +225,7 @@ open class PageTabBarController: RootController {
         v.dataSource = self
         v.isDoubleSided = false
         
-        for view in v.view.subviews {
-            if let v = view as? UIScrollView {
-                v.delegate = self
-            }
-        }
+        scrollView?.delegate = self
     }
     
     /// Prepares the pageTabBarItems.
@@ -254,14 +274,14 @@ open class PageTabBarController: RootController {
     /// Prepares the pageTabBar.
     private func preparePageTabBar() {
         pageTabBar.zPosition = 1000
-        pageTabBar.divider.color = Color.grey.lighten3
+        pageTabBar.dividerColor = Color.grey.lighten3
         view.addSubview(pageTabBar)
         pageTabBar.select(at: selectedIndex)
     }
 }
 
 extension PageTabBarController: UIPageViewControllerDelegate {
-    public func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    open func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         guard let v = pageViewController.viewControllers?.first else {
             return
         }
@@ -280,7 +300,7 @@ extension PageTabBarController: UIPageViewControllerDelegate {
 }
 
 extension PageTabBarController: UIPageViewControllerDataSource {
-    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+    open func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let current = viewControllers.index(of: viewController) else {
             return nil
         }
@@ -294,7 +314,7 @@ extension PageTabBarController: UIPageViewControllerDataSource {
         return viewControllers[previous]
     }
     
-    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+    open func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let current = viewControllers.index(of: viewController) else {
             return nil
         }
@@ -310,7 +330,7 @@ extension PageTabBarController: UIPageViewControllerDataSource {
 }
 
 extension PageTabBarController: UIScrollViewDelegate {
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard !pageTabBar.isAnimating else {
             return
         }

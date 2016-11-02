@@ -30,34 +30,56 @@
 
 import UIKit
 
-@IBDesignable
 @objc(CollectionViewCell)
 open class CollectionViewCell: UICollectionViewCell {
+    /**
+     A CAShapeLayer used to manage elements that would be affected by
+     the clipToBounds property of the backing layer. For example, this
+     allows the dropshadow effect on the backing layer, while clipping
+     the image to a desired shape within the visualLayer.
+     */
+    open private(set) lazy var visualLayer = CAShapeLayer()
+	
+    /// A Pulse reference.
+    internal private(set) lazy var pulse: Pulse = Pulse()
+    
+    /// PulseAnimation value.
+    open var pulseAnimation: PulseAnimation {
+        get {
+            return pulse.animation
+        }
+        set(value) {
+            pulse.animation = value
+        }
+    }
+    
+    /// PulseAnimation color.
+    @IBInspectable
+    open var pulseColor: UIColor {
+        get {
+            return pulse.color
+        }
+        set(value) {
+            pulse.color = value
+        }
+    }
+    
+    /// Pulse opacity.
+    @IBInspectable
+    open var pulseOpacity: CGFloat {
+        get {
+            return pulse.opacity
+        }
+        set(value) {
+            pulse.opacity = value
+        }
+    }
+	
 	/**
-	A CAShapeLayer used to manage elements that would be affected by
-	the clipToBounds property of the backing layer. For example, this
-	allows the dropshadow effect on the backing layer, while clipping
-	the image to a desired shape within the visualLayer.
-	*/
-    open private(set) var visualLayer: CAShapeLayer!
-	
-	/// An Array of pulse layers.
-	open private(set) lazy var pulseLayers = [CAShapeLayer]()
-	
-	/// The opcaity value for the pulse animation.
-	@IBInspectable open var pulseOpacity: CGFloat = 0.25
-	
-	/// The color of the pulse effect.
-	@IBInspectable open var pulseColor: UIColor = Color.grey.base
-	
-	/// The type of PulseAnimation.
-	open var pulseAnimation = PulseAnimation.pointWithBacking
-	
-	/**
-	A property that manages an image for the visualLayer's contents
-	property. Images should not be set to the backing layer's contents
-	property to avoid conflicts when using clipsToBounds.
-	*/
+     A property that manages an image for the visualLayer's contents
+     property. Images should not be set to the backing layer's contents
+     property to avoid conflicts when using clipsToBounds.
+     */
 	@IBInspectable
     open var image: UIImage? {
 		didSet {
@@ -66,11 +88,11 @@ open class CollectionViewCell: UICollectionViewCell {
 	}
 	
 	/**
-	Allows a relative subrectangle within the range of 0 to 1 to be
-	specified for the visualLayer's contents property. This allows
-	much greater flexibility than the contentsGravity property in
-	terms of how the image is cropped and stretched.
-	*/
+     Allows a relative subrectangle within the range of 0 to 1 to be
+     specified for the visualLayer's contents property. This allows
+     much greater flexibility than the contentsGravity property in
+     terms of how the image is cropped and stretched.
+     */
 	@IBInspectable
     open var contentsRect: CGRect {
 		get {
@@ -82,9 +104,9 @@ open class CollectionViewCell: UICollectionViewCell {
 	}
 	
 	/**
-	A CGRect that defines a stretchable region inside the visualLayer
-	with a fixed border around the edge.
-	*/
+     A CGRect that defines a stretchable region inside the visualLayer
+     with a fixed border around the edge.
+     */
 	@IBInspectable
     open var contentsCenter: CGRect {
 		get {
@@ -96,10 +118,10 @@ open class CollectionViewCell: UICollectionViewCell {
 	}
 	
 	/**
-	A floating point value that defines a ratio between the pixel
-	dimensions of the visualLayer's contents property and the size
-	of the view. By default, this value is set to the Device.scale.
-	*/
+     A floating point value that defines a ratio between the pixel
+     dimensions of the visualLayer's contents property and the size
+     of the view. By default, this value is set to the Device.scale.
+     */
 	@IBInspectable
     open var contentsScale: CGFloat {
 		get {
@@ -111,9 +133,9 @@ open class CollectionViewCell: UICollectionViewCell {
 	}
 	
 	/// A Preset for the contentsGravity property.
-	public var contentsGravityPreset: MaterialGravity {
+	public var contentsGravityPreset: Gravity {
 		didSet {
-            contentsGravity = MaterialGravityToValue(gravity: contentsGravityPreset)
+            contentsGravity = GravityToValue(gravity: contentsGravityPreset)
 		}
 	}
 	
@@ -128,7 +150,7 @@ open class CollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-	/// A preset wrapper around contentInset.
+	/// A preset wrapper around contentEdgeInsets.
 	public var contentEdgeInsetsPreset: EdgeInsetsPreset {
 		get {
 			return contentView.grid.contentEdgeInsetsPreset
@@ -138,9 +160,9 @@ open class CollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-	/// A wrapper around grid.contentInset.
+	/// A reference to EdgeInsets.
 	@IBInspectable
-    open var contentInset: EdgeInsets {
+    open var contentEdgeInsets: EdgeInsets {
 		get {
 			return contentView.grid.contentEdgeInsets
 		}
@@ -167,7 +189,7 @@ open class CollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-	/// A property that accesses the backing layer's backgroundColor.
+	/// A property that accesses the backing layer's background
 	@IBInspectable
     open override var backgroundColor: UIColor? {
 		didSet {
@@ -176,25 +198,25 @@ open class CollectionViewCell: UICollectionViewCell {
 	}
 	
 	/**
-	An initializer that initializes the object with a NSCoder object.
-	- Parameter aDecoder: A NSCoder instance.
-	*/
+     An initializer that initializes the object with a NSCoder object.
+     - Parameter aDecoder: A NSCoder instance.
+     */
 	public required init?(coder aDecoder: NSCoder) {
-		contentsGravityPreset = .ResizeAspectFill
+		contentsGravityPreset = .resizeAspectFill
 		super.init(coder: aDecoder)
-		prepareView()
+		prepare()
 	}
 	
 	/**
-	An initializer that initializes the object with a CGRect object.
-	If AutoLayout is used, it is better to initilize the instance
-	using the init() initializer.
-	- Parameter frame: A CGRect instance.
-	*/
+     An initializer that initializes the object with a CGRect object.
+     If AutoLayout is used, it is better to initilize the instance
+     using the init() initializer.
+     - Parameter frame: A CGRect instance.
+     */
 	public override init(frame: CGRect) {
-		contentsGravityPreset = .ResizeAspectFill
+		contentsGravityPreset = .resizeAspectFill
 		super.init(frame: frame)
-		prepareView()
+		prepare()
 	}
 	
 	/// A convenience initializer.
@@ -204,10 +226,12 @@ open class CollectionViewCell: UICollectionViewCell {
 	
 	open override func layoutSublayers(of layer: CALayer) {
 		super.layoutSublayers(of: layer)
-		if self.layer == layer {
-			layoutShape()
-			layoutVisualLayer()
-		}
+        guard self.layer == layer else {
+            return
+        }
+        
+        layoutShape()
+        layoutVisualLayer()
 	}
 	
 	open override func layoutSubviews() {
@@ -221,13 +245,13 @@ open class CollectionViewCell: UICollectionViewCell {
      from the center.
      */
     open func pulse(point: CGPoint? = nil) {
-        let p: CGPoint = nil == point ? CGPoint(x: CGFloat(width / 2), y: CGFloat(height / 2)) : point!
-        Animation.pulseExpandAnimation(layer: layer, visualLayer: visualLayer, pulseColor: pulseColor, pulseOpacity: pulseOpacity, point: p, width: width, height: height, pulseLayers: &pulseLayers, pulseAnimation: pulseAnimation)
-        _ = Animation.delay(time: 0.35) { [weak self] in
+        let p = nil == point ? CGPoint(x: CGFloat(width / 2), y: CGFloat(height / 2)) : point!
+        Motion.pulseExpandAnimation(layer: layer, visualLayer: visualLayer, point: p, width: width, height: height, pulse: &pulse)
+        Motion.delay(time: 0.35) { [weak self] in
             guard let s = self else {
                 return
             }
-            Animation.pulseContractAnimation(layer: s.layer, visualLayer: s.visualLayer, pulseColor: s.pulseColor, pulseLayers: &s.pulseLayers, pulseAnimation: s.pulseAnimation)
+            Motion.pulseContractAnimation(layer: s.layer, visualLayer: s.visualLayer, pulse: &s.pulse)
         }
     }
     
@@ -239,7 +263,7 @@ open class CollectionViewCell: UICollectionViewCell {
      */
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        Animation.pulseExpandAnimation(layer: layer, visualLayer: visualLayer, pulseColor: pulseColor, pulseOpacity: pulseOpacity, point: layer.convert(touches.first!.location(in: self), from: layer), width: width, height: height, pulseLayers: &pulseLayers, pulseAnimation: pulseAnimation)
+        Motion.pulseExpandAnimation(layer: layer, visualLayer: visualLayer, point: layer.convert(touches.first!.location(in: self), from: layer), width: width, height: height, pulse: &pulse)
     }
     
     /**
@@ -250,7 +274,7 @@ open class CollectionViewCell: UICollectionViewCell {
      */
     open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        Animation.pulseContractAnimation(layer: layer, visualLayer: visualLayer, pulseColor: pulseColor, pulseLayers: &pulseLayers, pulseAnimation: pulseAnimation)
+        Motion.pulseContractAnimation(layer: layer, visualLayer: visualLayer, pulse: &pulse)
     }
     
     /**
@@ -261,24 +285,23 @@ open class CollectionViewCell: UICollectionViewCell {
      */
     open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesCancelled(touches, with: event)
-        Animation.pulseContractAnimation(layer: layer, visualLayer: visualLayer, pulseColor: pulseColor, pulseLayers: &pulseLayers, pulseAnimation: pulseAnimation)
+        Motion.pulseContractAnimation(layer: layer, visualLayer: visualLayer, pulse: &pulse)
     }
 	
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	open func prepareView() {
+	open func prepare() {
 		contentScaleFactor = Device.scale
 		prepareVisualLayer()
 	}
 	
 	/// Prepares the visualLayer property.
 	internal func prepareVisualLayer() {
-        visualLayer = CAShapeLayer()
 		visualLayer.zPosition = 0
 		visualLayer.masksToBounds = true
 		layer.addSublayer(visualLayer)

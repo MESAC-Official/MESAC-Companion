@@ -42,7 +42,6 @@ extension UINavigationController {
     }
 }
 
-@IBDesignable
 open class NavigationController: UINavigationController {
     /**
      An initializer that initializes the object with a NSCoder object.
@@ -91,29 +90,34 @@ open class NavigationController: UINavigationController {
 	
 	open override func viewDidLoad() {
 		super.viewDidLoad()
-		prepareView()
+		prepare()
 	}
 	
 	open override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
-		// Load the initial topItem.
-		if let v = navigationBar as? NavigationBar {
-			if let item = v.topItem {
-				v.layoutNavigationItem(item: item)
-			}
-		}
+		guard let v = navigationBar as? NavigationBar else {
+            return
+        }
+        
+        guard let item = v.topItem else {
+            return
+        }
+        
+        v.layoutNavigationItem(item: item)
 	}
     
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	open func prepareView() {
+	open func prepare() {
+        navigationBar.heightPreset = .normal
+        
         view.clipsToBounds = true
-		view.backgroundColor = Color.white
+		view.backgroundColor = .white
         view.contentScaleFactor = Device.scale
         
         // This ensures the panning gesture is available when going back between views.
@@ -135,11 +139,9 @@ extension NavigationController: UINavigationBarDelegate {
      */
     public func navigationBar(_ navigationBar: UINavigationBar, shouldPush item: UINavigationItem) -> Bool {
         if let v = navigationBar as? NavigationBar {
-            let backButton = IconButton(image: v.backButtonImage, tintColor: Color.blueGrey.base)
-            backButton.addTarget(self, action: #selector(handleBackButton), for: .touchUpInside)
-            
-            item.backButton = backButton
-            item.leftControls.append(backButton)
+            item.backButton.addTarget(self, action: #selector(handleBackButton), for: .touchUpInside)
+            item.backButton.image = v.backButtonImage
+            item.leftViews.append(item.backButton)
             v.layoutNavigationItem(item: item)
         }
         return true

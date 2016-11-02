@@ -68,12 +68,23 @@ public protocol ToolbarControllerDelegate {
 }
 
 @objc(ToolbarController)
-open class ToolbarController: RootController {
-	/// Internal reference to the floatingViewController.
+open class ToolbarController: StatusBarController {
+    /**
+     A Display value to indicate whether or not to 
+     display the rootViewController to the full view
+     bounds, or up to the toolbar height.
+     */
+    open var display = Display.partial {
+        didSet {
+            layoutSubviews()
+        }
+    }
+    
+    /// Reference to the Toolbar.
+    open private(set) lazy var toolbar: Toolbar = Toolbar()
+    
+    /// Internal reference to the floatingViewController.
 	private var internalFloatingViewController: UIViewController?
-	
-	/// Reference to the Toolbar.
-    open internal(set) lazy var toolbar: Toolbar = Toolbar()
 	
 	/// Delegation handler.
 	open weak var delegate: ToolbarControllerDelegate?
@@ -122,8 +133,6 @@ open class ToolbarController: RootController {
 				view.insertSubview(v.view, aboveSubview: toolbar)
 				v.view.layer.zPosition = 1500
 				v.didMove(toParentViewController: self)
-				
-				// Animate the noteButton out and the noteViewController! in.
 				v.view.isHidden = false
 				v.view.layer.rasterizationScale = Device.scale
 				v.view.layer.shouldRasterize = true
@@ -134,62 +143,66 @@ open class ToolbarController: RootController {
 				toolbar.isUserInteractionEnabled = false
 				delegate?.toolbarControllerWillOpenFloatingViewController?(toolbarController: self)
 				UIView.animate(withDuration: 0.5,
-					animations: { [weak self] in
-						if let s = self {
-							v.view.center.y = s.view.bounds.height / 2
-							s.toolbar.alpha = 0.5
-							s.rootViewController.view.alpha = 0.5
-						}
-					}) { [weak self] _ in
-						if let s = self {
-							v.view.layer.shouldRasterize = false
-							s.view.layer.shouldRasterize = false
-							DispatchQueue.main.async { [weak self] in
-								if let s = self {
-									s.delegate?.toolbarControllerDidOpenFloatingViewController?(toolbarController: s)
-								}
-							}
-						}
+					animations: { [weak self, v = v] in
+						guard let s = self else {
+                            return
+                        }
+                        
+                        v.view.center.y = s.view.bounds.height / 2
+                        s.toolbar.alpha = 0.5
+                        s.rootViewController.view.alpha = 0.5
+					}) { [weak self, v = v] _ in
+                        guard let s = self else {
+                            return
+                        }
+                        
+                        v.view.layer.shouldRasterize = false
+                        s.view.layer.shouldRasterize = false
+                        DispatchQueue.main.async { [weak self] in
+                            if let s = self {
+                                s.delegate?.toolbarControllerDidOpenFloatingViewController?(toolbarController: s)
+                            }
+                        }
 					}
 			}
 		}
 	}
 	
-	/**
-     To execute in the order of the layout chain, override this
-     method. LayoutSubviews should be called immediately, unless you
-     have a certain need.
-     */
+	
 	open override func layoutSubviews() {
 		super.layoutSubviews()
-		
-        toolbar.grid.layoutEdgeInsets.top = .phone == Device.userInterfaceIdiom && Device.isLandscape ? 0 : 20
+        statusBar.layoutIfNeeded()
         
-        let p = toolbar.intrinsicContentSize.height + toolbar.grid.layoutEdgeInsets.top + toolbar.grid.layoutEdgeInsets.bottom
+        let y = 0 == statusBar.zPosition || statusBar.isHidden ? 0 : statusBar.height
+        let p = y + toolbar.height
         
-        toolbar.width = view.width + toolbar.grid.layoutEdgeInsets.left + toolbar.grid.layoutEdgeInsets.right
-        toolbar.height = p
+        toolbar.y = y
+        toolbar.width = view.width
         
-        rootViewController.view.y = p
-        rootViewController.view.height = view.height - p
+        switch display {
+        case .partial:
+            rootViewController.view.y = p
+            rootViewController.view.height = view.height - p
+        case .full:
+            rootViewController.view.frame = view.bounds
+        }
 	}
 	
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	open override func prepareView() {
-		super.prepareView()
+	open override func prepare() {
+		super.prepare()
 		prepareToolbar()
 	}
 	
 	/// Prepares the toolbar.
 	private func prepareToolbar() {
         toolbar.depthPreset = .depth1
-        toolbar.zPosition = 1000
         view.addSubview(toolbar)
 	}
 }

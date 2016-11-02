@@ -31,397 +31,240 @@
 import UIKit
 
 open class Card: PulseView {
-	/**
-	:name:	dividerLayer
-	*/
-	internal var dividerLayer: CAShapeLayer?
-	
-	/**
-	:name:	dividerColor
-	*/
-	@IBInspectable
-    open var dividerColor: UIColor? {
-		didSet {
-			dividerLayer?.backgroundColor = dividerColor?.cgColor
-		}
-	}
-	
-	/**
-	:name:	divider
-	*/
-	@IBInspectable
-    open var divider = true {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	dividerInsets
-	*/
-	open var dividerEdgeInsetsPreset: EdgeInsetsPreset = .none {
-		didSet {
-			dividerInset = EdgeInsetsPresetToValue(preset: dividerEdgeInsetsPreset)
-		}
-	}
-	
-	/**
-	:name:	dividerInset
-	*/
-	@IBInspectable
-    open var dividerInset = EdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	contentInsets
-	*/
-	open var contentEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
-		didSet {
-			contentInset = EdgeInsetsPresetToValue(preset: contentEdgeInsetsPreset)
-		}
-	}
-	
-	/**
-	:name:	contentInset
-	*/
-	@IBInspectable
-    open var contentInset = EdgeInsetsPresetToValue(preset: .square2) {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	titleLabelInsets
-	*/
-	open var titleLabelEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
-		didSet {
-			titleLabelInset = EdgeInsetsPresetToValue(preset: titleLabelEdgeInsetsPreset)
-		}
-	}
-	
-	/**
-	:name:	titleLabelInset
-	*/
-	@IBInspectable
-    open var titleLabelInset = EdgeInsetsPresetToValue(preset: .square2) {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	titleLabel
-	*/
-	@IBInspectable
-    open var titleLabel: UILabel? {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	contentViewInsets
-	*/
-	open var contentViewEdgeInsetsPreset: EdgeInsetsPreset = .square2 {
-		didSet {
-			contentViewInset = EdgeInsetsPresetToValue(preset: contentViewEdgeInsetsPreset)
-		}
-	}
-	
-	/**
-	:name:	contentViewInset
-	*/
-	@IBInspectable
-    open var contentViewInset = EdgeInsetsPresetToValue(preset: .square2) {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	contentView
-	*/
-	@IBInspectable
+    /// Will layout the view.
+    open var willLayout: Bool {
+        return 0 < width && nil != superview
+    }
+    
+    /// A container view for subviews.
+    open private(set) lazy var container = UIView()
+    
+    @IBInspectable
+    open override var cornerRadiusPreset: CornerRadiusPreset {
+        didSet {
+            container.cornerRadiusPreset = cornerRadiusPreset
+        }
+    }
+    
+    @IBInspectable
+    open override var cornerRadius: CGFloat {
+        didSet {
+            container.cornerRadius = cornerRadius
+        }
+    }
+    
+    open override var shapePreset: ShapePreset {
+        didSet {
+            container.shapePreset = shapePreset
+        }
+    }
+    
+    @IBInspectable
+    open override var backgroundColor: UIColor? {
+        didSet {
+            container.backgroundColor = backgroundColor
+        }
+    }
+    
+    /// A reference to the toolbar.
+    @IBInspectable
+    open var toolbar: Toolbar? {
+        didSet {
+            oldValue?.removeFromSuperview()
+            if let v = toolbar {
+                container.addSubview(v)
+            }
+            layoutSubviews()
+        }
+    }
+    
+    /// A preset wrapper around toolbarEdgeInsets.
+    open var toolbarEdgeInsetsPreset = EdgeInsetsPreset.none {
+        didSet {
+            toolbarEdgeInsets = EdgeInsetsPresetToValue(preset: toolbarEdgeInsetsPreset)
+        }
+    }
+    
+    /// A reference to toolbarEdgeInsets.
+    @IBInspectable
+    open var toolbarEdgeInsets = EdgeInsets.zero {
+        didSet {
+            layoutSubviews()
+        }
+    }
+    
+    /// A reference to the contentView.
+    @IBInspectable
     open var contentView: UIView? {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	leftButtonsInsets
-	*/
-	open var leftButtonsEdgeInsetsPreset: EdgeInsetsPreset = .none {
-		didSet {
-			leftButtonsInset = EdgeInsetsPresetToValue(preset: leftButtonsEdgeInsetsPreset)
-		}
-	}
-	
-	/**
-	:name:	leftButtonsInset
-	*/
-	@IBInspectable
-    open var leftButtonsInset = EdgeInsets.zero {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	leftButtons
-	*/
-	open var leftButtons = [UIView]() {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	rightButtonsInsets
-	*/
-	open var rightButtonsEdgeInsetsPreset: EdgeInsetsPreset = .none {
-		didSet {
-            rightButtonsInset = EdgeInsetsPresetToValue(preset: rightButtonsEdgeInsetsPreset)
-		}
-	}
-	
-	/**
-	:name:	rightButtonsInset
-	*/
-	@IBInspectable open var rightButtonsInset = EdgeInsets.zero {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	rightButtons
-	*/
-	open var rightButtons = [UIView]() {
-		didSet {
-			reloadView()
-		}
-	}
-	
-	/**
-	:name:	init
-	*/
-	public required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-	}
-	
-	/**
-	:name:	init
-	*/
-	public override init(frame: CGRect) {
-		super.init(frame: frame)
-	}
-	
-	/**
-	:name:	init
-	*/
-	public convenience init() {
-		self.init(frame: .zero)
-	}
-	
-	/**
-	:name:	init
-	*/
-	public convenience init?(image: UIImage? = nil, titleLabel: UILabel? = nil, contentView: UIView? = nil, leftButtons: [UIView]? = nil, rightButtons: [UIView]? = nil) {
-		self.init(frame: .zero)
-		prepareProperties(image: image, titleLabel: titleLabel, contentView: contentView, leftButtons: leftButtons, rightButtons: rightButtons)
-	}
-	
-	/**
-	:name:	layoutSublayersOfLayer
-	*/
-	open override func layoutSublayers(of layer: CALayer) {
-		super.layoutSublayers(of: layer)
-		if self.layer == layer {
-			if divider {
-				var y: CGFloat = contentInset.bottom + dividerInset.bottom
-				if 0 < leftButtons.count {
-					y += leftButtonsInset.top + leftButtonsInset.bottom + leftButtons[0].frame.height
-				} else if 0 < rightButtons.count {
-					y += rightButtonsInset.top + rightButtonsInset.bottom + rightButtons[0].frame.height
-				}
-				if 0 < y {
-					prepareDivider(y: bounds.height - y - 0.5, width: bounds.width)
-				}
-			} else {
-				dividerLayer?.removeFromSuperlayer()
-				dividerLayer = nil
-			}
-		}
-	}
-	
-	/**
-	:name:	reloadView
-	*/
-	open func reloadView() {
-		// clear constraints so new ones do not conflict
-		removeConstraints(constraints)
-		for v in subviews {
-			v.removeFromSuperview()
-		}
-		
-		var verticalFormat: String = "V:|"
-		var views: Dictionary<String, Any> = Dictionary<String, Any>()
-		var metrics: Dictionary<String, Any> = Dictionary<String, Any>()
-		
-		if nil != titleLabel {
-			verticalFormat += "-(insetTop)"
-			metrics["insetTop"] = contentInset.top + titleLabelInset.top
-		} else if nil != contentView {
-			verticalFormat += "-(insetTop)"
-			metrics["insetTop"] = contentInset.top + contentViewInset.top
-		}
-		
-		// title
-		if let v: UILabel = titleLabel {
-			verticalFormat += "-[titleLabel]"
-			views["titleLabel"] = v
-			
-			_ = layout(v).horizontally(left: contentInset.left + titleLabelInset.left, right: contentInset.right + titleLabelInset.right)
-		}
-		
-		// detail
-		if let v: UIView = contentView {
-			if nil == titleLabel {
-				metrics["insetTop"] = (metrics["insetTop"] as! CGFloat) + contentViewInset.top
-			} else {
-				verticalFormat += "-(insetB)"
-				metrics["insetB"] = titleLabelInset.bottom + contentViewInset.top
-			}
-			
-			verticalFormat += "-[contentView]"
-			views["contentView"] = v
-			
-			_ = layout(v).horizontally(left: contentInset.left + contentViewInset.left, right: contentInset.right + contentViewInset.right)
-		}
-		
-		// leftButtons
-        if 0 < leftButtons.count {
-            var h = "H:|"
-            var d = Dictionary<String, Any>()
-            var i = 0
-            for b in leftButtons {
-                let k: String = "b\(i)"
-                
-                d[k] = b
-                
-                if 0 == i {
-                    h += "-(left)-"
-                } else {
-                    h += "-(left_right)-"
-                }
-                
-                h += "[\(k)]"
-                
-                _ = layout(b).bottom(contentInset.bottom + leftButtonsInset.bottom)
-                
-                i += 1
+        didSet {
+            oldValue?.removeFromSuperview()
+            if let v = contentView {
+                v.clipsToBounds = true
+                container.addSubview(v)
             }
-            
-            addConstraints(Layout.constraint(format: h, options: [], metrics: ["left" : contentInset.left + leftButtonsInset.left, "left_right" : leftButtonsInset.left + leftButtonsInset.right], views: d))
+            layoutSubviews()
         }
-		
-		// rightButtons
-        if 0 < rightButtons.count {
-            var h = "H:"
-            var d = Dictionary<String, Any>()
-            var i = rightButtons.count - 1
-            
-            for b in rightButtons {
-                let k: String = "b\(i)"
-                
-                d[k] = b
-                
-                h += "[\(k)]"
-                
-                if 0 == i {
-                    h += "-(right)-"
-                } else {
-                    h += "-(right_left)-"
-                }
-                
-                _ = layout(b).bottom(contentInset.bottom + rightButtonsInset.bottom)
-                
-                i -= 1
+    }
+    
+    /// A preset wrapper around contentViewEdgeInsets.
+    open var contentViewEdgeInsetsPreset = EdgeInsetsPreset.none {
+        didSet {
+            contentViewEdgeInsets = EdgeInsetsPresetToValue(preset: contentViewEdgeInsetsPreset)
+        }
+    }
+    
+    /// A reference to contentViewEdgeInsets.
+    @IBInspectable
+    open var contentViewEdgeInsets = EdgeInsets.zero {
+        didSet {
+            layoutSubviews()
+        }
+    }
+    
+    /// A reference to the bottomBar.
+    @IBInspectable
+    open var bottomBar: Bar? {
+        didSet {
+            oldValue?.removeFromSuperview()
+            if let v = bottomBar {
+                container.addSubview(v)
             }
-            
-            addConstraints(Layout.constraint(format: h + "|", options: [], metrics: ["right" : contentInset.right + rightButtonsInset.right, "right_left" : rightButtonsInset.right + rightButtonsInset.left], views: d))
+            layoutSubviews()
         }
-		
-		if 0 < leftButtons.count {
-			verticalFormat += "-(insetC)-[button]"
-			views["button"] = leftButtons[0]
-			metrics["insetC"] = leftButtonsInset.top
-			metrics["insetBottom"] = contentInset.bottom + leftButtonsInset.bottom
-		} else if 0 < rightButtons.count {
-			verticalFormat += "-(insetC)-[button]"
-			views["button"] = rightButtons[0]
-			metrics["insetC"] = rightButtonsInset.top
-			metrics["insetBottom"] = contentInset.bottom + rightButtonsInset.bottom
-		}
-		
-		if nil != contentView {
-			if nil == metrics["insetC"] {
-				metrics["insetBottom"] = contentInset.bottom + contentViewInset.bottom + (divider ? dividerInset.top + dividerInset.bottom : 0)
-			} else {
-				metrics["insetC"] = (metrics["insetC"] as! CGFloat) + contentViewInset.bottom + (divider ? dividerInset.top + dividerInset.bottom : 0)
-			}
-		} else if nil != titleLabel {
-			if nil == metrics["insetC"] {
-				metrics["insetBottom"] = contentInset.bottom + titleLabelInset.bottom + (divider ? dividerInset.top + dividerInset.bottom : 0)
-			} else {
-				metrics["insetC"] = (metrics["insetTop"] as! CGFloat) + titleLabelInset.bottom + (divider ? dividerInset.top + dividerInset.bottom : 0)
-			}
-		} else if nil != metrics["insetC"] {
-			metrics["insetC"] = (metrics["insetC"] as! CGFloat) + contentInset.top + (divider ? dividerInset.top + dividerInset.bottom : 0)
-		}
-		
-		if 0 < views.count {
-			verticalFormat += "-(insetBottom)-|"
-			addConstraints(Layout.constraint(format: verticalFormat, options: [], metrics: metrics, views: views))
-		}
-	}
-	
-	/**
-	:name:	prepareView
-	*/
-	open override func prepareView() {
-		super.prepareView()
-		depthPreset = .depth1
-		dividerColor = Color.grey.lighten3
-		cornerRadiusPreset = .cornerRadius1
-	}
-	
-	/**
-	:name:	prepareDivider
-	*/
-	internal func prepareDivider(y: CGFloat, width: CGFloat) {
-		if nil == dividerLayer {
-			dividerLayer = CAShapeLayer()
-			dividerLayer!.zPosition = 0
-			layer.addSublayer(dividerLayer!)
-		}
-		dividerLayer?.backgroundColor = dividerColor?.cgColor
-        dividerLayer?.frame = CGRect(x: dividerInset.left, y: y, width: width - dividerInset.left - dividerInset.right, height: 1)
-	}
-	
-	/**
-	:name:	prepareProperties
-	*/
-	internal func prepareProperties(image: UIImage?, titleLabel: UILabel?, contentView: UIView?, leftButtons: [UIView]?, rightButtons: [UIView]?) {
-		self.image = image
-		self.titleLabel = titleLabel
-		self.contentView = contentView
-		self.leftButtons = leftButtons ?? []
-		self.rightButtons = rightButtons ?? []
-	}
+    }
+    
+    /// A preset wrapper around bottomBarEdgeInsets.
+    open var bottomBarEdgeInsetsPreset = EdgeInsetsPreset.none {
+        didSet {
+            bottomBarEdgeInsets = EdgeInsetsPresetToValue(preset: bottomBarEdgeInsetsPreset)
+        }
+    }
+    
+    /// A reference to bottomBarEdgeInsets.
+    @IBInspectable
+    open var bottomBarEdgeInsets = EdgeInsets.zero {
+        didSet {
+            layoutSubviews()
+        }
+    }
+    
+    /**
+     An initializer that accepts a NSCoder.
+     - Parameter coder aDecoder: A NSCoder.
+     */
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    /**
+     An initializer that accepts a CGRect.
+     - Parameter frame: A CGRect.
+     */
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    /// A convenience initializer.
+    public convenience init() {
+        self.init(frame: .zero)
+    }
+    
+    /**
+     A convenience initiazlier.
+     - Parameter toolbar: An optional Toolbar.
+     - Parameter contentView: An optional UIView.
+     - Parameter bottomBar: An optional Bar.
+     */
+    public convenience init?(toolbar: Toolbar?, contentView: UIView?, bottomBar: Bar?) {
+        self.init(frame: .zero)
+        prepareProperties(toolbar: toolbar, contentView: contentView, bottomBar: bottomBar)
+    }
+    
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        guard willLayout else {
+            return
+        }
+        
+        container.width = width
+        
+        reload()
+    }
+    
+    /// Reloads the layout.
+    open func reload() {
+        var h: CGFloat = 0
+        
+        h = prepare(view: toolbar, with: toolbarEdgeInsets, from: h)
+        h = prepare(view: contentView, with: contentViewEdgeInsets, from: h)
+        h = prepare(view: bottomBar, with: bottomBarEdgeInsets, from: h)
+        
+        container.height = h
+        bounds.size.height = h
+    }
+    
+    /**
+     Prepares the view instance when intialized. When subclassing,
+     it is recommended to override the prepare method
+     to initialize property values and other setup operations.
+     The super.prepare method should always be called immediately
+     when subclassing.
+     */
+    open override func prepare() {
+        super.prepare()
+        depthPreset = .depth1
+        pulseAnimation = .none
+        cornerRadiusPreset = .cornerRadius1
+        prepareContainer()
+    }
+    
+    /**
+     Prepare the view size from a given top position.
+     - Parameter view: A UIView.
+     - Parameter edge insets: An EdgeInsets.
+     - Parameter from top: A CGFloat.
+     - Returns: A CGFloat.
+     */
+    @discardableResult
+    open func prepare(view: UIView?, with insets: EdgeInsets, from top: CGFloat) -> CGFloat {
+        guard let v = view else {
+            return top
+        }
+        
+        let t = insets.top + top
+        
+        v.y = t
+        v.x = insets.left
+        
+        let w = container.width - insets.left - insets.right
+        var h = v.height
+        
+        if 0 == h {
+            (v as? UILabel)?.sizeToFit()
+            h = v.sizeThatFits(CGSize(width: w, height: CGFloat.greatestFiniteMagnitude)).height
+        }
+        
+        v.width = w
+        v.height = h
+        
+        return t + h + insets.bottom
+    }
+    
+    /**
+     A preparation method that sets the base UI elements.
+     - Parameter toolbar: An optional Toolbar.
+     - Parameter contentView: An optional UIView.
+     - Parameter bottomBar: An optional Bar.
+     */
+    internal func prepareProperties(toolbar: Toolbar?, contentView: UIView?, bottomBar: Bar?) {
+        self.toolbar = toolbar
+        self.contentView = contentView
+        self.bottomBar = bottomBar
+    }
+    
+    /// Prepares the container.
+    private func prepareContainer() {
+        container.clipsToBounds = true
+        addSubview(container)
+    }
 }

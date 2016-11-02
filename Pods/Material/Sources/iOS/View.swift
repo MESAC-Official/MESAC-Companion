@@ -30,8 +30,6 @@
 
 import UIKit
 
-@IBDesignable
-@objc(View)
 open class View: UIView {
 	/**
      A CAShapeLayer used to manage elements that would be affected by
@@ -39,7 +37,7 @@ open class View: UIView {
      allows the dropshadow effect on the backing layer, while clipping
      the image to a desired shape within the visualLayer.
      */
-	open private(set) var visualLayer: CAShapeLayer!
+	open private(set) lazy var visualLayer = CAShapeLayer()
 	
 	/**
      A property that manages an image for the visualLayer's contents
@@ -100,9 +98,9 @@ open class View: UIView {
 	
 	/// A Preset for the contentsGravity property.
 	@IBInspectable
-    open var contentsGravityPreset: MaterialGravity {
+    open var contentsGravityPreset: Gravity {
 		didSet {
-			contentsGravity = MaterialGravityToValue(gravity: contentsGravityPreset)
+			contentsGravity = GravityToValue(gravity: contentsGravityPreset)
 		}
 	}
 	
@@ -117,7 +115,7 @@ open class View: UIView {
 		}
 	}
 	
-	/// A property that accesses the backing layer's backgroundColor.
+	/// A property that accesses the backing layer's background
 	@IBInspectable
     open override var backgroundColor: UIColor? {
 		didSet {
@@ -130,9 +128,9 @@ open class View: UIView {
      - Parameter aDecoder: A NSCoder instance.
      */
 	public required init?(coder aDecoder: NSCoder) {
-		contentsGravityPreset = .ResizeAspectFill
+		contentsGravityPreset = .resizeAspectFill
 		super.init(coder: aDecoder)
-		prepareView()
+		prepare()
 	}
 	
 	/**
@@ -142,9 +140,9 @@ open class View: UIView {
      - Parameter frame: A CGRect instance.
      */
 	public override init(frame: CGRect) {
-		contentsGravityPreset = .ResizeAspectFill
+		contentsGravityPreset = .resizeAspectFill
 		super.init(frame: frame)
-		prepareView()
+		prepare()
 	}
 	
 	/// A convenience initializer.
@@ -154,34 +152,35 @@ open class View: UIView {
 	
 	open override func layoutSublayers(of layer: CALayer) {
 		super.layoutSublayers(of: layer)
-		if self.layer == layer {
-			layoutShape()
-			layoutVisualLayer()
-		}
+        guard self.layer == layer else {
+            return
+        }
+        
+        layoutShape()
+        layoutVisualLayer()
 	}
 	
 	open override func layoutSubviews() {
 		super.layoutSubviews()
-		layoutShadowPath()
+        layoutShadowPath()
 	}
 	
 	/**
      Prepares the view instance when intialized. When subclassing,
-     it is recommended to override the prepareView method
+     it is recommended to override the prepare method
      to initialize property values and other setup operations.
-     The super.prepareView method should always be called immediately
+     The super.prepare method should always be called immediately
      when subclassing.
      */
-	open func prepareView() {
+	open func prepare() {
 		contentScaleFactor = Device.scale
-		backgroundColor = Color.white
+		backgroundColor = .white
 		prepareVisualLayer()
 	}
 	
 	/// Prepares the visualLayer property.
 	internal func prepareVisualLayer() {
-		visualLayer = CAShapeLayer()
-        visualLayer.zPosition = 0
+		visualLayer.zPosition = 0
 		visualLayer.masksToBounds = true
 		layer.addSublayer(visualLayer)
 	}

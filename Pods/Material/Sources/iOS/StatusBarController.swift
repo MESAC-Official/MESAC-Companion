@@ -32,10 +32,10 @@ import UIKit
 
 extension UIViewController {
 	/**
-	A convenience property that provides access to the StatusBarController.
-	This is the recommended method of accessing the StatusBarController
-	through child UIViewControllers.
-	*/
+     A convenience property that provides access to the StatusBarController.
+     This is the recommended method of accessing the StatusBarController
+     through child UIViewControllers.
+     */
 	public var statusBarController: StatusBarController? {
 		var viewController: UIViewController? = self
 		while nil != viewController {
@@ -48,38 +48,44 @@ extension UIViewController {
 	}
 }
 
-@IBDesignable
 open class StatusBarController: RootController {
-	/// A reference to the statusBarView.
-	open internal(set) lazy var statusBarView = View()
+	/// A reference to the statusBar.
+	open private(set) lazy var statusBar = View()
 	
+    open override var isStatusBarHidden: Bool {
+        didSet {
+            statusBar.isHidden = isStatusBarHidden
+        }
+    }
+    
 	/**
-	To execute in the order of the layout chain, override this
-	method. LayoutSubviews should be called immediately, unless you
-	have a certain need.
-	*/
+     To execute in the order of the layout chain, override this
+     method. LayoutSubviews should be called immediately, unless you
+     have a certain need.
+     */
 	open override func layoutSubviews() {
 		super.layoutSubviews()
-		statusBarView.isHidden = Device.isLandscape && .phone == Device.userInterfaceIdiom
+        statusBar.width = view.width
+        statusBar.zPosition = Device.isLandscape && .phone == Device.userInterfaceIdiom ? 0 : 3000
 		rootViewController.view.frame = view.bounds
 	}
 	
 	/**
-	Prepares the view instance when intialized. When subclassing,
-	it is recommended to override the prepareView method
-	to initialize property values and other setup operations.
-	The super.prepareView method should always be called immediately
-	when subclassing.
-	*/
-	open override func prepareView() {
-        super.prepareView()
-		prepareStatusBarView()
+     Prepares the view instance when intialized. When subclassing,
+     it is recommended to override the prepare method
+     to initialize property values and other setup operations.
+     The super.prepare method should always be called immediately
+     when subclassing.
+     */
+	open override func prepare() {
+        super.prepare()
+		prepareStatusBar()
 	}
 	
-	/// Prepares the statusBarView.
-	private func prepareStatusBarView() {
-		statusBarView.zPosition = 3000
-		statusBarView.backgroundColor = Color.black.withAlphaComponent(0.12)
-		_ = view.layout(statusBarView).top(0).horizontally().height(20)
+	/// Prepares the statusBar.
+	private func prepareStatusBar() {
+		statusBar.backgroundColor = .white
+        statusBar.height = 20
+		view.addSubview(statusBar)
 	}
 }

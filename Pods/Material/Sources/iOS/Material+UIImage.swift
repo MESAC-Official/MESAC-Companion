@@ -100,7 +100,7 @@ extension UIImage {
      - Parameter color: The UIColor to create the image from.
      - Returns: A UIImage that is the color passed in.
      */
-    open func tintWithColor(color: UIColor) -> UIImage? {
+    open func tint(with color: UIColor) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(size, false, Device.scale)
         guard let context = UIGraphicsGetCurrentContext() else {
             return nil
@@ -116,9 +116,9 @@ extension UIImage {
         color.setFill()
         context.fill(rect)
         
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image?.withRenderingMode(.alwaysOriginal)
     }
 }
 
@@ -129,14 +129,14 @@ extension UIImage {
      - Parameter size: The size of the image to create.
      - Returns: A UIImage that is the color passed in.
      */
-    open class func imageWithColor(color: UIColor, size: CGSize) -> UIImage? {
+    open class func image(with color: UIColor, size: CGSize) -> UIImage? {
         let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         color.setFill()
         UIRectFill(rect)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return image
+        return image?.withRenderingMode(.alwaysOriginal)
     }
 }
 
@@ -185,8 +185,8 @@ extension UIImage {
      - Parameter completion: A completion block that is executed once the image
      has been retrieved.
      */
-    open class func contentsOfURL(url: URL, completion: ((UIImage?, Error?) -> Void)) {
-        URLSession.shared.dataTask(with: URLRequest(url: url)) { (data: Data?, response: URLResponse?, error: Error?) in
+    open class func contentsOfURL(url: URL, completion: @escaping ((UIImage?, Error?) -> Void)) {
+        URLSession.shared.dataTask(with: URLRequest(url: url)) { [completion = completion] (data: Data?, response: URLResponse?, error: Error?) in
             DispatchQueue.main.async {
                 if let v = error {
                     completion(nil, v)
