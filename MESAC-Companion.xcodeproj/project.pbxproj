@@ -264,7 +264,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Philippos Slicher & Yajat Dua";
 				TargetAttributes = {
 					B84F94FC1D490BBD0095E50E = {
